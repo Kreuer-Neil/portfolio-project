@@ -3,9 +3,9 @@
 !README.md
 !package.json
 !webpack.mix.js
-!wp-content/
-wp-content/*
-!wp-content/themes
-wp-content/themes/*
-!wp-content/themes/portfolio
-!wp-content/themes/portfolio/*
+!/wp-content/
+/wp-content/**
+!/wp-content/themes
+/wp-content/themes/*
+!/wp-content/themes/portfolio/
+!/wp-content/themes/portfolio/*
