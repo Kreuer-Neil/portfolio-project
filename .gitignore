@@ -9,3 +9,17 @@
 /wp-content/themes/*
 !/wp-content/themes/portfolio/
 !/wp-content/themes/portfolio/*
+!/wp-content/themes/portfolio/parts/
+!/wp-content/themes/portfolio/parts/*
+!/wp-content/themes/portfolio/ressources/
+!/wp-content/themes/portfolio/ressources/*
+!/wp-content/themes/portfolio/ressources/sass/
+!/wp-content/themes/portfolio/ressources/sass/*
+!/wp-content/themes/portfolio/ressources/sass/config/
+!/wp-content/themes/portfolio/ressources/sass/config/*
+!/wp-content/themes/portfolio/ressources/sass/pages/
+!/wp-content/themes/portfolio/ressources/sass/pages/*
+!/wp-content/themes/portfolio/ressources/sass/parts/
+!/wp-content/themes/portfolio/ressources/sass/parts/*
+!/wp-content/themes/portfolio/ressources/sass/queries/
+!/wp-content/themes/portfolio/ressources/sass/queries/*
