@@ -1,10 +1,13 @@
+html {
+  font-size: 16px;
+}
+
 body {
-  background-color: #030d18;
-  padding-top: 3rem;
-  color: white;
+  color: var(--white);
   text-align: center;
-  margin: auto;
-  width:  min(100vw, 1920px);
+  min-height: 100vh;
+  //width: min(100vw, 1920px);
+  background: linear-gradient(200deg, #030d18 0%, #060660 20%, #280258 40%, #300315 60%, #030d18 100%);
 }
 
 abbr {
@@ -12,8 +15,6 @@ abbr {
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
 h2 {
@@ -24,4 +25,12 @@ h2 {
 h3 {
   font-size: 1.2rem;
   margin-bottom: .5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:visited {
+    color: #f0f0f0;
+  }
 }

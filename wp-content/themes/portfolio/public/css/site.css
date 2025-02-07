@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --white: #fff;
+  --white2: #f1f1f1;
+  --black: #030d18;
+  --darkgrey: #2f2f2f;
+  --neonblue: #2A4B9A;
+  --darkpurple: #a95fa2;
+  --darkorange: #c6672e;
+  --neonpink: #a9529a;
+  --neonpurple: #ae2885;
+  --darkpink: #b94b95;
+}
+
+.sro {
+  font-size: 0;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.light {
+  color: black;
+}
+
+.site-icon--1 {
+  fill: #f6ad6d;
+}
+.site-icon--2 {
+  fill: #ee7f9b;
+}
+.site-icon__stroke {
+  stroke: white;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  fill: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: var(--white);
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(200deg, #030d18 0%, #060660 20%, #280258 40%, #300315 60%, #030d18 100%);
+}
+
+abbr {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: #f0f0f0;
+}
+
+.site-icon {
+  margin: 0.25rem;
+  width: auto;
+}
+
+.main-nav {
+  background-color: var(--black);
+  width: 100vw;
+}
+.main-nav__container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  height: auto;
+  min-height: 4rem;
+}
+.main-nav__element {
+  list-style-type: none;
+  flex-grow: 1;
+}
+.main-nav__element--active {
+  background-color: var(--darkgrey);
+}
+.main-nav__element::after {
+  width: 0.25rem;
+  background-color: var(--white);
+}
+.main-nav__element--home {
+  flex-grow: 0;
+}
+.main-nav__link {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.projects {
+  /*
+    display: grid;
+    grid-auto-flow: row;*/
+}
+.projects h2 {
+  font-size: 1.7em;
+}
+.projects__container {
+  margin-top: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.project {
+  width: 20rem;
+  aspect-ratio: 2.5/3.5;
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem 0.1rem 0.5rem;
+  border: 0.1rem solid lightpink;
+  margin: 2rem;
+  background: rgba(45, 33, 44, 0.5);
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 2rem;
+}
+.project sh {
+  position: absolute;
+  inset: -1.25rem;
+  border: 1.25rem solid rgba(0, 0, 0, 0);
+  border-radius: 3.25rem;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transform: translateZ(-1px);
+  pointer-events: none;
+}
+.project sh::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  border-radius: 2rem;
+  background: conic-gradient(from 45deg, var(--neonblue) 0%, var(--darkpurple) 20%, var(--darkorange) 40%, var(--neonpink) 60%, var(--neonpurple) 80%, var(--neonpink) 100%);
+  filter: blur(0.75rem);
+  transform: translate(0px, 0px);
+}
+.project__title {
+  margin-bottom: 0.5rem;
+  order: -2;
+}
+.project__img {
+  z-index: 1;
+  order: -1;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+@media (max-width: 480px) {
+  .project {
+    margin: 6vw;
+    width: 86vw;
+  }
+}
+
+/*# sourceMappingURL=site.css.map */

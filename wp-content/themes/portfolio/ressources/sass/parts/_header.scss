@@ -1,0 +1,51 @@
+header {
+
+}
+
+.site-icon {
+  margin: .25rem;
+  width: auto;
+}
+
+.main-nav {
+  background-color: var(--black);
+  width: 100vw;
+
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: auto;
+    min-height: 4rem;
+  }
+
+  &__element {
+    list-style-type: none;
+    flex-grow: 1;
+
+    &--active {
+      background-color: var(--darkgrey);
+    }
+
+    &::after {
+      width: .25rem;
+      background-color: var(--white);
+    }
+
+    &--home {
+      flex-grow: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &--home {
+    }
+  }
+}

@@ -7,7 +7,7 @@
     <meta name="author" content="Kreuer Neil"/>
     <?php wp_head() ?>
     <meta name="keyword" content="Portfolio, Neil Kreuer, Web Designer, CV, Web Developer">
-    <meta name="description" content="Nouvelle page d'accueil du Service d'Entraide Familiale, version de Neil Kreuer"/>
+    <meta name="description" content="Page d'accueil du site Portfolio "/>
 
     <?php wp_head(); ?>
 
@@ -16,17 +16,22 @@
 <body>
 
 <header>
-    <h1 ><span class="sro"><?= get_the_title(); ?></span><a href="<?= get_home_url() ?>" title="Vers l'accueil"><svg></svg></a></h1>
-    <?php //todo mettre le SVG dans le titre ?>
+    <h1 class="sro"><?= get_the_title(); ?></h1>
 
     <nav class="main-nav" id="main-nav">
         <h2 class="main-nav__title sro">Menu de navigation principale</h2>
-            <ul class="main-nav__container">
-                <?php foreach (dw_get_navigation_links('main') as $link): ?>
-                    <li class="main-nav__element<?php if ($link->url === get_page_link()) echo " main-nav__elements--active" ?>">
-                        <a href="<?= $link->url ?>" class="main-nav__links"><?= $link->label ?></a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+        <ul class="main-nav__container">
+            <li class="main-nav__element main-nav__element--home">
+                <a class="main-nav__link main-nav__link--home" href="<?= get_home_url() ?>" title="Vers l'accueil">
+                    <svg class="site-icon" title="Logo N K" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181 129" role="img" width="50">
+                        <defs></defs><path class="site-icon--1" d="M167.58 1.45h-62.75v61.93l62.75-61.93z"/><path class="site-icon--2" d="m128.12 68.07 52.2 46.24V14.19l-52.2 53.88z"/><path class="site-icon--1" d="M104.83 89.45v38.19h62.75l-52.2-46.24-10.55 8.05z"/><path class="site-icon--2" d="M85.74 95.07V1.45H22.25l63.49 93.62z"/><path class="site-icon--1" d="M19.69 31.69v95.95h65.07L19.69 31.69z"/><path class="site-icon__stroke" d="M1 1h179v127H1z"/>
+                    </svg></a>
+            </li>
+            <?php foreach (dw_get_navigation_links('main') as $link): ?>
+                <li class="main-nav__element<?php if ($link->url === get_page_link()) echo " main-nav__element--active" ?>">
+                    <a href="<?= $link->url ?>" class="main-nav__link"><?= $link->label ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
     </nav>
 </header>
