@@ -1,5 +1,25 @@
-header {
+@keyframes logo-hover {
+  0% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 
+@keyframes nav-hover {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 2.5rem;
+  }
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .site-icon {
@@ -8,23 +28,36 @@ header {
 }
 
 .main-nav {
+  opacity: 50%;
   background-color: var(--black);
-  width: 100vw;
+  height: 4rem;
+  transition: opacity .5s ease-out;
+
+  &:hover {
+    transition: opacity .5s ease-out;
+    opacity: 100%;
+
+    & a {
+      transition: height .2s ease-out;
+      height: 1.5rem;
+    }
+  }
 
 
-  &__container {
+  & ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     height: auto;
     min-height: 4rem;
   }
 
-  &__element {
+  & li {
     list-style-type: none;
     flex-grow: 1;
 
-    &--active {
+
+    & .nav-active {
       background-color: var(--darkgrey);
     }
 
@@ -33,19 +66,20 @@ header {
       background-color: var(--white);
     }
 
-    &--home {
-      flex-grow: 0;
-    }
   }
 
-  &__link {
+  & .nav-home {
+    flex-grow: 0;
+    height: fit-content;
+  }
+
+  & a {
+    height: 0;
+    transition: height .2s ease-out;
     display: flex;
-    height: 100%;
-    width: 100%;
     align-items: center;
     justify-content: center;
-
-    &--home {
-    }
+    padding: .5rem 0;
+    width: 100%;
   }
 }
