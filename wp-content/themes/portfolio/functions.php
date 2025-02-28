@@ -1,5 +1,9 @@
 <?php
 
+//Charger les champs ACF exportés
+
+//include_once('fields.php');
+
 // Désactiver l'éditeur de texte Gutenberg de Wordpress :
 add_filter('use_block_editor_for_post', '__return_false');
 add_theme_support( 'custom-header' );
