@@ -1,0 +1,37 @@
+:root {
+  /*--white: #fff;
+  --white2: #f1f1f1;
+  --black: #030d18;
+  --darkgrey: #2f2f2f;
+
+  --neonblue: #2A4B9A;
+  --darkpurple: #a95fa2;
+  --darkorange: #c6672e;
+  --neonpink: #a9529a;
+  --neonpurple: #ae2885;
+  --darkpink: #b94b95;*/
+
+
+  // base common theme colors
+  --color-white: #F1F1F1;
+  --color-untrue-black: #0B0B0B;
+  --color-darkblue: #100F1F;
+  --color-darkblue-light: #2E125F;
+
+  // Logo colors
+  --color-main-purple-1: #FC76FA;
+  --color-main-purple-2: #A516FA;
+
+  --color-main-orange-1: #FEC552;
+  --color-main-orange-2: #FF6A1A;
+  --color-logo-bg: var(--color-darkblue);
+
+
+  // base dark theme colors
+  --color-main-bg: var(--color-darkblue);
+  --color-main-bg-gradient: var(--color-darkblue-white);
+  --color-text: var(--color-white);
+
+  --color-border-main-gradient-1: var(--color-main-purple-1);
+  --color-border-main-gradient-2: var(--color-main-purple-2);
+}

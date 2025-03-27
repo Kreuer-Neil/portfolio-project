@@ -2,8 +2,12 @@
 !.gitignore
 !README.md
 !package.json
+!vite.config.js
+!manifest.json
+
 !db_backups
 !db_backups/*
+
 !wp-content/
 wp-content/*
 !wp-content/themes/
@@ -11,3 +15,7 @@ wp-content/*
 !wp-content/themes/portfolio
 !wp-content/themes/portfolio/*
 !wp-content/themes/portfolio/**/*
+
+!wp-content/uploads
+!wp-content/uploads/*
+!wp-content/uploads/**/*

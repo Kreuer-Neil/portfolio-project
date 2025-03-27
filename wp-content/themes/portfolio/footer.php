@@ -1,3 +1,4 @@
+</main>
 <footer class="footer">
 <nav class="footer-nav">
     <h2 class="footer-nav__title sro"><?= get_field('footer_nav_title') ?></h2>
