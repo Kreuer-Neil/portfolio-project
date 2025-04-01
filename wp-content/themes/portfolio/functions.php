@@ -1,27 +1,29 @@
 <?php
 
-//Charger les champs ACF exportés
+use FnComponents\Project;
 
+//Charger les champs ACF exportés
 include_once('fields.php');
 
 // Désactiver l'éditeur de texte Gutenberg de Wordpress :
 add_filter('use_block_editor_for_post', '__return_false');
 add_theme_support('custom-header');
 add_theme_support('custom-footer');
+add_theme_support('post-thumbnails');
 
 // Enregistrer des menus de navigation :
 register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
 
 //retirer des fonctions de base WP
-add_action( 'wp_enqueue_scripts', function() {
+add_action('wp_enqueue_scripts', function () {
     // Remove CSS on the front end.
-    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style('wp-block-library');
     // Remove Gutenberg theme.
-    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style('wp-block-library-theme');
     // Remove inline global CSS on the front end.
-    wp_dequeue_style( 'global-styles' );
-}, 20 );
+    wp_dequeue_style('global-styles');
+}, 20);
 
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
@@ -46,21 +48,23 @@ if (file_exists($manifestPath)) {
     }
 }
 
-//register project post type
+//register project post type + taxonomy
 //Project::getInstance();
 register_post_type('project', [
     'label' => 'Projects',
     'description' => 'Mes projets affichés sur le site',
     'public' => true,
     'hierarchical' => false,
+    'has-archive' => true,
     'menu_position' => 21,
     'menu_icon' => 'dashicons-cover-image',
     'has_archive' => true,
     'rewrite' => [
         'slug' => 'projects',
-    ]
-]);
+    ],
+    'supports' => ['title', 'excerpt', 'editor', 'thumbnail'],
 
+]);
 
 // Fonctions propres au thème :
 

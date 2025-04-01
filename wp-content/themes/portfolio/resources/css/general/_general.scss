@@ -1,0 +1,137 @@
+.custom-page {
+  background-color: var(--color-main-bg);
+  color: var(--color-main-text);
+
+  // Bidouillage pour permettre à presque n'importe quoi
+  // d'apparaître malgré un Z-index -1, y
+  // compris le dégradé de haut de page
+  z-index: -3;
+
+  // gradient top bg
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: var(--gradient-top-bg);
+    z-index: -2;
+  }
+}
+
+h1 {
+  font-size: var(--number-fsize-title);
+}
+
+h2 {
+  font-size: var(--number-fsize-h2);
+}
+
+/* Solution avec un :before en absolute, avec un z-index et un bg-image. Fond non transparent.
+ * Avantages : Plutôt court et pas "trop" de bidouillages.
+ */
+.neon-box {
+  background-color: var(--color-main-bg);
+  position: relative;
+  //padding: calc(var(--number-card-main-width) * 2);
+  border-radius: calc(var(--number-card-main-radius) - (var(--number-card-main-stroke-width)));
+
+  &::before {
+    border-radius: var(--number-card-main-radius);
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: var(--gradient-main-border-1);
+    padding: var(--number-card-main-stroke-width);
+    top: calc(-1 * var(--number-card-main-stroke-width));
+    left: calc(-1 * var(--number-card-main-stroke-width));
+    position: absolute;
+    z-index: -1;
+
+    &:nth-child(2n) {
+      background-image: var(--gradient-main-border-2);
+    }
+  }
+}
+
+.custom-page main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--number-gap-sections);
+}
+
+/*
+ * Specific style. Remove from here pls.
+ */
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--number-padding-mini);
+  margin: var(--number-padding-heavy) var(--number-padding-medium);
+
+  font-size: var(--number-card-title-fsize);
+  font-family: code bold, sans-serif;
+
+  &__logo {
+    background-color: var(--color-darkblue);
+    border: var(--number-padding-small) solid var(--color-darkblue-light);
+  }
+}
+
+.projects {
+  &__container {
+    display: grid;
+    gap: 1rem;
+    line-height: 0;
+  }
+
+  &__item {
+    @extend .neon-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--number-padding-small);
+    text-align: center;
+    //width: min(23rem,85vw);
+    position: relative;
+    margin: var(--number-card-main-stroke-width);
+    max-width: 20rem;
+
+    &>* {
+      line-height: normal;
+    }
+
+    &__title {
+      padding-top: var(--number-padding-mini);
+      font-size: var(--number-card-title-fsize);
+    }
+
+    &__link {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      align-content: center;
+      color: var(--color-main-text);
+      text-decoration: underline;
+      background-image: var(--gradient-projects-link-1);
+      padding: var(--number-padding-simple) var(--number-padding-little);
+      border-radius: var(--number-padding-mini) var(--number-card-inner-radius) var(--number-card-inner-radius) var(--number-padding-mini);
+
+      /*&::after {
+        // La flèche
+        font-family: dashicons;
+        content: var(--icon-arrow-right);
+      }*/
+    }
+
+    &__img {
+      border-radius: 0 0 var(--number-card-inner-radius) var(--number-card-inner-radius);
+      overflow:hidden;
+      width: 100%;
+    }
+  }
+}

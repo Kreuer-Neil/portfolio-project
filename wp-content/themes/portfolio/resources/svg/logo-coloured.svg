@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 180 127" id="loco-colored">
+    <path fill="url(#a)" d="M168 0h-63.5v62.5L168 0ZM104.5 88.707V127H168l-53-46.5-10.5 8.207Z"/>
+    <path fill="url(#b)" d="M127.5 67.5 180 114V13l-52.5 54.5Z"/>
+    <path fill="url(#c)" d="M85.5 95V0H21l64.5 95ZM19 30v97h65L19 30Z"/>
+    <defs>
+        <linearGradient id="a" x1="104.5" x2="168" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FC76FA"/>
+            <stop offset="1" stop-color="#A516FA"/>
+        </linearGradient>
+        <linearGradient id="b" x1="127.5" x2="180" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FC76FA"/>
+            <stop offset="1" stop-color="#A516FA"/>
+        </linearGradient>
+        <linearGradient id="c" x1="85.5" x2="21" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FEC552"/>
+            <stop offset="1" stop-color="#FF6A1A"/>
+        </linearGradient>
+    </defs>
+</svg>

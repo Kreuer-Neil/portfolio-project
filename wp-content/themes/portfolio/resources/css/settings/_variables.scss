@@ -1,40 +1,112 @@
 :root {
+  // TODO voir si c’est OK
+  font-size: 16px;
+
   // base common theme colors
   --color-white: #F1F1F1;
   --color-untrue-black: #0B0B0B;
+  --color-transparent: #ffffff00;
+  --color-lightpink: #cad;
+
+
   --color-darkblue: #100F1F;
   --color-darkblue-light: #2E125F;
+  --color-darkpurple: #2E125F;
+  --color-orange-faded: #A46C31;
 
   // gradient vivid colors
+  //light theme
+
+  //dark theme
   --color-gradient-purple-light: #FC76FA;
   --color-gradient-purple-deep: #A516FA;
   --color-gradient-orange-light: #FEC552;
   --color-gradient-orange-deep: #FF6A1A;
 
   // Logo colors
-  --color-logo-left-1: var(--color-gradient-orange-light);
-  --color-logo-left-2: var(--color-gradient-orange-deep);
-  --gradient-logo-left: linear-gradient(90deg, var(--color-logo-left-1), var(--color-logo-left-2));
+  --color-logo-left-light: var(--color-gradient-orange-light);
+  --color-logo-left-deep: var(--color-gradient-orange-deep);
 
-  --color-logo-right-1: var(--color-gradient-purple-light);
-  --color-logo-right-2: var(--color-gradient-purple-deep);
+  --color-logo-right-light: var(--color-gradient-purple-light);
+  --color-logo-right-deep: var(--color-gradient-purple-deep);
 
-  --color-logo-bg: var(--color-darkblue);
+  --color-logo-bg: var(--color-white);
+  --color-logo-border: var(--color-darkblue-light);
+
 
   //* Base light theme colors
-  --color-text: var(--color-untrue-black);
-  --color-bg: var(--color-white);
+  --color-main-text: var(--color-untrue-black);
+  --color-main-bg: var(--color-white);
+
+
+  // Gradients colors
+  --color-main-border-1-gradient-light: #fff;
+  --color-main-border-1-gradient-deep: #fff;
+
+  --color-main-border-2-gradient-light: #fff;
+  --color-main-border-2-gradient-deep: #fff;
+
+  --color-gradient-top-light: var(--color-lightpink);
+
+  //* Numbers
+  // Paddings
+  --number-padding-little: .125rem; // 2px
+  --number-padding-mini: .25rem; // 4px
+  --number-padding-small: .5rem; // 8px
+  --number-padding-simple: .75rem; // 12px
+  --number-padding-medium: 1rem; // 16px
+  --number-padding-double: 1.5rem; // 24px
+  --number-padding-semi-heavy: 2rem; // 32px
+  --number-padding-heavy: 3rem; // 48px
+
+  // Font sizes
+  --number-fsize-title: 2rem;
+  --number-fsize-h2: 1.25rem;
+
+  // Auto gaps
+  --number-gap-sections: 1.5rem;
+
+  // Card radius & else
+  --number-card-main-radius: 2rem; // 32px
+  --number-card-inner-radius: 1.75rem; // 28 rem
+  --number-card-main-stroke-width: .25rem; // 4px
+  --number-card-title-fsize: 1.5rem;
 }
 
 .dark {
   //* Base dark theme colors
   --color-main-bg: var(--color-darkblue);
-  --color-main-bg-gradient: var(--color-darkblue-white);
-  --color-text: var(--color-white);
+  --color-main-text: var(--color-white);
+  --color-gradient-top-light: var(--color-darkpurple);
 
-  --color-main-border-1-gradient-1: var(--color-gradient-purple-light);
-  --color-main-border-1-gradient-2: var(--color-gradient-purple-deep);
+  // Logo and SVGs colors
+  --color-logo-bg: var(--color-darkblue);
+  --color-logo-border: var(--color-darkblue-light);
 
-  --color-main-border-2-gradient-1: var(--color-gradient-orange-light);
-  --color-main-border-2-gradient-2: var(--color-gradient-orange-deep);
+  // Gradients colors
+  --color-main-border-1-gradient-light: var(--color-gradient-purple-light);
+  --color-main-border-1-gradient-deep: var(--color-gradient-purple-deep);
+
+  --color-main-border-2-gradient-light: var(--color-gradient-orange-light);
+  --color-main-border-2-gradient-deep: var(--color-gradient-orange-deep);
+  --color-projects-link-1: rgba(var(--color-orange-faded), .4);
+  --color-projects-link-2: rgba(var(--color-orange-faded), .4); // need pink décrêpi si possible
+}
+
+// Re-setting root to assign correct values to gradients (& other composed values if needed)
+.custom-page {
+  // Page main gradients
+  --gradient-top-bg: linear-gradient(var(--color-gradient-top-light),var(--color-main-bg) 65%);
+
+  // Logo and SVGs gradients
+  --gradient-logo-left: linear-gradient(to right, var(--color-logo-left-light), var(--color-logo-left-deep));
+  --gradient-logo-right: linear-gradient(to left, var(--color-logo-right-light), var(--color-logo-right-deep));
+
+  // Box borders
+  --gradient-main-border-1: linear-gradient(30deg, var(--color-main-border-1-gradient-light), var(--color-main-border-1-gradient-deep) 15% 85%, var(--color-main-border-1-gradient-light));
+  --gradient-main-border-2: linear-gradient(150deg, var(--color-main-border-2-gradient-light), var(--color-main-border-2-gradient-deep) 15% 85%, var(--color-main-border-2-gradient-light));
+
+  // Links
+  --gradient-projects-link-1: linear-gradient(to right, var(--color-transparent), var(--color-projects-link-1));
+  --gradient-projects-link-2: linear-gradient(to right, var(--color-transparent), var(--color-projects-link-2));
 }

@@ -11,10 +11,10 @@
 
     <?php wp_head(); ?>
 
-    <link rel="stylesheet" href="<?= dw_asset('css/site.css'); ?>">
+    <?php /*<link rel="stylesheet" href="<?= dw_asset('css/site.css'); ?>"> */ ?>
     <title>Neil Kreuer - Portfolio</title>
 </head>
-<body>
+<body class="custom-page dark">
 
 <header>
     <h1 class="sro"><?= get_the_title(); ?></h1>
