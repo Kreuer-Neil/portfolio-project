@@ -7,7 +7,6 @@ $recent_projects = new WP_Query([
     'orderby' => 'date',
     'order' => 'DESC',
 ]);
-
 ?>
 
 <?php get_header(); ?>
