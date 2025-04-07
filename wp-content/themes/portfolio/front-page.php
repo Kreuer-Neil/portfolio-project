@@ -62,8 +62,7 @@ $recent_projects = new WP_Query([
                     en forme un site web, ne lui trouvant comme seul défaut qu’il utilise JS pour fonctionner, son
                     surplus
                     de classes facilement compensé par la possibilité d’empiler les règles sous des classes customisées
-                    dans
-                    les fichiers de config, comme du simple CSS amélioré.
+                    dans les fichiers de config, comme du simple CSS amélioré.
                     En ce qui concerne l’utilisation de JavaScript (à l’aide de TypeScript afin d’avoir quelque chose de
                     bien plus propre), j’apprécie beaucoup m’en servir, entre autres afin de faire des Single Page App,
                     mais
