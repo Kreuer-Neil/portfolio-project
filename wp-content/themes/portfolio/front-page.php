@@ -60,19 +60,11 @@ $recent_projects = new WP_Query([
                     mais je me débrouille en CSS. J’ai un faible pour TailwindCSS, qui est rapide et efficace pour rapidement
                     mettre
                     en forme un site web, ne lui trouvant comme seul défaut qu’il utilise JS pour fonctionner, son
-                    surplus
-                    de classes facilement compensé par la possibilité d’empiler les règles sous des classes customisées
+                    surplus de classes facilement compensé par la possibilité d’empiler les règles sous des classes customisées
                     dans les fichiers de config, comme du simple CSS amélioré.
                     En ce qui concerne l’utilisation de JavaScript (à l’aide de TypeScript afin d’avoir quelque chose de
-                    bien plus propre), j’apprécie beaucoup m’en servir, entre autres afin de faire des Single Page App,
-                    mais
-                    aussi dans le but de faire des animations et petites fonctionnalités que HTML et CSS ne
-                    permettraient
-                    pas de faire.
-                    Quelques points importants pour moi lorsque je code sont de me retrouver avec un rendu HTML un
-                    minimum
-                    correct et propre dans la vue finale, que les sites soient entièrement accessible pour un maximum de
-                    personnes, ce qui inclut qu’un maximum de features soient fonctionnelles sans JS si possible, et de
+                    bien plus propre), j’apprécie beaucoup m’en servir, entre autres afin de faire des Single Page App, mais
+                    aussi dans le but de faire des animations et petites fonctionnalités que HTML et CSS ne permettraient pas de faire. Quelques points importants pour moi lorsque je code sont de me retrouver avec un rendu HTML un minimum correct et propre dans la vue finale, que les sites soient entièrement accessible pour un maximum de personnes, ce qui inclut qu’un maximum de features soient fonctionnelles sans JS si possible, et de
                     pouvoir compter sur l’entraide entre collègues pour avancer et s’améliorer bien plus rapidement.</p>
             </article>
             <article class="about__container about__container--more">
