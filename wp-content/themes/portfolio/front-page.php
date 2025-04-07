@@ -38,19 +38,19 @@ $recent_projects = new WP_Query([
         <?php // TODO import SVG with it's frame (composed SVG tier 2) ?>
         <p class="about__content--short">
             <?php /* <?= get_field('short_bio_content'); */ ?>
-            Bienvenue sur mon portfolio ! Bien qu’il soit fait en Wordpress (malgré moi, pour le moment du moins),
-            ce site est bien mon portfolio officiel ! Mon nom est Neil Kreuer, Dev Web bientôt en fin
-            d’apprentissage à la Haute École de la Province de Liège.
+            Bienvenue sur mon portfolio ! Bien qu’il soit fait en Wordpress (principalement pour des raisons de
+            contraintes scolaires), ce site est bien mon portfolio officiel ! Mon nom est Neil Kreuer, Dev Web bientôt
+            en fin d’apprentissage à la Haute École de la Province de Liège.
         </p>
         <label for="about-me"
-               class="about__inavlink inavlink inavlink--right" title="Vers ma bio">
+               class="about__inavlink inavlink inavlink--right" title="Afficher ma bio">
             <span class="inavlink__text">Plus <span class="inavlink__text--underlined">à propos de moi</span></span>
         </label>
         <div>
             <input type="checkbox"
-                   id="about-me"> <?php // TODO Mettre en place le truc de faire apparaître la bio du portfolio ?>
+                   id="about-me" class="hidden-checkbox"> <?php // TODO Mettre en place le truc de faire apparaître la bio du portfolio ?>
             <article class="about__container about__container--dev">
-                <h3 class="about__title about__title--dev">Qui suis-je en tant que développeur ?</h3>
+                <h3 class="about__title about__title--dev">Plutôt “dev” que “designer” web</h3>
                 <p class="about__content about__content--dev">Je suis un web dev, plutôt intéressé par l’UX et le
                     back-end
                     (php), assez fan de l’utilisation de Laravel, et surtout LiveWire en ce qui concerne la création de
@@ -98,11 +98,17 @@ $recent_projects = new WP_Query([
                 <?php /* <h2 class="about__title--specs"><?= get_field('specialities_title') ?></h2>
                     <p class="about__content--specs"><?= get_field('specialities_content')?></p> */ ?>
                 <h3 class="about__title">L’accessibilité, plus qu'une simple formalité</h3>
-                <p>Je valorise fortement l’accessibilité. Les contrastes, le principe d’affordance, mais aussi les attributs Aria, tableaux avec scopes, attributs alt et title, éléments en Screen Reader Only, … font partie de mon vocabulaire courant.
-                Le web est une ressource créée dans le but d’offrir un accès total à une mine d'informations et de fonctionnalités à tous et à toutes, et cela n'exclut personne. Aussi bien personnes naviguant au clavier souris, que les personnes malvoyantes en lecteur d’écrans, celles naviguant au clavier uniquement, ou même accédant au web par un appareil mobile.</p>
+                <p>Je valorise fortement l’accessibilité. Les contrastes, le principe d’affordance, mais aussi les
+                    attributs Aria, tableaux avec scopes, attributs alt et title, éléments en Screen Reader Only, … font
+                    partie de mon vocabulaire courant.
+                    Le web est une ressource créée dans le but d’offrir un accès total à une mine d'informations et de
+                    fonctionnalités à tous et à toutes, et cela n'exclut personne. Aussi bien personnes naviguant au
+                    clavier souris, que les personnes malvoyantes en lecteur d’écrans, celles naviguant au clavier
+                    uniquement, ou même accédant au web par un appareil mobile.</p>
             </article>
         </div>
-        <a href="" class="about__inavlink inavlink inavlink--right"><span class="inavlink__text">Pour voir <span class="inavlink__text--underlined">tous mes projets, <br/>c’est par ici&nbsp;!</span></span></a>
+        <a href="" class="about__inavlink inavlink inavlink--right"><span class="inavlink__text">Pour voir <span
+                        class="inavlink__text--underlined">tous mes projets, <br/>c’est par ici&nbsp;!</span></span></a>
     </section>
 
     <section class="projects" id="projects">

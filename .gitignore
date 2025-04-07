@@ -4,7 +4,6 @@
 !package.json
 !vite.config.js
 !manifest.json
-/**/.DS_Store
 
 !db_backups
 !db_backups/*
@@ -20,3 +19,5 @@ wp-content/*
 !wp-content/uploads
 !wp-content/uploads/*
 !wp-content/uploads/**/*
+
+/**/.DS_Store

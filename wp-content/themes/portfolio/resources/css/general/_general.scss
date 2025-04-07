@@ -1,6 +1,7 @@
 .custom-page {
   background-color: var(--color-main-bg);
   color: var(--color-main-text);
+  font-family: "Poppins Medium", sans-serif;
 
   // Bidouillage pour permettre à presque n'importe quoi
   // d'apparaître malgré un Z-index -1, y
@@ -21,6 +22,10 @@
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat Medium", sans-serif;
+}
+
 h1 {
   font-size: var(--number-fsize-title);
 }
@@ -34,6 +39,12 @@ section, article {
   flex-direction: column;
   align-items: center;
   gap: var(--number-padding-little);
+}
+
+.custom-page main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--number-gap-sections);
 }
 
 /* Solution avec un :before en absolute, avec un z-index et un bg-image. Fond non transparent.
@@ -76,10 +87,10 @@ section, article {
   background-image: var(--gradient-inavlink-l-1);
   min-height: var(--number-padding-heavy);
   border-radius: var(--number-padding-double);
+  cursor: pointer;
 
   color: var(--color-main-text);
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: "Poppins SemiBold Italic", sans-serif bold italic;
   text-decoration: none;
   width: min(90vw, 27rem);
 
@@ -113,10 +124,8 @@ section, article {
   }
 }
 
-.custom-page main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--number-gap-sections);
+.hidden-checkbox {
+  display: none;
 }
 
 /*
@@ -131,7 +140,7 @@ section, article {
   margin: var(--number-padding-heavy) var(--number-padding-medium);
 
   font-size: var(--number-card-title-fsize);
-  font-family: code bold, sans-serif;
+  font-family: "Ubuntu Mono", code, sans-serif;
 
   &__logo {
     background-color: var(--color-darkblue);
@@ -147,7 +156,7 @@ section, article {
     align-content: space-evenly;
     grid-template-columns: repeat(1fr);
     padding: var(--number-padding-simple) var(--number-padding-medium);
-    width: 100%;
+    width: calc(100% - (var(--number-padding-medium) * 2));
 
     &--suggest {
       //scroll-snap-type: x mandatory;
