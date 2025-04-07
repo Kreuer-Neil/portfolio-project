@@ -132,3 +132,4 @@ $recent_projects = new WP_Query([
         </ul>
     </section>
 <?php get_footer(); ?>
+
