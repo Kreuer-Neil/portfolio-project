@@ -57,8 +57,7 @@ $recent_projects = new WP_Query([
                     web-app. Je prends pas mal de plaisir à travailler en équipe sur les projets et échanger sur la
                     meilleure méthode à appliquer, et trouve cet aspect relativement important.
                     Honnêtement, le design, ce n’est pas vraiment mon point fort lorsqu’il s’agit de les créer de 0,
-                    mais je
-                    me débrouille en CSS. J’ai un faible pour TailwindCSS, qui est rapide et efficace pour rapidement
+                    mais je me débrouille en CSS. J’ai un faible pour TailwindCSS, qui est rapide et efficace pour rapidement
                     mettre
                     en forme un site web, ne lui trouvant comme seul défaut qu’il utilise JS pour fonctionner, son
                     surplus
