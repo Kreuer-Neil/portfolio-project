@@ -29,6 +29,13 @@ h2 {
   font-size: var(--number-fsize-h2);
 }
 
+section, article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--number-padding-little);
+}
+
 /* Solution avec un :before en absolute, avec un z-index et un bg-image. Fond non transparent.
  * Avantages : Plutôt court et pas "trop" de bidouillages.
  */
@@ -50,9 +57,59 @@ h2 {
     position: absolute;
     z-index: -1;
 
-    &:nth-child(2n) {
-      background-image: var(--gradient-main-border-2);
+  }
+
+  &:nth-child(2n)::before {
+    background-image: var(--gradient-main-border-2);
+  }
+}
+
+.inavlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--number-padding-medium);
+  margin: var(--number-padding-simple) var(--number-padding-medium);
+
+  transition: gap 200ms var(--anim-inavlink-hover);
+  transition-timing-function: var(--anim-inavlink-hover);
+  background-image: var(--gradient-inavlink-l-1);
+  min-height: var(--number-padding-heavy);
+  border-radius: var(--number-padding-double);
+
+  color: var(--color-main-text);
+  font-family: sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  width: min(90vw, 27rem);
+
+  &:hover {
+    gap: var(--number-padding-semi-heavy);
+  }
+
+  &--left::before {
+    background-image: var(--url-arrow-l);
+    content: '';
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &--right::after {
+    background-image: var(--url-arrow-r);
+    content: '';
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__text {
+    &--underlined {
+      text-decoration: underline;
     }
+  }
+
+  &--right {
+    text-align: right;
+    background-image: var(--gradient-inavlink-r-2);
   }
 }
 
@@ -85,54 +142,69 @@ h2 {
 .projects {
   &__container {
     display: grid;
-    gap: 1rem;
+    //gap: var(--number-padding-double);
     line-height: 0;
+    align-content: space-evenly;
+    grid-template-columns: repeat(1fr);
+    padding: var(--number-padding-simple) var(--number-padding-medium);
+    width: 100%;
+
+    &--suggest {
+      //scroll-snap-type: x mandatory;
+      align-content: start;
+      justify-content: start;
+      grid-auto-flow: column;
+      overflow-x: scroll;
+    }
   }
 
   &__item {
     @extend .neon-box;
     display: flex;
     flex-direction: column;
-    gap: var(--number-padding-small);
+    gap: var(--number-padding-mini);
     text-align: center;
-    //width: min(23rem,85vw);
+    width: 25rem;
+    max-width: 85vw;
+    // width: 85vw;
     position: relative;
-    margin: var(--number-card-main-stroke-width);
-    max-width: 20rem;
+    margin: calc(var(--number-padding-small) + var(--number-card-main-stroke-width));
+    //scroll-snap-align: start;
 
-    &>* {
+    & > * {
       line-height: normal;
     }
 
     &__title {
-      padding-top: var(--number-padding-mini);
+      padding-top: var(--number-padding-small);
       font-size: var(--number-card-title-fsize);
+      font-family: sans-serif;
     }
 
     &__link {
+      @extend .inavlink;
+      @extend .inavlink--right;
+      margin: 0 var(--number-padding-mini) 0 0;
       position: absolute;
       bottom: 0;
       width: 100%;
-      display: flex;
-      align-content: center;
-      color: var(--color-main-text);
+      min-height: var(--number-card-main-radius);
       text-decoration: underline;
-      background-image: var(--gradient-projects-link-1);
-      background-color: var(--color-projects-link-1);
-      padding: var(--number-padding-simple) var(--number-padding-little);
-      border-radius: var(--number-padding-mini)var(--number-padding-mini) var(--number-card-inner-radius) var(--number-card-inner-radius);
 
-      /*&::after {
-        // La flèche
-        font-family: dashicons;
-        content: var(--icon-arrow-right);
-      }*/
+      background-image: var(--gradient-projects-link-1);
+      padding: var(--number-padding-little);
+      border-radius: var(--number-padding-mini) var(--number-padding-mini) var(--number-card-inner-radius) var(--number-card-inner-radius);
     }
 
     &__img {
       border-radius: 0 0 var(--number-card-inner-radius) var(--number-card-inner-radius);
-      overflow:hidden;
+      overflow: hidden;
       width: 100%;
+      height: auto;
+    }
+
+    &:nth-child(2n) .projects__item__link {
+      background-image: var(--gradient-projects-link-2);
     }
   }
 }

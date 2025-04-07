@@ -1,11 +1,11 @@
 //first to load
-@import "utils";
-@import "settings";
+@use "utils";
+@use "settings";
 
 //base style
-@import "general";
+@use "general";
 
 /*
-@import "fonts";
-@import "admin";
+@use "fonts";
+@use "admin";
 */

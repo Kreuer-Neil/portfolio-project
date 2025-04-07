@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "watch": "chokidar './wp-content/themes/portfolio/ressources/js/app/**/*.js' './wp-content/themes/portfolio/ressources/css/**/*' -c 'vite build'",
+    "watch": "chokidar './wp-content/themes/portfolio/ressources/js/app/**/*.js' './wp-content/themes/portfolio/ressources/css/**/*' './wp-content/themes/portfolio/ressources/svg/*' -c 'vite build'",
     "serve": "browser-sync start --proxy 'http://portfolio-project.test' --files 'wp-content/themes/portfolio/public/**/*' --no-https --port 3000"
   },
   "keywords": [],

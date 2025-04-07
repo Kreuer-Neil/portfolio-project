@@ -44,11 +44,11 @@ $recent_projects = new WP_Query([
         </p>
         <label for="about-me"
                class="about__inavlink inavlink inavlink--right" title="Vers ma bio">
-            Plus <span class="inavlink__underlined">à propos de moi</span>
+            <span class="inavlink__text">Plus <span class="inavlink__text--underlined">à propos de moi</span></span>
         </label>
         <div>
             <input type="checkbox"
-                   id="about-me"> <?php //Mettre en place le truc de faire apparaître la bio du portfolio ?>
+                   id="about-me"> <?php // TODO Mettre en place le truc de faire apparaître la bio du portfolio ?>
             <article class="about__container about__container--dev">
                 <h3 class="about__title about__title--dev">Qui suis-je en tant que développeur ?</h3>
                 <p class="about__content about__content--dev">Je suis un web dev, plutôt intéressé par l’UX et le
@@ -94,19 +94,25 @@ $recent_projects = new WP_Query([
                     style
                     de narration me convenant.</p>
             </article>
+            <article class="about__container">
+                <?php /* <h2 class="about__title--specs"><?= get_field('specialities_title') ?></h2>
+                    <p class="about__content--specs"><?= get_field('specialities_content')?></p> */ ?>
+                <h3 class="about__title">L’accessibilité, plus qu'une simple formalité</h3>
+                <p>Je valorise fortement l’accessibilité. Les contrastes, le principe d’affordance, mais aussi les attributs Aria, tableaux avec scopes, attributs alt et title, éléments en Screen Reader Only, … font partie de mon vocabulaire courant.
+                Le web est une ressource créée dans le but d’offrir un accès total à une mine d'informations et de fonctionnalités à tous et à toutes, et cela n'exclut personne. Aussi bien personnes naviguant au clavier souris, que les personnes malvoyantes en lecteur d’écrans, celles naviguant au clavier uniquement, ou même accédant au web par un appareil mobile.</p>
+            </article>
         </div>
-        <a href="" class="about__inavlink inavlink inavlink--right">Voir mes projets</a>
+        <a href="" class="about__inavlink inavlink inavlink--right"><span class="inavlink__text">Pour voir <span class="inavlink__text--underlined">tous mes projets, <br/>c’est par ici&nbsp;!</span></span></a>
     </section>
 
     <section class="projects" id="projects">
         <h2 class="projects__title">Mes projets</h2>
 
-        <div class="projects__container">
+        <div class="projects__container projects__container--suggest">
             <?php if ($recent_projects->have_posts()): while ($recent_projects->have_posts()): $recent_projects->the_post(); ?>
                 <article class="projects__item">
                     <?php $image = get_field('project_thumbnail'); ?>
                     <h3 class="projects__item__title"><?= get_the_title(); ?></h3>
-                    <?php /* <p class="projects__item__text"><?= get_field('short_description') ?></p> */ ?>
                     <a class="projects__item__link" href="<?= get_page_link() ?>">Vers le projet</a>
                     <?= get_the_post_thumbnail(size: 'thumbnail', attr: ['width' => '370', 'height' => '209', 'class' => 'projects__item__img']); ?>
                 </article>

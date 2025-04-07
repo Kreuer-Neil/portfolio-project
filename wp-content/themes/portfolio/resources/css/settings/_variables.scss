@@ -11,8 +11,8 @@
 
   --color-darkblue: #100F1F;
   --color-darkblue-light: #2E125F;
+  --color-midpurple: #6E3361;
   --color-darkpurple: #2E125F;
-  --color-orange-faded: #A46C31;
 
   // gradient vivid colors
   //light theme
@@ -22,6 +22,11 @@
   --color-gradient-purple-deep: #A516FA;
   --color-gradient-orange-light: #FEC552;
   --color-gradient-orange-deep: #FF6A1A;
+
+  --color-orange-faded: #A46C31;
+  --color-orange-faded-dark: #FF6A1A;
+  --color-pink-faded: #9746CE;
+  --color-pink-faded-dark: #A516FA;
 
   // Logo colors
   --color-logo-left-light: var(--color-gradient-orange-light);
@@ -71,6 +76,10 @@
   --number-card-inner-radius: 1.75rem; // 28 rem
   --number-card-main-stroke-width: .25rem; // 4px
   --number-card-title-fsize: 1.5rem;
+  --url-arrow-r: url("../../svg/arrow-r.svg");
+
+  //* Animations
+  --anim-inavlink-hover: cubic-bezier( 0, 0.58, .58, 2);
 }
 
 .dark {
@@ -89,8 +98,17 @@
 
   --color-main-border-2-gradient-light: var(--color-gradient-orange-light);
   --color-main-border-2-gradient-deep: var(--color-gradient-orange-deep);
-  --color-projects-link-1: rgba(var(--color-orange-faded), .4);
-  --color-projects-link-2: rgba(var(--color-orange-faded), .4); // need pink décrêpi si possible
+
+  --color-projects-link-1-light: #A516FA66;
+  --color-projects-link-1-deep: #A46C31CC;
+  --color-projects-link-2-light: #FF6A1A66;
+  --color-projects-link-2-deep: #9746CECC;
+
+
+  --color-gradient-inavlink-1-mid: var(--color-midpurple);
+  --color-gradient-inavlink-1-end: var(--color-orange-faded);
+  --color-gradient-inavlink-2-mid: var(--color-midpurple);
+  --color-gradient-inavlink-2-end: var(--color-pink-faded);
 }
 
 // Re-setting root to assign correct values to gradients (& other composed values if needed)
@@ -107,6 +125,11 @@
   --gradient-main-border-2: linear-gradient(150deg, var(--color-main-border-2-gradient-light), var(--color-main-border-2-gradient-deep) 15% 85%, var(--color-main-border-2-gradient-light));
 
   // Links
-  --gradient-projects-link-1: linear-gradient(to right, var(--color-transparent), var(--color-projects-link-1));
-  --gradient-projects-link-2: linear-gradient(to right, var(--color-transparent), var(--color-projects-link-2));
+  --gradient-inavlink-r-1: linear-gradient(to right, var(--color-main-bg),var(--color-gradient-inavlink-1-mid) 40%, var(--color-gradient-inavlink-1-end));
+  --gradient-inavlink-r-2: linear-gradient(to right, var(--color-main-bg),var(--color-gradient-inavlink-2-mid) 40%, var(--color-gradient-inavlink-2-end));
+  --gradient-inavlink-l-1: linear-gradient(to left, var(--color-main-bg),var(--color-gradient-inavlink-1-mid) 40%, var(--color-gradient-inavlink-1-end));
+  --gradient-inavlink-l-2: linear-gradient(to left, var(--color-main-bg),var(--color-gradient-inavlink-2-mid) 40%, var(--color-gradient-inavlink-2-end));
+
+  --gradient-projects-link-1: linear-gradient(to right, var(--color-projects-link-1-light), var(--color-projects-link-1-deep) 90%);
+  --gradient-projects-link-2: linear-gradient(to right, var(--color-projects-link-2-light), var(--color-projects-link-2-deep) 90%);
 }
