@@ -9,13 +9,18 @@
   --color-lightpink: #cad;
 
 
-  --color-darkblue: #100F1F;
-  --color-darkblue-light: #2E125F;
+  //--color-darkblue: #100F1F;
+  --color-darkblue: #1D1B36;
+  --color-darkblue-light: #23204A;
   --color-midpurple: #6E3361;
-  --color-darkpurple: #2E125F;
+  //--color-darkpurple: #2E125F;
+  --color-darkpurple: #441990;
 
   // gradient vivid colors
   //light theme
+
+  // TODO light theme plz
+
 
   //dark theme
   --color-gradient-purple-light: #FC76FA;
@@ -27,6 +32,16 @@
   --color-orange-faded-dark: #FF6A1A;
   --color-pink-faded: #9746CE;
   --color-pink-faded-dark: #A516FA;
+
+  --color-amethyst-base: #672FA1;
+  --color-amethyst-reflection: #7A4599;
+  --color-amethyst-saturated: #501984;
+  --color-crystal-purple-base: #A640EA;
+  --color-crystal-purple-reflection: #B762F0;
+  --color-crystal-purple-saturated: #8F2AD4;
+  --color-crystal-orange-base: #DB7827;
+  --color-crystal-orange-reflection: #ED9625;
+  --color-crystal-orange-saturated: #D36F1C;
 
   // Logo colors
   --color-logo-left-light: var(--color-gradient-orange-light);
@@ -54,6 +69,9 @@
   --color-gradient-top-light: var(--color-lightpink);
 
   //* Numbers
+
+  --number-screen-max: 62rem;
+
   // Paddings
   --number-padding-little: .125rem; // 2px
   --number-padding-mini: .25rem; // 4px
@@ -61,7 +79,7 @@
   --number-padding-simple: .75rem; // 12px
   --number-padding-medium: 1rem; // 16px
   --number-padding-double: 1.5rem; // 24px
-  --number-padding-semi-heavy: 2rem; // 32px
+  --number-padding-semiheavy: 2rem; // 32px
   --number-padding-heavy: 3rem; // 48px
 
   // Font sizes
@@ -71,15 +89,20 @@
   // Auto gaps
   --number-gap-sections: 1.5rem;
 
+  --number-maxw-button: 32.5;
+
   // Card radius & else
   --number-card-main-radius: 2rem; // 32px
   --number-card-inner-radius: 1.75rem; // 28 rem
   --number-card-main-stroke-width: .25rem; // 4px
-  --number-card-title-fsize: 1.75rem;
-  --url-arrow-r: url("../../svg/arrow-r.svg");
+  --number-card-title-fsize: 2rem;
+  --number-card-project-title-fsize: 2rem;
+  --url-arrow-l: url("../svg/arrow-l.svg");
+  --url-arrow-r: url("../svg/arrow-r.svg");
 
   //* Animations
-  --anim-inavlink-hover: cubic-bezier( 0, 0.58, .58, 2);
+  --anim-inavlink-hover: cubic-bezier(0, 0.58, .58, 2);
+
 }
 
 .dark {
@@ -90,7 +113,7 @@
 
   // Logo and SVGs colors
   --color-logo-bg: var(--color-darkblue);
-  --color-logo-border: var(--color-darkblue-light);
+  --color-logo-border: var(--color-darkpurple);
 
   // Gradients colors
   --color-main-border-1-gradient-light: var(--color-gradient-purple-light);
@@ -105,16 +128,19 @@
   --color-projects-link-2-deep: #9746CECC;
 
 
-  --color-gradient-inavlink-1-mid: var(--color-midpurple);
-  --color-gradient-inavlink-1-end: var(--color-orange-faded);
-  --color-gradient-inavlink-2-mid: var(--color-midpurple);
-  --color-gradient-inavlink-2-end: var(--color-pink-faded);
+  //--color-gradient-inavlink-1-mid: var(--color-midpurple);
+  //--color-gradient-inavlink-1-end: var(--color-orange-faded);
+  //--color-gradient-inavlink-2-mid: var(--color-midpurple);
+  //--color-gradient-inavlink-2-end: var(--color-pink-faded);
+
+  --color-gradient-inavlink-start: var(--color-midpurple);
+  --color-gradient-inavlink-end: var(--color-crystal-purple-base);
 }
 
 // Re-setting root to assign correct values to gradients (& other composed values if needed)
 .custom-page {
   // Page main gradients
-  --gradient-top-bg: linear-gradient(var(--color-gradient-top-light),var(--color-main-bg) 65%);
+  --gradient-top-bg: linear-gradient(var(--color-gradient-top-light), var(--color-main-bg) 65%);
 
   // Logo and SVGs gradients
   --gradient-logo-left: linear-gradient(to right, var(--color-logo-left-light), var(--color-logo-left-deep));
@@ -125,10 +151,12 @@
   --gradient-main-border-2: linear-gradient(150deg, var(--color-main-border-2-gradient-light), var(--color-main-border-2-gradient-deep) 15% 85%, var(--color-main-border-2-gradient-light));
 
   // Links
-  --gradient-inavlink-r-1: linear-gradient(to right, var(--color-main-bg),var(--color-gradient-inavlink-1-mid) 40%, var(--color-gradient-inavlink-1-end));
-  --gradient-inavlink-r-2: linear-gradient(to right, var(--color-main-bg),var(--color-gradient-inavlink-2-mid) 40%, var(--color-gradient-inavlink-2-end));
-  --gradient-inavlink-l-1: linear-gradient(to left, var(--color-main-bg),var(--color-gradient-inavlink-1-mid) 40%, var(--color-gradient-inavlink-1-end));
-  --gradient-inavlink-l-2: linear-gradient(to left, var(--color-main-bg),var(--color-gradient-inavlink-2-mid) 40%, var(--color-gradient-inavlink-2-end));
+  //--gradient-inavlink-r-1: linear-gradient(to right, var(--color-main-bg), var(--color-gradient-inavlink-1-mid) 40%, var(--color-gradient-inavlink-1-end));
+  //--gradient-inavlink-l-1: linear-gradient(to left, var(--color-main-bg), var(--color-gradient-inavlink-1-mid) 40%, var(--color-gradient-inavlink-1-end));
+  //--gradient-inavlink-l-2: linear-gradient(to left, var(--color-main-bg), var(--color-gradient-inavlink-2-mid) 40%, var(--color-gradient-inavlink-2-end));
+  //--gradient-inavlink-r-2: linear-gradient(to right, var(--color-main-bg), var(--color-gradient-inavlink-2-mid) 40%, var(--color-gradient-inavlink-2-end));
+  --gradient-inavlink-r: linear-gradient(to right, var(--color-gradient-inavlink-start) 0% 70%, var(--color-gradient-inavlink-1-end));
+  --gradient-inavlink-l: linear-gradient(to left, var(--color-gradient-inavlink-start) 0% 70%, var(--color-gradient-inavlink-1-end));
 
   --gradient-projects-link-1: linear-gradient(to right, var(--color-projects-link-1-light), var(--color-projects-link-1-deep) 90%);
   --gradient-projects-link-2: linear-gradient(to right, var(--color-projects-link-2-light), var(--color-projects-link-2-deep) 90%);

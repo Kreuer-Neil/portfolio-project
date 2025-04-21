@@ -3,6 +3,9 @@
   color: var(--color-main-text);
   font-family: "Poppins Medium", sans-serif;
 
+  background-image: url("../svg/bg-crystals.svg");
+  background-repeat: repeat-y;
+
   // Bidouillage pour permettre à presque n'importe quoi
   // d'apparaître malgré un Z-index -1, y
   // compris le dégradé de haut de page
@@ -41,6 +44,10 @@ section, article {
   gap: var(--number-padding-little);
 }
 
+article h2, article h3, article h4 {
+  font-size: var(--number-fsize-card);
+}
+
 .custom-page main {
   display: flex;
   flex-direction: column;
@@ -50,11 +57,17 @@ section, article {
 /* Solution avec un :before en absolute, avec un z-index et un bg-image. Fond non transparent.
  * Avantages : Plutôt court et pas "trop" de bidouillages.
  */
-.neon-box {
+.neon-card {
   background-color: var(--color-main-bg);
   position: relative;
   //padding: calc(var(--number-card-main-width) * 2);
   border-radius: calc(var(--number-card-main-radius) - (var(--number-card-main-stroke-width)));
+  margin: var(--number-card-main-stroke-width);
+
+  & h2, & h3 {
+    font-size: var(--number-card-title-fsize);
+    text-align: center;
+  }
 
   &::before {
     border-radius: var(--number-card-main-radius);
@@ -80,11 +93,11 @@ section, article {
   justify-content: center;
   align-items: center;
   gap: var(--number-padding-medium);
-  margin: var(--number-padding-simple) var(--number-padding-medium);
+  //margin: var(--number-padding-simple) var(--number-padding-medium);
 
   transition: gap 200ms var(--anim-inavlink-hover);
   transition-timing-function: var(--anim-inavlink-hover);
-  background-image: var(--gradient-inavlink-l-1);
+  background-image: var(--gradient-inavlink-l);
   min-height: var(--number-padding-heavy);
   border-radius: var(--number-padding-double);
   cursor: pointer;
@@ -92,10 +105,22 @@ section, article {
   color: var(--color-main-text);
   font-family: "Poppins SemiBold Italic", sans-serif bold italic;
   text-decoration: none;
-  width: min(90vw, 27rem);
+  //text-align: center;
+  width: 27rem;
+  max-width: var(--number-maxw-button);
+  margin: 0 var(--number-padding-simple);
 
   &:hover {
-    gap: var(--number-padding-semi-heavy);
+    gap: var(--number-padding-semiheavy);
+  }
+
+  & div {
+    display: flex;
+
+    &::before {
+      flex-grow: 1;
+      background-image: var(--gradient-inavlink-l);
+    }
   }
 
   &--left::before {
@@ -119,8 +144,9 @@ section, article {
   }
 
   &--right {
+    // Peut-être ou pas faire alignement sur le côté
     text-align: right;
-    background-image: var(--gradient-inavlink-r-2);
+    background-image: var(--gradient-inavlink-r);
   }
 }
 
@@ -131,89 +157,3 @@ section, article {
 /*
  * Specific style. Remove from here pls.
  */
-
-.home-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--number-padding-mini);
-  margin: var(--number-padding-heavy) var(--number-padding-medium);
-
-  font-size: var(--number-card-title-fsize);
-  font-family: "Ubuntu Mono", code, sans-serif;
-
-  &__logo {
-    background-color: var(--color-darkblue);
-    border: var(--number-padding-small) solid var(--color-darkblue-light);
-  }
-}
-
-.projects {
-  &__container {
-    display: grid;
-    //gap: var(--number-padding-double);
-    line-height: 0;
-    align-content: space-evenly;
-    grid-template-columns: repeat(1fr);
-    padding: var(--number-padding-simple) var(--number-padding-medium);
-    width: calc(100% - (var(--number-padding-medium) * 2));
-
-    &--suggest {
-      //scroll-snap-type: x mandatory;
-      align-content: start;
-      justify-content: start;
-      grid-auto-flow: column;
-      overflow-x: scroll;
-    }
-  }
-
-  &__item {
-    @extend .neon-box;
-    display: flex;
-    flex-direction: column;
-    gap: var(--number-padding-mini);
-    text-align: center;
-    width: 25rem;
-    max-width: 85vw;
-    // width: 85vw;
-    position: relative;
-    margin: calc(var(--number-padding-small) + var(--number-card-main-stroke-width));
-    //scroll-snap-align: start;
-
-    & > * {
-      line-height: normal;
-    }
-
-    &__title {
-      padding-top: var(--number-padding-small);
-      font-size: var(--number-card-title-fsize);
-      font-family: sans-serif;
-    }
-
-    &__link {
-      @extend .inavlink;
-      @extend .inavlink--right;
-      margin: 0 var(--number-padding-mini) 0 0;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      min-height: var(--number-card-main-radius);
-      text-decoration: underline;
-
-      background-image: var(--gradient-projects-link-1);
-      padding: var(--number-padding-little);
-      border-radius: var(--number-padding-mini) var(--number-padding-mini) var(--number-card-inner-radius) var(--number-card-inner-radius);
-    }
-
-    &__img {
-      border-radius: 0 0 var(--number-card-inner-radius) var(--number-card-inner-radius);
-      overflow: hidden;
-      width: 100%;
-      height: auto;
-    }
-
-    &:nth-child(2n) .projects__item__link {
-      background-image: var(--gradient-projects-link-2);
-    }
-  }
-}

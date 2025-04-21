@@ -1,0 +1,47 @@
+@use "general" as g;
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--number-padding-mini);
+  margin: var(--number-padding-heavy) var(--number-padding-medium);
+
+  font-size: var(--number-card-title-fsize);
+  font-family: "Ubuntu Mono", code, sans-serif;
+
+  &__logo {
+    background-color: var(--color-logo-bg);
+    border: var(--number-padding-small) solid var(--color-logo-border);
+  }
+}
+
+.about {
+  &__content {
+    margin: 0 var(--number-padding-simple) var(--number-padding-double);
+    max-width: 40rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-auto-flow: dense;
+    justify-content: space-between;
+    gap: var(--number-padding-double) var(--number-padding-medium);
+    margin: var(--number-padding-double) var(--number-padding-simple);
+    max-width: var(--number-screen-max);
+
+    @media (min-width: 750px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    @extend .neon-card;
+    height: fit-content;
+
+    padding: var(--number-padding-medium);
+    display: flex;
+    flex-direction: column;
+    gap: var(--number-padding-simple);
+  }
+}

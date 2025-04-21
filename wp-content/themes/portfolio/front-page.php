@@ -36,41 +36,34 @@ $recent_projects = new WP_Query([
             Développeur Web
         </h2>
         <?php // TODO import SVG with it's frame (composed SVG tier 2) ?>
-        <p class="about__content--short">
+        <p class="about__content">
             <?php /* <?= get_field('short_bio_content'); */ ?>
-            Bienvenue sur mon portfolio ! Bien qu’il soit fait en Wordpress (principalement pour des raisons de
-            contraintes scolaires), ce site est bien mon portfolio officiel ! Mon nom est Neil Kreuer, Dev Web bientôt
+            Bienvenue sur mon portfolio&nbsp;! Bien qu’il soit fait en Wordpress (principalement pour des raisons de
+            contraintes scolaires), ce site est bien mon portfolio officiel&nbsp;! Mon nom est Neil Kreuer, Dev Web bientôt
             en fin d’apprentissage à la Haute École de la Province de Liège.
         </p>
         <label for="about-me"
                class="about__inavlink inavlink inavlink--right" title="Afficher ma bio">
             <span class="inavlink__text">Plus <span class="inavlink__text--underlined">à propos de moi</span></span>
         </label>
-        <div>
+        <div class="about__container">
             <input type="checkbox"
                    id="about-me" class="hidden-checkbox"> <?php // TODO Mettre en place le truc de faire apparaître la bio du portfolio ?>
-            <article class="about__container about__container--dev">
-                <h3 class="about__title about__title--dev">Plutôt “dev” que “designer” web</h3>
-                <p class="about__content about__content--dev">Je suis un web dev, plutôt intéressé par l’UX et le
+            <article class="about__item">
+                <h3 class="about__title">Plutôt “dev” que “designer” web</h3>
+                <p class="about__content">Je suis un web dev, plutôt intéressé par l’UX et le
                     back-end
                     (php), assez fan de l’utilisation de Laravel, et surtout LiveWire en ce qui concerne la création de
                     web-app. Je prends pas mal de plaisir à travailler en équipe sur les projets et échanger sur la
                     meilleure méthode à appliquer, et trouve cet aspect relativement important.
                     Honnêtement, le design, ce n’est pas vraiment mon point fort lorsqu’il s’agit de les créer de 0,
                     mais je me débrouille en CSS. J’ai un faible pour TailwindCSS, qui est rapide et efficace pour rapidement
-                    mettre
-                    en forme un site web, ne lui trouvant comme seul défaut qu’il utilise JS pour fonctionner, son
-                    surplus de classes facilement compensé par la possibilité d’empiler les règles sous des classes customisées
-                    dans les fichiers de config, comme du simple CSS amélioré.
-                    En ce qui concerne l’utilisation de JavaScript (à l’aide de TypeScript afin d’avoir quelque chose de
-                    bien plus propre), j’apprécie beaucoup m’en servir, entre autres afin de faire des Single Page App, mais
-                    aussi dans le but de faire des animations et petites fonctionnalités que HTML et CSS ne permettraient pas de faire. Quelques points importants pour moi lorsque je code sont de me retrouver avec un rendu HTML un minimum correct et propre dans la vue finale, que les sites soient entièrement accessible pour un maximum de personnes, ce qui inclut qu’un maximum de features soient fonctionnelles sans JS si possible, et de
-                    pouvoir compter sur l’entraide entre collègues pour avancer et s’améliorer bien plus rapidement.</p>
+                    mettre</p>
             </article>
-            <article class="about__container about__container--more">
+            <article class="about__item">
                 <?php /* <h2 class="about__title--specs"><?= get_field('specialities_title') ?></h2>
                     <p class="about__content--specs"><?= get_field('specialities_content')?></p> */ ?>
-                <h3 class="about__title about__title--more">Que dire de plus à propos de moi ?</h3>
+                <h3 class="about__title">Que dire de plus à propos de moi ?</h3>
                 <p>Je pourrais mentionner ici que j’ai un relativement bon niveau de français, et que je parle également
                     relativement bien l’allemand et l’anglais, et que j’ai également un CESS (Certificat d’Études
                     Secondaires Supérieures) avec spécialisation en techniques d’infographie.
@@ -84,10 +77,10 @@ $recent_projects = new WP_Query([
                     style
                     de narration me convenant.</p>
             </article>
-            <article class="about__container">
+            <article class="about__item">
                 <?php /* <h2 class="about__title--specs"><?= get_field('specialities_title') ?></h2>
                     <p class="about__content--specs"><?= get_field('specialities_content')?></p> */ ?>
-                <h3 class="about__title">L’accessibilité, plus qu'une simple formalité</h3>
+                <h3 class="about__title">L’accessibilité, pas qu'une formalité</h3>
                 <p>Je valorise fortement l’accessibilité. Les contrastes, le principe d’affordance, mais aussi les
                     attributs Aria, tableaux avec scopes, attributs alt et title, éléments en Screen Reader Only, … font
                     partie de mon vocabulaire courant.
@@ -97,8 +90,8 @@ $recent_projects = new WP_Query([
                     uniquement, ou même accédant au web par un appareil mobile.</p>
             </article>
         </div>
-        <a href="" class="about__inavlink inavlink inavlink--right"><span class="inavlink__text">Pour voir <span
-                        class="inavlink__text--underlined">tous mes projets, <br/>c’est par ici&nbsp;!</span></span></a>
+        <a href="<?= get_posts_nav_link('projects')?>" class="about__inavlink inavlink inavlink--right"><div class="inavlink__bg"></div><span class="inavlink__text">Voir <span
+                        class="inavlink__text--underlined">tous mes projets</span></span></a>
     </section>
 
     <section class="projects" id="projects">
@@ -109,7 +102,7 @@ $recent_projects = new WP_Query([
                 <article class="projects__item">
                     <?php $image = get_field('project_thumbnail'); ?>
                     <h3 class="projects__item__title"><?= get_the_title(); ?></h3>
-                    <a class="projects__item__link" href="<?= get_page_link() ?>">Vers le projet</a>
+                    <a class="projects__item__link" href="<?= get_page_link() ?>">Voir le projet</a>
                     <?= get_the_post_thumbnail(size: 'thumbnail', attr: ['width' => '370', 'height' => '209', 'class' => 'projects__item__img']); ?>
                 </article>
             <?php endwhile; endif; ?>
