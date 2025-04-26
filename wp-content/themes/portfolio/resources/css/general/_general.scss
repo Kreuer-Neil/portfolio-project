@@ -1,10 +1,7 @@
 .custom-page {
   background-color: var(--color-main-bg);
   color: var(--color-main-text);
-  font-family: "Poppins Medium", sans-serif;
-
-  background-image: url("../svg/bg-crystals.svg");
-  background-repeat: repeat-y;
+  font-family: "Poppins", sans-serif;
 
   // Bidouillage pour permettre à presque n'importe quoi
   // d'apparaître malgré un Z-index -1, y
@@ -22,6 +19,11 @@
     right: 0;
     background-image: var(--gradient-top-bg);
     z-index: -2;
+  }
+
+  & main {
+    background-image: url("../svg/bg-crystals.svg");
+    background-repeat: repeat-y;
   }
 }
 
@@ -103,7 +105,7 @@ article h2, article h3, article h4 {
   cursor: pointer;
 
   color: var(--color-main-text);
-  font-family: "Poppins SemiBold Italic", sans-serif bold italic;
+  font-family: "Poppins SemiBold Italic", sans-serif;
   text-decoration: none;
   //text-align: center;
   width: 27rem;
