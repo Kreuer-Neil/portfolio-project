@@ -43,8 +43,8 @@ $recent_projects = new WP_Query([
             en fin d’apprentissage à la Haute École de la Province de Liège.
         </p>
         <label for="about-me"
-               class="about__inavlink inavlink inavlink--right" title="Afficher ma bio">
-            <span class="inavlink__text">Plus <span class="inavlink__text--underlined">à propos de moi</span></span>
+               class="about__button" title="Afficher ma bio">
+            Plus à propos de moi
         </label>
         <div class="about__container">
             <input type="checkbox"

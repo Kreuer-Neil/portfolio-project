@@ -6,7 +6,6 @@
   // Bidouillage pour permettre à presque n'importe quoi
   // d'apparaître malgré un Z-index -1, y
   // compris le dégradé de haut de page
-  z-index: -3;
 
   // gradient top bg
   &::before {
@@ -18,12 +17,23 @@
     left: 0;
     right: 0;
     background-image: var(--gradient-top-bg);
-    z-index: -2;
+    z-index: -3;
   }
 
   & main {
-    background-image: url("../svg/bg-crystals.svg");
-    background-repeat: repeat-y;
+    position: relative;
+    overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 999rem;
+    z-index: -3;
+
+    background: url("../svg/bg-crystals.svg") repeat-y center top;
+  }
   }
 }
 

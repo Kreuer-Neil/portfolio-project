@@ -17,6 +17,9 @@
 }
 
 .about {
+  &__button {
+    tab-index: 0;
+  }
   &__content {
     margin: 0 var(--number-padding-simple) var(--number-padding-double);
     max-width: 40rem;
