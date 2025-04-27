@@ -15,6 +15,7 @@ wp-content/*
 !wp-content/themes/portfolio
 !wp-content/themes/portfolio/*
 !wp-content/themes/portfolio/**/*
+wp-content/themes/portfolio/public/assets
 
 !wp-content/uploads
 !wp-content/uploads/*
