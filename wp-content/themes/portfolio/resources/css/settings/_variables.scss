@@ -73,7 +73,9 @@
   --number-max-container-width: 90rem;
   --number-max-container-width-extended: 120rem;
   --number-max-text-width: 45rem;
+  --number-max-button-w: 32.5rem;
   --number-projects-max-container-width: 76rem;
+
 
   // Paddings
   --number-padding-little: .125rem; // 2px
@@ -92,8 +94,6 @@
   // Auto gaps
   --number-gap-sections: 1.5rem;
 
-  --number-maxw-button: 32.5;
-
   // Card radius & else
   --number-card-main-radius: 2rem; // 32px
   --number-card-inner-radius: 1.75rem; // 28 rem
@@ -102,6 +102,10 @@
   --number-card-project-title-fsize: 2rem;
 
   --number-inavlink-height: var(--number-padding-heavy);
+
+  //* URLs
+  --url-arrow-l: url("../svg/arrow-l.svg");
+  --url-arrow-r: url("../svg/arrow-r.svg");
 
   //* Animations
   --anim-inavlink-hover: cubic-bezier(0, 0.58, .58, 2);

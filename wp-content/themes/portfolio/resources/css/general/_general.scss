@@ -116,9 +116,8 @@ article h2, article h3, article h4 {
   color: var(--color-main-text);
   font-family: "Poppins SemiBold Italic", sans-serif;
   text-decoration: none;
-  //text-align: center;
-  width: 27rem;
-  max-width: var(--number-maxw-button);
+  align-self: stretch;
+  max-width: var(--number-max-button-w);
   margin: 0 var(--number-padding-simple);
 
   &:hover {
@@ -146,6 +145,7 @@ article h2, article h3, article h4 {
 
   &--right {
     flex-direction: row-reverse;
+    margin-right: calc(var(--number-padding-simple) + 5rem);
     &::before {
       background-image: var(--url-arrow-r);
     }
@@ -153,7 +153,9 @@ article h2, article h3, article h4 {
       right: -5rem;
     }
   }
-  &--left::after {
+  &--left {
+    margin-left: calc(var(--number-padding-simple) + 5rem);
+  &::after {
     left: -5rem;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -161,6 +163,7 @@ article h2, article h3, article h4 {
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
+  }
   }
 
   &__text {
