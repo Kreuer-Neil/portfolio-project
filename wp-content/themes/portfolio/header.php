@@ -17,7 +17,7 @@
 <body class="custom-page dark">
 
 <header>
-    <h1 class="sro"><?= get_the_title(); ?></h1>
+    <?php /* <h1 class="sro"><?= get_the_title(); ?></h1> */ ?>
     <?php /*
     <nav class="main-nav" id="main-nav">
         <h2 class="sro">Menu de navigation principale</h2>

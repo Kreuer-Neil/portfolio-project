@@ -1,12 +1,12 @@
-@font-face {
+/*@font-face {
   font-family: "Poppins Medium";
   src: local("Poppins-Medium"),
 url("../fonts/Poppins-Medium.otf") format("opentype");
-}
+}*/
 @font-face {
-  font-family: "Poppins Medium";
-  src: local("Poppins-Medium"),
-url("../fonts/Poppins-Medium.otf") format("opentype");
+  font-family: "Poppins";
+  src: local("Poppins-Regular"),
+url("../fonts/Poppins-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Poppins SemiBold Italic";

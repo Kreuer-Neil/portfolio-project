@@ -60,17 +60,20 @@
 
 
   // Gradients colors
-  --color-main-border-1-gradient-light: #fff;
-  --color-main-border-1-gradient-deep: #fff;
+  --color-main-purple-gradient-light: #fff;
+  --color-main-border-purple-gradient-deep: #fff;
 
-  --color-main-border-2-gradient-light: #fff;
-  --color-main-border-2-gradient-deep: #fff;
+  --color-main-orange-gradient-light: #fff;
+  --color-main-orange-gradient-deep: #fff;
 
   --color-gradient-top-light: var(--color-lightpink);
 
   //* Numbers
-
-  --number-screen-max: 62rem;
+  // maximums
+  --number-max-container-width: 90rem;
+  --number-max-container-width-extended: 120rem;
+  --number-max-text-width: 45rem;
+  --number-projects-max-container-width: 76rem;
 
   // Paddings
   --number-padding-little: .125rem; // 2px
@@ -116,11 +119,11 @@
   --color-logo-border: var(--color-darkpurple);
 
   // Gradients colors
-  --color-main-border-1-gradient-light: var(--color-gradient-purple-light);
-  --color-main-border-1-gradient-deep: var(--color-gradient-purple-deep);
+  --color-main-purple-gradient-light: var(--color-gradient-purple-light);
+  --color-main-purple-gradient-deep: var(--color-gradient-purple-deep);
 
-  --color-main-border-2-gradient-light: var(--color-gradient-orange-light);
-  --color-main-border-2-gradient-deep: var(--color-gradient-orange-deep);
+  --color-main-orange-gradient-light: var(--color-gradient-orange-light);
+  --color-main-orange-gradient-deep: var(--color-gradient-orange-deep);
 
   --color-projects-link-1-light: #A516FA66;
   --color-projects-link-1-deep: #A46C31CC;
@@ -147,16 +150,16 @@
   --gradient-logo-right: linear-gradient(to left, var(--color-logo-right-light), var(--color-logo-right-deep));
 
   // Box borders
-  --gradient-main-border-1: linear-gradient(30deg, var(--color-main-border-1-gradient-light), var(--color-main-border-1-gradient-deep) 15% 85%, var(--color-main-border-1-gradient-light));
-  --gradient-main-border-2: linear-gradient(150deg, var(--color-main-border-2-gradient-light), var(--color-main-border-2-gradient-deep) 15% 85%, var(--color-main-border-2-gradient-light));
+  --gradient-main-border-1: linear-gradient(30deg, var(--color-main-purple-gradient-light),var(--color-main-purple-gradient-deep) 15%, var(--color-main-orange-gradient-deep) 85%, var(--color-main-orange-gradient-light));
+  --gradient-main-border-2: linear-gradient(150deg, var(--color-main-orange-gradient-light), var(--color-main-orange-gradient-deep) 15%, var(--color-main-purple-gradient-deep) 85%, var(--color-main-purple-gradient-light));
 
   // Links
   //--gradient-inavlink-r-1: linear-gradient(to right, var(--color-main-bg), var(--color-gradient-inavlink-1-mid) 40%, var(--color-gradient-inavlink-1-end));
   //--gradient-inavlink-l-1: linear-gradient(to left, var(--color-main-bg), var(--color-gradient-inavlink-1-mid) 40%, var(--color-gradient-inavlink-1-end));
   //--gradient-inavlink-l-2: linear-gradient(to left, var(--color-main-bg), var(--color-gradient-inavlink-2-mid) 40%, var(--color-gradient-inavlink-2-end));
   //--gradient-inavlink-r-2: linear-gradient(to right, var(--color-main-bg), var(--color-gradient-inavlink-2-mid) 40%, var(--color-gradient-inavlink-2-end));
-  --gradient-inavlink-r: linear-gradient(to right, var(--color-gradient-inavlink-start) 0% 70%, var(--color-gradient-inavlink-1-end));
-  --gradient-inavlink-l: linear-gradient(to left, var(--color-gradient-inavlink-start) 0% 70%, var(--color-gradient-inavlink-1-end));
+  --gradient-inavlink-r: linear-gradient(to right, var(--color-gradient-inavlink-start) 0% 70%, var(--color-gradient-inavlink-end));
+  --gradient-inavlink-l: linear-gradient(to left, var(--color-gradient-inavlink-start) 0% 70%, var(--color-gradient-inavlink-end));
 
   --gradient-projects-link-1: linear-gradient(to right, var(--color-projects-link-1-light), var(--color-projects-link-1-deep) 90%);
   --gradient-projects-link-2: linear-gradient(to right, var(--color-projects-link-2-light), var(--color-projects-link-2-deep) 90%);
