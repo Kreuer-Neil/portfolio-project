@@ -23,17 +23,18 @@
   & main {
     position: relative;
     overflow: hidden;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 999rem;
-    z-index: -3;
 
-    background: url("../svg/bg-crystals.svg") repeat-y center top;
-  }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 999rem;
+      z-index: -3;
+
+      background: url("../svg/bg-crystals.svg") repeat-y center top;
+    }
   }
 }
 
@@ -57,7 +58,7 @@ section, article {
 }
 
 article h2, article h3, article h4 {
-  font-size: var(--number-fsize-card);
+  font-size: var(--number-fsize-h2);
 }
 
 .custom-page main {
@@ -101,6 +102,7 @@ article h2, article h3, article h4 {
 }
 
 .inavlink {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,9 +111,7 @@ article h2, article h3, article h4 {
   transition: gap 200ms var(--anim-inavlink-hover);
   transition-timing-function: var(--anim-inavlink-hover);
   background-image: var(--gradient-inavlink-l);
-  min-height: var(--number-padding-heavy);
-  border-radius: var(--number-padding-double);
-  cursor: pointer;
+  min-height: var(--number-inavlink-height);
 
   color: var(--color-main-text);
   font-family: "Poppins SemiBold Italic", sans-serif;
@@ -125,33 +125,49 @@ article h2, article h3, article h4 {
     gap: var(--number-padding-semiheavy);
   }
 
-  & div {
-    display: flex;
-
-    &::before {
-      flex-grow: 1;
-      background-image: var(--gradient-inavlink-l);
-    }
-  }
-
-  &--left::before {
+  &::before {
+    //left = default
     background-image: var(--url-arrow-l);
     content: '';
     width: 2rem;
     height: 2rem;
   }
 
-  &--right::after {
-    background-image: var(--url-arrow-r);
+  // image
+  &::after {
     content: '';
-    width: 2rem;
-    height: 2rem;
+    position: absolute;
+    //left: -5rem;
+    background: left no-repeat url("../svg/link-crystal.svg");
+    padding:0 0 0 5rem;
+    height: var(--number-inavlink-height);
+    width: 0;
+  }
+
+  &--right {
+    flex-direction: row-reverse;
+    &::before {
+      background-image: var(--url-arrow-r);
+    }
+    &::after {
+      right: -5rem;
+    }
+  }
+  &--left::after {
+    left: -5rem;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
   }
 
   &__text {
     &--underlined {
       text-decoration: underline;
     }
+
   }
 
   &--right {

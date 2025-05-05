@@ -100,8 +100,8 @@
   --number-card-main-stroke-width: .25rem; // 4px
   --number-card-title-fsize: 2rem;
   --number-card-project-title-fsize: 2rem;
-  --url-arrow-l: url("../svg/arrow-l.svg");
-  --url-arrow-r: url("../svg/arrow-r.svg");
+
+  --number-inavlink-height: var(--number-padding-heavy);
 
   //* Animations
   --anim-inavlink-hover: cubic-bezier(0, 0.58, .58, 2);

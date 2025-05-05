@@ -1,28 +1,49 @@
 @use "general" as g;
 
-.home-title {
+.home {
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--number-padding-mini);
-  margin: var(--number-padding-heavy) var(--number-padding-medium);
+  justify-content: space-around;
+  height: 35rem;
+  min-height: max(80vh, fit-content);
 
-  font-size: var(--number-card-title-fsize);
-  font-family: "Ubuntu Mono", code, sans-serif;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--number-padding-mini);
+    margin: var(--number-padding-medium) var(--number-padding-medium) var(--number-padding-heavy) ;
+
+    font-size: var(--number-card-title-fsize);
+    font-family: "Ubuntu Mono", code, sans-serif;
+  }
 
   &__logo {
     background-color: var(--color-logo-bg);
     border: var(--number-padding-small) solid var(--color-logo-border);
+  }
+
+  &__content {
+    margin: 0 var(--number-padding-simple);
+    max-width: var(--number-max-text-width);
+    align-self: center;
+  }
+
+  &__bio {
+    margin: 0 var(--number-padding-simple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--number-padding-simple);
+    max-width: var(--number-max-text-width);
   }
 }
 
 .about {
   &__button {
     tab-index: 0;
-  }
-  &__content {
-    margin: 0 var(--number-padding-simple) var(--number-padding-double);
-    max-width: 40rem;
   }
 
   &__container {
