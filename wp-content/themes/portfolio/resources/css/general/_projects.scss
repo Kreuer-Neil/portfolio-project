@@ -1,4 +1,5 @@
 @use "general" as g;
+
 .projects {
   &__container {
     display: grid;
@@ -20,13 +21,14 @@
 
   &__item {
     @extend .neon-card;
+    text-decoration: none;
+    color: var(--color-main-text);
     display: flex;
     flex-direction: column;
     gap: var(--number-padding-mini);
     text-align: center;
     width: 25rem;
-    max-width: 85vw;
-    // width: 85vw;
+    max-width: min(var(--number-card-max-w), 85vw);
     position: relative;
     margin: var(--number-card-main-stroke-width);
     //scroll-snap-align: start;
@@ -37,24 +39,40 @@
 
     &__title {
       padding-top: var(--number-padding-small);
-      font-size: var(--number-card-title-fsize);
-      font-family: "Montserrat Medium", sans-serif;
     }
 
-    &__link {
-      @extend .inavlink;
-      @extend .inavlink--right;
-      margin: 0 var(--number-padding-mini) 0 0;
+    &__effect {
       min-width: 0;
       position: absolute;
+      left: 0;
       bottom: 0;
       width: 100%;
-      min-height: var(--number-card-main-radius);
-      text-decoration: underline;
+      height: var(--number-card-main-radius);
 
-      background-image: var(--gradient-projects-link-1);
-      padding: var(--number-padding-little);
+      transition: background-position 200ms ease-out;
+      background: top 5rem left 0 no-repeat var(--gradient-projects-link-1);
+      padding: var(--number-padding-small) 0;
       border-radius: var(--number-padding-mini) var(--number-padding-mini) var(--number-card-inner-radius) var(--number-card-inner-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: '';
+        background: repeat-x center var(--url-arrow-r);
+        transition: width 500ms ease-out; //TODO jouer avec les keyframes pour l'anim infinie après
+        width: 0;
+        align-self: stretch;
+      }
+    }
+
+    &:hover .projects__item__effect, &:focus .projects__item__effect {
+      background-position: top 0 left 0;
+
+      &::before {
+        width: 90%;
+        animation: arrowMove 1s linear infinite;
+      }
     }
 
     &__img {
@@ -64,7 +82,7 @@
       height: auto;
     }
 
-    &:nth-child(2n) .projects__item__link {
+    &:nth-child(2n) .projects__item__effect {
       background-image: var(--gradient-projects-link-2);
     }
   }

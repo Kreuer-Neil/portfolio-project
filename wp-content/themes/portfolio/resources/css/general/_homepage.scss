@@ -16,7 +16,7 @@
     gap: var(--number-padding-mini);
     margin: var(--number-padding-medium) var(--number-padding-medium) var(--number-padding-heavy) ;
 
-    font-size: var(--number-card-title-fsize);
+    font-size: var(--number-fsize-subtitle);
     font-family: "Ubuntu Mono", code, sans-serif;
   }
 
@@ -43,16 +43,18 @@
 
 .about {
   &__button {
-    tab-index: 0;
+    cursor: pointer;
   }
 
   &__container {
-    display: grid;
-    grid-auto-flow: dense;
-    justify-content: space-between;
-    gap: var(--number-padding-double) var(--number-padding-medium);
-    margin: var(--number-padding-double) var(--number-padding-simple);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
     max-width: var(--number-max-container-width);
+    padding: var(--number-padding-heavy) var(--number-padding-simple);
+    gap: var(--number-padding-simple);
 
     @media (min-width: 750px) {
       grid-template-columns: 1fr 1fr;
@@ -60,12 +62,20 @@
   }
 
   &__item {
-    @extend .neon-card;
-    height: fit-content;
+    position: relative;
+    padding: var(--number-padding-small);
+    border-radius: var(--number-padding-medium);
+    max-width: var(--number-tools-max-item-width);
+    min-width: var(--number-tools-min-item-width);
+    margin-top: var(--number-padding-heavy);
+    background-color: var(--color-about-item-bg);
 
-    padding: var(--number-padding-medium);
-    display: flex;
-    flex-direction: column;
-    gap: var(--number-padding-simple);
+    &__logo {
+      z-index: -1;
+      position: absolute;
+      top: calc(-1 * (var(--number-padding-heavy)));
+      width: var(--number-about-logo-size);
+      height: var(--number-about-logo-size);
+    }
   }
 }

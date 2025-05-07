@@ -38,17 +38,17 @@ $recent_projects = new WP_Query([
     <?php // TODO import SVG with it's frame (composed SVG tier 2) ?>
     <p class="home__content">
         <?php /* <?= get_field('short_bio_content'); */ ?>
-        Bienvenue sur mon portfolio&nbsp;! Mon nom est Neil Kreuer, et bien qu’il soit fait en Wordpress (principalement pour des raisons de contraintes scolaires), ce site est bel et bien mon portfolio officiel&nbsp;! Et je suis un jeune Dev Web bientôt en fin d’apprentissage à la Haute École de la Province de Liège.
+        Bienvenue sur mon portfolio&nbsp;! Mon nom est Neil Kreuer, et bien qu’il soit fait en Wordpress (principalement pour des raisons de contraintes scolaires), ce site est bel et bien mon portfolio officiel&nbsp;! Je suis un jeune Dev Web bientôt en fin d’apprentissage à la Haute École de la Province de Liège.
     </p>
     <article class="home__bio">
         <h2 class="home__bio__title">Mon parcours</h2>
-        <p class="home__bio__text">En 2016, à 12 ans, j'ai rejoint l'institut St Joseph de Welkenraedt, et y ai passé mes études secondaires, jusqu'à l'an de grâce 2020, année covid. La situation me fit réaliser que j'avais envie de changement, ce qui me poussa à partir afin d'étudier l'infographie à l'Athénée Royale de Welkenraedt. J'en suis sorti avec le CESS et une qualification en techniques d'infographie, et ai tout de suite approfondi mes études dans ce domaine à la HEPL. C'est là que je découvris ma voie&nbsp;: Web Dev.</p>
+        <p class="home__bio__text">En 2016, j'ai rejoint l'institut St Joseph de Welkenraedt, et y ai passé mes études secondaires, jusqu'à l'an de grâce 2020, année Covid 19. La situation me fit réaliser que j'avais envie de changement, ce qui me poussa à partir afin d'étudier l'infographie à l'Athénée Royale de Welkenraedt. J'en suis sorti avec le <abbr title="Certificat d’Études Secondaires Supérieures">CESS</abbr> et une qualification en techniques d'infographie, et ai tout de suite approfondi mes études dans ce domaine à la HEPL. C'est là que je découvris ma voie&nbsp;: Web Dev.</p>
     </article>
 </div>
 
 <section class="about" id="about">
     <label for="about-me"
-           class="about__button" title="Afficher mes outils">
+           class="about__button" title="Afficher mes outils" tabindex="0">
         <h2>
             Mes outils
         </h2>
@@ -61,6 +61,7 @@ $recent_projects = new WP_Query([
             <h3 class="about__title">Plutôt “dev” que “designer” web</h3>
             <p class="about__content">Je suis un dev plutôt axé back-end, qui sait assez bien visualiser en avance les
                 possibilités avec le code, avec des idées en design manquant d’organisation.</p>
+            <img class="about__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>" width="128px" height="128px">
         </article>
         <article class="about__item">
             <?php /* <h2 class="about__title--specs"><?= get_field('specialities_title') ?></h2>
@@ -70,6 +71,7 @@ $recent_projects = new WP_Query([
                 tellement de fonctionnalités que même mes SVG se font par là. Ses composants, variables et différents
                 modes permettent de simuler presque entièrement tout le comportement d’une web app.
                 <br>Par ailleurs, c’est Figma qui m’aide à préparer mon CSS, grâce à son organisation similaire.</p>
+            <img class="about__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>" width="128px" height="128px">
         </article>
         <article class="about__item">
             <?php /* <h2 class="about__title--specs"><?= get_field('specialities_title') ?></h2>
@@ -77,6 +79,7 @@ $recent_projects = new WP_Query([
             <h3 class="about__title">Laravel/Livewire</h3>
             <p>Ma meilleure expérience de création de webapp avec du PHP restera via le framework Laravel, voir même
                 LiveWire. Le gain de temps titanesque que représente l’utilisation de ces frameworks est incroyable.</p>
+            <img class="about__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>" width="128px" height="128px">
         </article>
     </div>
     <a href="<?= get_posts_nav_link('projects') ?>" class="inavlink inavlink--right">
@@ -91,12 +94,14 @@ $recent_projects = new WP_Query([
 
     <div class="projects__container projects__container--suggest">
         <?php if ($recent_projects->have_posts()): while ($recent_projects->have_posts()): $recent_projects->the_post(); ?>
-            <article class="projects__item">
+    <a class="projects__item" href="<?= get_page_link() ?>">
+            <article class="projects__item__article">
                 <?php $image = get_field('project_thumbnail'); ?>
                 <h3 class="projects__item__title"><?= get_the_title(); ?></h3>
-                <a class="projects__item__link" href="<?= get_page_link() ?>">Voir le projet</a>
+                <div class="projects__item__effect"></div>
                 <?= get_the_post_thumbnail(size: 'thumbnail', attr: ['width' => '370', 'height' => '209', 'class' => 'projects__item__img']); ?>
             </article>
+    </a>
         <?php endwhile; endif; ?>
     </div>
 </section>

@@ -40,25 +40,19 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat Medium", sans-serif;
+  font-size: var(--number-fsize-subtitle);
+  text-align: center;
 }
 
 h1 {
   font-size: var(--number-fsize-title);
 }
 
-h2 {
-  font-size: var(--number-fsize-h2);
-}
-
 section, article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--number-padding-little);
-}
-
-article h2, article h3, article h4 {
-  font-size: var(--number-fsize-h2);
+  gap: var(--number-padding-simple);
 }
 
 .custom-page main {
@@ -71,16 +65,11 @@ article h2, article h3, article h4 {
  * Avantages : Plutôt court et pas "trop" de bidouillages.
  */
 .neon-card {
-  background-color: var(--color-main-bg);
+  background-image: var(--gradient-main-bg-1);
   position: relative;
   //padding: calc(var(--number-card-main-width) * 2);
   border-radius: calc(var(--number-card-main-radius) - (var(--number-card-main-stroke-width)));
   margin: var(--number-card-main-stroke-width);
-
-  & h2, & h3 {
-    font-size: var(--number-card-title-fsize);
-    text-align: center;
-  }
 
   &::before {
     border-radius: var(--number-card-main-radius);
@@ -96,8 +85,11 @@ article h2, article h3, article h4 {
 
   }
 
-  &:nth-child(2n)::before {
+  &:nth-child(2n) {
+    background-image: var(--gradient-main-bg-2);
+  &::before {
     background-image: var(--gradient-main-border-2);
+  }
   }
 }
 
@@ -116,7 +108,8 @@ article h2, article h3, article h4 {
   color: var(--color-main-text);
   font-family: "Poppins SemiBold Italic", sans-serif;
   text-decoration: none;
-  align-self: stretch;
+  align-self: stretch; //TODO fix car empêche pos. center
+  //width: 100%;
   max-width: var(--number-max-button-w);
   margin: 0 var(--number-padding-simple);
 
@@ -138,7 +131,7 @@ article h2, article h3, article h4 {
     position: absolute;
     //left: -5rem;
     background: left no-repeat url("../svg/link-crystal.svg");
-    padding:0 0 0 5rem;
+    padding: 0 0 0 5rem;
     height: var(--number-inavlink-height);
     width: 0;
   }
@@ -146,6 +139,7 @@ article h2, article h3, article h4 {
   &--right {
     flex-direction: row-reverse;
     margin-right: calc(var(--number-padding-simple) + 5rem);
+
     &::before {
       background-image: var(--url-arrow-r);
     }
@@ -153,17 +147,19 @@ article h2, article h3, article h4 {
       right: -5rem;
     }
   }
+
   &--left {
     margin-left: calc(var(--number-padding-simple) + 5rem);
-  &::after {
-    left: -5rem;
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
-  }
+
+    &::after {
+      left: -5rem;
+      /*-moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);*/
+      transform: scaleX(-1);
+      /*filter: FlipH;
+      -ms-filter: "FlipH";*/
+    }
   }
 
   &__text {
