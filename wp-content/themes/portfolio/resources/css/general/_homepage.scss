@@ -1,4 +1,4 @@
-@use "general" as g;
+@use "../settings/breakpoints" as b;
 
 .home {
 
@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--number-padding-mini);
-    margin: var(--number-padding-medium) var(--number-padding-medium) var(--number-padding-heavy);
+    margin: var(--number-padding-medium);
 
     font-size: var(--number-fsize-subtitle);
     font-family: "Ubuntu Mono", code, sans-serif;
@@ -59,10 +59,7 @@
             var(--number-padding-simple);
     overflow: visible;
 
-    transition: height .5s ease-out;
-
-    @media (min-width: 750px) {
-    }
+    transition: height .5s ease-in;
 
     &:has(#about-me:checked) {
       gap: var(--number-padding-simple);
@@ -110,5 +107,23 @@
       width: var(--number-about-logo-size);
       height: var(--number-about-logo-size);
     }
+  }
+}
+
+#contact {
+  width: 100%;
+  display: grid;
+  gap: var(--number-padding-simple);
+
+  @include b.lg {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  & .links__ {
+
+  }
+
+  & .contact {
+    padding: 0 var(--number-padding-simple);
   }
 }
