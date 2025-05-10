@@ -68,7 +68,7 @@ $tools = new WP_Query([
     <div class="about__container">
         <input type="checkbox"
                id="about-me"
-               class="hidden-checkbox"> <?php // TODO Mettre en place le truc de faire apparaître la bio du portfolio ?>
+               class="hidden-checkbox"> <?php // TODO Mettre en place le truc de faire apparaître la bio du portfolio avec flex content ? ?>
         <?php // if ($tools->have_posts()): while ($tools->have_posts()): $tools->the_post(); ?>
         <article class="about__item">
             <h3 class="about__title">Plutôt “dev” que “designer” web</h3>
