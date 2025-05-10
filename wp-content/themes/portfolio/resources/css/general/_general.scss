@@ -102,7 +102,7 @@ section, article {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--number-padding-medium);
+  gap: 0;
 
   transition: gap 200ms var(--anim-inavlink-hover);
   transition-timing-function: var(--anim-inavlink-hover);
@@ -117,15 +117,16 @@ section, article {
   padding: 0 0 0 var(--number-crystal-inavlink-size);
 
   &:hover {
-    gap: var(--number-padding-semiheavy);
+    gap: var(--number-padding-medium);
   }
 
   &::before {
     //left = default
-    background-image: var(--url-arrow-l);
+    background: var(--url-arrow-l) no-repeat center;
     content: '';
     width: 2rem;
     height: 2rem;
+    padding: 0 var(--number-padding-small);
   }
 
   // image
@@ -167,6 +168,8 @@ section, article {
   }
 
   &__text {
+    padding: 0 var(--number-padding-small);
+
     &--underlined {
       text-decoration: underline;
     }
