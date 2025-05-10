@@ -7,6 +7,13 @@ $recent_projects = new WP_Query([
     'orderby' => 'date',
     'order' => 'DESC',
 ]);
+$tools = new WP_Query([
+    'post_type' => 'about_tools',
+    'post_status' => 'publish',
+//    'posts_per_page' => 5,
+    'orderby' => 'date',
+    'order' => 'DESC',
+]);
 ?>
 
 <?php get_header(); ?>
@@ -47,22 +54,24 @@ $recent_projects = new WP_Query([
 </div>
 
 <section class="about" id="about">
+        <h2>
     <label for="about-me"
            class="about__button" title="Afficher mes outils" tabindex="0">
-        <h2>
             Mes outils
-        </h2>
     </label>
+        </h2>
     <div class="about__container">
         <input type="checkbox"
                id="about-me"
                class="hidden-checkbox"> <?php // TODO Mettre en place le truc de faire apparaître la bio du portfolio ?>
+        <?php // if ($tools->have_posts()): while ($tools->have_posts()): $tools->the_post(); ?>
         <article class="about__item">
             <h3 class="about__title">Plutôt “dev” que “designer” web</h3>
             <p class="about__content">Je suis un dev plutôt axé back-end, qui sait assez bien visualiser en avance les
                 possibilités avec le code, avec des idées en design manquant d’organisation.</p>
             <img class="about__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>" width="128px" height="128px">
         </article>
+        <?php // endwhile; endif; ?>
         <article class="about__item">
             <?php /* <h2 class="about__title--specs"><?= get_field('specialities_title') ?></h2>
                     <p class="about__content--specs"><?= get_field('specialities_content')?></p> */ ?>
@@ -105,6 +114,7 @@ $recent_projects = new WP_Query([
         <?php endwhile; endif; ?>
     </div>
 </section>
+
 <section class="my-links">
     <h2 class="my-links__title">Mes liens</h2>
     <ul class="my-links__container">

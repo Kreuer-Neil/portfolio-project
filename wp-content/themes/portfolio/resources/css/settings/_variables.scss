@@ -41,9 +41,9 @@
   //* Numbers
   // maximums
   --number-max-container-width: 90rem; //1440px
-  --number-max-container-width-extended: 120rem;
-  --number-max-text-width: 45rem;
-  --number-max-button-w: 32.5rem;
+  --number-max-container-width-extended: 120rem; // 1920px
+  --number-max-text-width: 45rem; //720px
+  --number-max-button-w: 32.5rem; // 520px
   --number-projects-max-container-width: 76rem;
   --number-tools-max-item-width: 25.25rem; // 420px - 2*8px (padding)
   --number-tools-min-item-width: 17.75rem; // 300px - 2*8px (padding)
@@ -72,6 +72,9 @@
 
   --number-inavlink-height: var(--number-padding-heavy);
   --number-about-logo-size: 8rem; // 128px
+
+  --number-crystal-inavlink-size: 4.5rem;
+  --number-crystal-about-aspect-ratio: 201/53;
 
   //* URLs
   --url-arrow-l: url("../svg/arrow-l.svg");

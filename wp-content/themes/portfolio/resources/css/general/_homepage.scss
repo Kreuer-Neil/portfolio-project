@@ -6,15 +6,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 35rem;
-  min-height: max(80vh, fit-content);
+  gap: var(--number-padding-simple);
+  min-height: max(80vh, 100%);
 
   &__title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--number-padding-mini);
-    margin: var(--number-padding-medium) var(--number-padding-medium) var(--number-padding-heavy) ;
+    margin: var(--number-padding-medium) var(--number-padding-medium) var(--number-padding-heavy);
 
     font-size: var(--number-fsize-subtitle);
     font-family: "Ubuntu Mono", code, sans-serif;
@@ -48,20 +48,53 @@
 
   &__container {
     display: flex;
+    align-self: stretch;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
+    gap: 0;
     max-width: var(--number-max-container-width);
-    padding: var(--number-padding-heavy) var(--number-padding-simple);
-    gap: var(--number-padding-simple);
+    padding: /*var(--number-padding-heavy)*/
+            var(--number-padding-simple);
+    overflow: visible;
+
+    transition: height .5s ease-out;
 
     @media (min-width: 750px) {
-      grid-template-columns: 1fr 1fr;
+    }
+
+    &:has(#about-me:checked) {
+      gap: var(--number-padding-simple);
+
+      & .about__item {
+        display: flex;
+      }
+    }
+
+    &::before, &::after {
+      width: 100vw;
+      overflow: visible;
+      aspect-ratio: var(--number-crystal-about-aspect-ratio);
+      max-width: var(--number-max-container-width-extended);
+      content: '';
+      background-size: cover;
+      z-index: -1;
+    }
+
+    &::before {
+      background: 20% 0 no-repeat url("../svg/crystal-top.svg");
+      margin-bottom: calc(-47% / (var(--number-crystal-about-aspect-ratio)));
+    }
+
+    &::after {
+      background: bottom center no-repeat url("../svg/crystal-bottom.svg");
+      margin-top: calc(-50% / (var(--number-crystal-about-aspect-ratio)));
     }
   }
 
   &__item {
+    display: none;
     position: relative;
     padding: var(--number-padding-small);
     border-radius: var(--number-padding-medium);

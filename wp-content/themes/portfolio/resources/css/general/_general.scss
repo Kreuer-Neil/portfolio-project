@@ -87,9 +87,10 @@ section, article {
 
   &:nth-child(2n) {
     background-image: var(--gradient-main-bg-2);
-  &::before {
-    background-image: var(--gradient-main-border-2);
-  }
+
+    &::before {
+      background-image: var(--gradient-main-border-2);
+    }
   }
 }
 
@@ -102,16 +103,15 @@ section, article {
 
   transition: gap 200ms var(--anim-inavlink-hover);
   transition-timing-function: var(--anim-inavlink-hover);
-  background-image: var(--gradient-inavlink-l);
+  background: var(--number-crystal-inavlink-size) 0 no-repeat var(--gradient-inavlink-l);
   min-height: var(--number-inavlink-height);
 
   color: var(--color-main-text);
   font-family: "Poppins SemiBold Italic", sans-serif;
   text-decoration: none;
-  align-self: stretch; //TODO fix car empêche pos. center
-  //width: 100%;
-  max-width: var(--number-max-button-w);
+  width: var(--number-max-button-w);
   margin: 0 var(--number-padding-simple);
+  padding: 0 0 0 var(--number-crystal-inavlink-size);
 
   &:hover {
     gap: var(--number-padding-semiheavy);
@@ -129,30 +129,31 @@ section, article {
   &::after {
     content: '';
     position: absolute;
-    //left: -5rem;
     background: left no-repeat url("../svg/link-crystal.svg");
-    padding: 0 0 0 5rem;
+    padding: 0 0 0 var(--number-crystal-inavlink-size);
     height: var(--number-inavlink-height);
     width: 0;
   }
 
   &--right {
     flex-direction: row-reverse;
-    margin-right: calc(var(--number-padding-simple) + 5rem);
+    text-align: right;
+    background: calc(-1 * var(--number-crystal-inavlink-size)) 0 no-repeat var(--gradient-inavlink-r);
+    padding: 0 var(--number-crystal-inavlink-size) 0 0;
 
     &::before {
       background-image: var(--url-arrow-r);
     }
+
     &::after {
-      right: -5rem;
+      right: 0;
     }
   }
 
   &--left {
-    margin-left: calc(var(--number-padding-simple) + 5rem);
 
     &::after {
-      left: -5rem;
+      left: 0;
       /*-moz-transform: scaleX(-1);
       -o-transform: scaleX(-1);
       -webkit-transform: scaleX(-1);*/
@@ -166,13 +167,6 @@ section, article {
     &--underlined {
       text-decoration: underline;
     }
-
-  }
-
-  &--right {
-    // Peut-être ou pas faire alignement sur le côté
-    text-align: right;
-    background-image: var(--gradient-inavlink-r);
   }
 }
 
