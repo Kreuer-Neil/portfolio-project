@@ -25,6 +25,10 @@
   & main {
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--number-gap-sections);
+    align-items: center;
     padding: var(--number-padding-heavy) 0;
 
     &::before {
@@ -56,12 +60,6 @@ section, article {
   flex-direction: column;
   align-items: center;
   gap: var(--number-padding-simple);
-}
-
-.custom-page main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--number-gap-sections);
 }
 
 /* Solution avec un :before en absolute, avec un z-index et un bg-image. Fond non transparent.
@@ -182,6 +180,7 @@ section, article {
 
 
 //* Icons
+// TODO mettre les icônes dans le HTML plutôt
 .icon {
   display: block;
   font-size: 0;
@@ -222,14 +221,19 @@ section, article {
   &__container {
     display: flex;
     gap: var(--number-padding-simple);
-    padding: 0 var(--number-padding-small);
+    padding: 0 var(--number-padding-little);
+    align-items: center;
+    min-height: 3.5rem;
   }
 
   &__link {
     width: var(--number-padding-heavy);
+    padding: 0;
+    transition: padding .2s ease-out;
 
     &:hover {
-      box-shadow: 0 0 5px #fff inset;
+      //box-shadow: 0 0 5px #fff inset;
+      padding: var(--number-padding-mini);
     }
   }
 

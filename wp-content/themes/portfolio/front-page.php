@@ -135,7 +135,7 @@ $tools = new WP_Query([
                 </li>
                 <li class="links__li">
                     <a title="Vers mon profil BlueSky pro" href="https://bsky.app/profile/neil-kreuer.be"
-                       class="links__link icon icon__bluesky">Mon profil Bluesky de développeur (professionnel)</a>
+                       class="links__link icon icon__bluesky">Mon profil Bluesky de développeur</a>
                 </li>
             </ul>
         </div>

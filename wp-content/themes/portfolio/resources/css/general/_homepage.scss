@@ -114,6 +114,9 @@
   width: 100%;
   display: grid;
   gap: var(--number-padding-simple);
+  align-items: center;
+  justify-content: center;
+  max-width: var(--number-max-container-width);
 
   @include b.lg {
     grid-template-columns: 1fr 1fr;
@@ -124,6 +127,7 @@
   }
 
   & .contact {
+    max-width: var(--number-max-text-width);
     padding: 0 var(--number-padding-simple);
   }
 }
