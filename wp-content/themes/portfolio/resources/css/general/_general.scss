@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--number-gap-sections);
-    align-items: center;
+    //align-items: center;
     padding: var(--number-padding-heavy) 0;
 
     &::before {
@@ -111,8 +111,9 @@ section, article {
   font-family: "Poppins SemiBold Italic", sans-serif;
   text-decoration: none;
   max-width: var(--number-max-button-w);
-  margin: 0 var(--number-padding-simple);
   padding: 0 0 0 var(--number-crystal-inavlink-size);
+  margin: 0 auto;
+  width: calc(100% - var(--number-crystal-inavlink-size) - var(--number-padding-simple) * 2);
 
   &:hover {
     gap: var(--number-padding-medium);
@@ -173,11 +174,6 @@ section, article {
     }
   }
 }
-
-.hidden-checkbox {
-  display: none;
-}
-
 
 //* Icons
 // TODO mettre les icônes dans le HTML plutôt

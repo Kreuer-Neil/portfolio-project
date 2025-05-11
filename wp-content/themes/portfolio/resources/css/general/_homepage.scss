@@ -41,14 +41,14 @@
   }
 }
 
-.about {
+.tools {
   &__button {
     cursor: pointer;
   }
 
   &__container {
     display: flex;
-    align-self: stretch;
+    //align-self: stretch;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
@@ -110,6 +110,10 @@
   }
 }
 
+.hidden-checkbox {
+  display: none;
+}
+
 #contact {
   width: 100%;
   display: grid;
@@ -120,10 +124,7 @@
 
   @include b.lg {
     grid-template-columns: 1fr 1fr;
-  }
-
-  & .links__ {
-
+    margin: auto;
   }
 
   & .contact {

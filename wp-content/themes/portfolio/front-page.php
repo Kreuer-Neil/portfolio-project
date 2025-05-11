@@ -3,17 +3,17 @@
 $recent_projects = new WP_Query([
     'post_type' => 'project',
     'post_status' => 'publish',
-    'posts_per_page' => 5,
+    'posts_per_page' => 4,
     'orderby' => 'date',
     'order' => 'DESC',
-]);
+]);/*
 $tools = new WP_Query([
-    'post_type' => 'about_tools',
+    'post_type' => 'tools',
     'post_status' => 'publish',
 //    'posts_per_page' => 5,
     'orderby' => 'date',
     'order' => 'DESC',
-]);
+]);*/
 ?>
 
 <?php get_header(); ?>
@@ -58,52 +58,47 @@ $tools = new WP_Query([
     </article>
 </div>
 
-<section class="about" id="about">
+<section class="tools" id="tools">
     <h2>
-        <label for="about-me"
-               class="about__button" title="Afficher mes outils" tabindex="0">
+        <label for="my-tools"
+               class="tools__button" title="Afficher mes outils" tabindex="0">
             Mes outils
         </label>
     </h2>
-    <div class="about__container">
+    <div class="tools__container">
         <input type="checkbox"
-               id="about-me"
-               class="hidden-checkbox"> <?php // TODO Mettre en place le truc de faire apparaître la bio du portfolio avec flex content ? ?>
+               id="my-tools"
+               class="hidden-checkbox">
         <?php // if ($tools->have_posts()): while ($tools->have_posts()): $tools->the_post(); ?>
-        <article class="about__item">
-            <h3 class="about__title">Plutôt “dev” que “designer” web</h3>
-            <p class="about__content">Je suis un dev plutôt axé back-end, qui sait assez bien visualiser en avance les
+        <article class="tools__item">
+            <h3 class="tools__title">Plutôt “dev” que “designer” web</h3>
+            <p class="tools__content">Je suis un dev plutôt axé back-end, qui sait assez bien visualiser en avance les
                 possibilités avec le code, avec des idées en design manquant d’organisation.</p>
-            <img class="about__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>"
+            <img class="tools__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>"
                  width="128px" height="128px">
         </article>
         <?php // endwhile; endif; ?>
-        <article class="about__item">
-            <?php /* <h2 class="about__title--specs"><?= get_field('specialities_title') ?></h2>
-                    <p class="about__content--specs"><?= get_field('specialities_content')?></p> */ ?>
-            <h3 class="about__title">Figma, avec auto layout et SVG</h3>
+        <article class="tools__item">
+            <?php /* <h2 class="tools__title--specs"><?= get_field('specialities_title') ?></h2>
+                    <p class="tools__content--specs"><?= get_field('specialities_content')?></p> */ ?>
+            <h3 class="tools__title">Figma, avec auto layout et SVG</h3>
             <p>Figma est un outil que j’admire. J’utilise tous les jours son auto layout, et l’application dispose de
                 tellement de fonctionnalités que même mes SVG se font par là. Ses composants, variables et différents
                 modes permettent de simuler presque entièrement tout le comportement d’une web app.
                 <br>Par ailleurs, c’est Figma qui m’aide à préparer mon CSS, grâce à son organisation similaire.</p>
-            <img class="about__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>"
+            <img class="tools__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>"
                  width="128px" height="128px">
         </article>
-        <article class="about__item">
-            <?php /* <h2 class="about__title--specs"><?= get_field('specialities_title') ?></h2>
-                    <p class="about__content--specs"><?= get_field('specialities_content')?></p> */ ?>
-            <h3 class="about__title">Laravel/Livewire</h3>
+        <article class="tools__item">
+            <?php /* <h2 class="tools__title--specs"><?= get_field('specialities_title') ?></h2>
+                    <p class="tools__content--specs"><?= get_field('specialities_content')?></p> */ ?>
+            <h3 class="tools__title">Laravel/Livewire</h3>
             <p>Ma meilleure expérience de création de webapp avec du PHP restera via le framework Laravel, voir même
                 LiveWire. Le gain de temps titanesque que représente l’utilisation de ces frameworks est incroyable.</p>
-            <img class="about__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>"
+            <img class="tools__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>"
                  width="128px" height="128px">
         </article>
     </div>
-    <a href="<?= get_posts_nav_link('projects') ?>" class="inavlink inavlink--right">
-        <?php /* <div class="inavlink__bg"></div> */ ?>
-        <span class="inavlink__text">Voir <span
-                    class="inavlink__text--underlined">tous mes projets</span></span>
-    </a>
 </section>
 
 <section class="projects" id="projects">
@@ -121,6 +116,11 @@ $tools = new WP_Query([
             </a>
         <?php endwhile; endif; ?>
     </div>
+    <a href="<?= get_posts_nav_link('projects') ?>" class="inavlink inavlink--right">
+        <?php /* <div class="inavlink__bg"></div> */ ?>
+        <span class="inavlink__text">Voir <span
+                    class="inavlink__text--underlined">tous mes projets</span></span>
+    </a>
 </section>
 
 <div id="contact">

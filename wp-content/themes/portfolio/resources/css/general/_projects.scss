@@ -1,4 +1,5 @@
 @use "general" as g;
+@use "../settings/breakpoints" as b;
 
 .projects {
   &__container {
@@ -6,16 +7,31 @@
     gap: var(--number-padding-double);
     line-height: 0;
     align-content: space-evenly;
-    grid-template-columns: repeat(1fr);
+    //justify-items: center;
     padding: var(--number-padding-simple) var(--number-padding-medium);
     width: calc(100% - (var(--number-padding-medium) * 2));
+    max-width: var(--number-max-container-width);
 
     &--suggest {
-      //scroll-snap-type: x mandatory;
-      align-content: start;
-      justify-content: start;
-      grid-auto-flow: column;
-      overflow-x: scroll;
+      @include b.xs {
+        //scroll-snap-type: x mandatory;
+        align-self: start;
+        align-content: start;
+        justify-content: start;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        .projects__item {
+          width: 25rem;
+          max-width: min(var(--number-projects-max-item-width-reduced), 85vw);
+        }
+      }
+      grid-template-columns: 1fr 1fr;
+      @include b.lg {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @include b.xl {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
     }
   }
 
@@ -27,8 +43,7 @@
     flex-direction: column;
     gap: var(--number-padding-mini);
     text-align: center;
-    width: 25rem;
-    max-width: min(var(--number-card-max-w), 85vw);
+    min-width: var(--number-projects-min-item-width);
     position: relative;
     margin: var(--number-card-main-stroke-width);
     //scroll-snap-align: start;
@@ -62,6 +77,7 @@
         background: repeat-x center var(--url-arrow-r);
         transition: width 500ms ease-out; //TODO jouer avec les keyframes pour l'anim infinie après
         width: 0;
+        border-radius: 35%;
         align-self: stretch;
       }
     }
