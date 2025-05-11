@@ -10,10 +10,18 @@ $projects = new WP_Query([
 
 get_header(); ?>
 
+<div class="projects__page">
     <h1>Mes projets</h1>
 
-    <div class="filters__container">
-
+    <div class="filters">
+        <ul class="filters__container">
+            <li class="filters__li"><a href="" class="filters__item">
+                    Web
+                </a></li>
+            <li class="filters__li"><a href="" class="filters__item">
+                    3D
+                </a></li>
+        </ul>
     </div>
     <div class="projects__container">
         <?php if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
@@ -22,7 +30,7 @@ get_header(); ?>
                     <?php $image = get_field('project_thumbnail'); ?>
                     <h2 class="projects__item__title"><?= get_the_title(); ?></h2>
                     <div class="projects__item__effect"></div>
-                    <?= get_the_post_thumbnail(size: 'thumbnail', attr: ['width' => '370', 'height' => '209', 'class' => 'projects__item__img']); ?>
+                    <?= get_the_post_thumbnail(size: 'thumbnail', attr: ['width' => '720', 'height' => '405', 'class' => 'projects__item__img']); ?>
                 </article>
             </a>
         <?php endwhile; endif; ?>
@@ -30,5 +38,6 @@ get_header(); ?>
     <a href="/" class="inavlink inavlink--left">
         <span class="inavlink__text"><span class="inavlink__text--underlined">Retourner</span> à l’accueil</span>
     </a>
+</div>
 
 <?php get_footer() ?>

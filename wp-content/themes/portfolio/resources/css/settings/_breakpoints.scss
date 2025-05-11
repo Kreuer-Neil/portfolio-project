@@ -34,7 +34,6 @@ $projects-large-min: 78rem; // 1248px (last media-query projects)
     @content;
   }
 }
-
 /*
 @mixin xs {
   @media (max-width: #{$screen-sm-min}) {

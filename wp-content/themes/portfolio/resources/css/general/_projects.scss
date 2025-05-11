@@ -2,6 +2,14 @@
 @use "../settings/breakpoints" as b;
 
 .projects {
+  &__page {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: var(--number-max-container-width);
+    gap: var(--number-padding-simple);
+  }
+
   &__container {
     display: grid;
     gap: var(--number-padding-semiheavy) var(--number-padding-double);
@@ -9,7 +17,7 @@
     align-content: space-evenly;
     padding: var(--number-padding-simple) var(--number-padding-medium);
     width: calc(100vw - var(--number-padding-medium) * 2);
-    max-width: var(--number-max-container-width);
+    max-width: calc(100% - var(--number-padding-medium) * 2);
 
     @include b.p-mid {
       grid-template-columns: repeat(2, 1fr);
@@ -104,5 +112,35 @@
     &:nth-child(2n) .projects__item__effect {
       background-image: var(--gradient-projects-link-2);
     }
+  }
+}
+
+.filters {
+  align-self: start;
+  padding: 0 var(--number-padding-simple);
+
+  @include b.md {
+    padding: 0 var(--number-padding-semiheavy);
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--number-padding-small);
+  }
+
+  &__item {
+    text-decoration: none;
+    display: block;
+    color: var(--color-main-text);
+
+    padding: var(--number-padding-small) var(--number-padding-medium);
+    background: var(--color-main-button);
+    border-radius: var(--number-padding-simple);
+
+    color: var(--color-main-text);
+    font-family: var(--font-fam-buttons);
+    text-decoration: none;
+    font-size: var(--number-fsize-button);
   }
 }

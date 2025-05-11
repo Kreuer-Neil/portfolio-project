@@ -3,7 +3,7 @@
 .custom-page {
   background-color: var(--color-main-bg);
   color: var(--color-main-text);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-fam-text);
 
   // Bidouillage pour permettre à presque n'importe quoi
   // d'apparaître malgré un Z-index -1, y
@@ -46,7 +46,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: var(--font-fam-title);
   font-size: var(--number-fsize-subtitle);
   text-align: center;
 }
@@ -108,8 +108,9 @@ section, article {
   min-height: var(--number-inavlink-height);
 
   color: var(--color-main-text);
-  font-family: "Poppins SemiBold Italic", sans-serif;
+  font-family: var(--font-fam-buttons);
   text-decoration: none;
+
   max-width: var(--number-max-button-w);
   padding: 0 0 0 var(--number-crystal-inavlink-size);
   margin: 0 auto;
