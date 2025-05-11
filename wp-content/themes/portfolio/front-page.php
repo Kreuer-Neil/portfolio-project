@@ -3,7 +3,7 @@
 $recent_projects = new WP_Query([
     'post_type' => 'project',
     'post_status' => 'publish',
-    'posts_per_page' => 4,
+    'posts_per_page' => 6,
     'orderby' => 'date',
     'order' => 'DESC',
 ]);/*
@@ -14,9 +14,8 @@ $tools = new WP_Query([
     'orderby' => 'date',
     'order' => 'DESC',
 ]);*/
-?>
 
-<?php get_header(); ?>
+    get_header(); ?>
 <div class="home">
 
     <h1 class="home__title">
@@ -116,8 +115,7 @@ $tools = new WP_Query([
             </a>
         <?php endwhile; endif; ?>
     </div>
-    <a href="<?= get_posts_nav_link('projects') ?>" class="inavlink inavlink--right">
-        <?php /* <div class="inavlink__bg"></div> */ ?>
+    <a href="/projects" class="inavlink inavlink--right">
         <span class="inavlink__text">Voir <span
                     class="inavlink__text--underlined">tous mes projets</span></span>
     </a>

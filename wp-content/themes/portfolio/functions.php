@@ -1,9 +1,9 @@
 <?php
 
-use FnComponents\Project;
+//use FnComponents\Project;
 
-//Charger les champs ACF exportés
-include_once('fields.php');
+//TODO Charger les champs ACF exportés
+//include_once('fields.php');
 
 // Désactiver l'éditeur de texte Gutenberg de Wordpress :
 add_filter('use_block_editor_for_post', '__return_false');

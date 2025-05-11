@@ -4,17 +4,27 @@
 .projects {
   &__container {
     display: grid;
-    gap: var(--number-padding-double);
+    gap: var(--number-padding-semiheavy) var(--number-padding-double);
     line-height: 0;
     align-content: space-evenly;
-    //justify-items: center;
     padding: var(--number-padding-simple) var(--number-padding-medium);
-    width: calc(100% - (var(--number-padding-medium) * 2));
+    width: calc(100vw - var(--number-padding-medium) * 2);
     max-width: var(--number-max-container-width);
 
+    @include b.p-mid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include b.p-max {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include b.xl {
+      margin: auto;
+    }
+
     &--suggest {
-      @include b.xs {
+      @include b.p-min {
         //scroll-snap-type: x mandatory;
+        width: calc(100% - (var(--number-padding-medium) * 2));
         align-self: start;
         align-content: start;
         justify-content: start;
@@ -24,13 +34,6 @@
           width: 25rem;
           max-width: min(var(--number-projects-max-item-width-reduced), 85vw);
         }
-      }
-      grid-template-columns: 1fr 1fr;
-      @include b.lg {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-      @include b.xl {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
   }
