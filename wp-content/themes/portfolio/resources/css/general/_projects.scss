@@ -2,20 +2,18 @@
 @use "../settings/breakpoints" as b;
 
 .projects {
-  &__page {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    max-width: var(--number-max-container-width);
-    gap: var(--number-padding-simple);
-  }
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: var(--number-max-container-width);
+  gap: var(--number-padding-simple);
 
   &__container {
     display: grid;
-    gap: var(--number-padding-semiheavy) var(--number-padding-double);
+    gap: var(--number-padding-medium) var(--number-padding-simple) ;
     line-height: 0;
     align-content: space-evenly;
-    padding: var(--number-padding-simple) var(--number-padding-medium);
+    padding: 0 var(--number-padding-medium);
     width: calc(100vw - var(--number-padding-medium) * 2);
     max-width: calc(100% - var(--number-padding-medium) * 2);
 
@@ -32,12 +30,13 @@
     &--suggest {
       @include b.p-min {
         //scroll-snap-type: x mandatory;
-        width: calc(100% - (var(--number-padding-medium) * 2));
+        //width: calc(100% - (var(--number-padding-medium) * 2));
         align-self: start;
         align-content: start;
         justify-content: start;
         grid-auto-flow: column;
         overflow-x: scroll;
+
         .projects__item {
           width: 25rem;
           max-width: min(var(--number-projects-max-item-width-reduced), 85vw);
@@ -47,17 +46,20 @@
   }
 
   &__item {
+    position: relative;
     @extend .neon-card;
     text-decoration: none;
     color: var(--color-main-text);
+
     display: flex;
     flex-direction: column;
     gap: var(--number-padding-mini);
     text-align: center;
+
     min-width: var(--number-projects-min-item-width);
-    position: relative;
+    max-width: var(--number-projects-max-item-width);
+    width: 100%;
     margin: var(--number-card-main-stroke-width);
-    //scroll-snap-align: start;
 
     & > * {
       line-height: normal;

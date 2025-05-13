@@ -10,7 +10,7 @@ $projects = new WP_Query([
 
 get_header(); ?>
 
-<div class="projects__page">
+<div class="projects">
     <h1>Mes projets</h1>
 
     <div class="filters">

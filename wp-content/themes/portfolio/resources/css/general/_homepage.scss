@@ -61,10 +61,10 @@
 
     transition: height .5s ease-in;
 
-    &:has(#about-me:checked) {
+    &:has(#my-tools:checked) {
       gap: var(--number-padding-simple);
 
-      & .about__item {
+      & .tools__item {
         display: flex;
       }
     }
