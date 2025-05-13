@@ -100,7 +100,7 @@ section, article {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: var(--number-padding-small);
 
   transition: gap 200ms var(--anim-inavlink-hover);
   transition-timing-function: var(--anim-inavlink-hover);
@@ -117,7 +117,7 @@ section, article {
   width: calc(100% - var(--number-crystal-inavlink-size) - var(--number-padding-simple) * 2);
 
   &:hover {
-    gap: var(--number-padding-medium);
+    gap: var(--number-padding-double);
   }
 
   &::before {
@@ -126,7 +126,6 @@ section, article {
     content: '';
     width: 2rem;
     height: 2rem;
-    padding: 0 var(--number-padding-small);
   }
 
   // image

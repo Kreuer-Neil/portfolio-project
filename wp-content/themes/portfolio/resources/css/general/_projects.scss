@@ -10,9 +10,11 @@
 
   &__container {
     display: grid;
-    gap: var(--number-padding-medium) var(--number-padding-simple) ;
+    gap: var(--number-padding-medium);
     line-height: 0;
     align-content: space-evenly;
+    justify-items: center;
+
     padding: 0 var(--number-padding-medium);
     width: calc(100vw - var(--number-padding-medium) * 2);
     max-width: calc(100% - var(--number-padding-medium) * 2);
