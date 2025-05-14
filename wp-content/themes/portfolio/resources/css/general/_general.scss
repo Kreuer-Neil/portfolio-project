@@ -5,10 +5,6 @@
   color: var(--color-main-text);
   font-family: var(--font-fam-text);
 
-  // Bidouillage pour permettre à presque n'importe quoi
-  // d'apparaître malgré un Z-index -1, y
-  // compris le dégradé de haut de page
-
   // gradient top bg
   &::before {
     position: absolute;
@@ -28,7 +24,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--number-gap-sections);
-    //align-items: center;
     padding: var(--number-padding-heavy) 0;
 
     &::before {
@@ -68,7 +63,6 @@ section, article {
 .neon-card {
   background-image: var(--gradient-main-bg-1);
   position: relative;
-  //padding: calc(var(--number-card-main-width) * 2);
   border-radius: calc(var(--number-card-main-radius) - (var(--number-card-main-stroke-width)));
   margin: var(--number-card-main-stroke-width);
 
@@ -121,7 +115,6 @@ section, article {
   }
 
   &::before {
-    //left = default
     background: var(--url-arrow-l) no-repeat center;
     content: '';
     width: 2rem;
@@ -231,7 +224,6 @@ section, article {
     transition: padding .2s ease-out;
 
     &:hover {
-      //box-shadow: 0 0 5px #fff inset;
       padding: var(--number-padding-mini);
     }
   }

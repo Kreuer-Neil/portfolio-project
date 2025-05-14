@@ -31,8 +31,6 @@
 
     &--suggest {
       @include b.p-min {
-        //scroll-snap-type: x mandatory;
-        //width: calc(100% - (var(--number-padding-medium) * 2));
         align-self: start;
         align-content: start;
         justify-content: start;
@@ -90,7 +88,7 @@
       &::before {
         content: '';
         background: repeat-x center var(--url-arrow-r);
-        transition: width 500ms ease-out; //TODO jouer avec les keyframes pour l'anim infinie après
+        transition: width .5ms ease-out;
         width: 0;
         border-radius: 35%;
         align-self: stretch;
@@ -141,6 +139,7 @@
     padding: var(--number-padding-small) var(--number-padding-medium);
     background: var(--color-main-button);
     border-radius: var(--number-padding-simple);
+    border: .125rem solid var(--color-main-button-border);
 
     color: var(--color-main-text);
     font-family: var(--font-fam-buttons);

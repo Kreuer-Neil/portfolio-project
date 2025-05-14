@@ -46,9 +46,9 @@ $recent_projects = new WP_Query([
 </div>
 
 <section class="tools" id="tools">
-    <h2>
+    <h2 class="tools__title">
         <label for="my-tools"
-               class="tools__button" title="Afficher mes outils" tabindex="0">
+               class="tools__button" title="Afficher/masquer mes outils" tabindex="0">
             Mes outils
         </label>
     </h2>

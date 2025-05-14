@@ -42,27 +42,39 @@
 }
 
 .tools {
+  &__title {
+    display: flex;
+    order: -1;
+  }
   &__button {
     cursor: pointer;
+    font-family: var(--font-fam-buttons);
+
+    background-color: var(--color-main-button);
+    padding: var(--number-padding-medium) var(--number-padding-double);
+    border-radius: var(--number-padding-double);
+    border: .25rem solid var(--color-main-button-border);
   }
 
   &__container {
     display: flex;
-    //align-self: stretch;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
     gap: 0;
     max-width: var(--number-max-container-width);
-    padding: /*var(--number-padding-heavy)*/
-            var(--number-padding-simple);
+    padding: 0 var(--number-padding-simple);
     overflow: visible;
 
-    transition: height .5s ease-in;
+    //max-height: 100vh;
+    transition-property: gap, height;
+    transition: gap .1s ease-out;
+    //, max-height .5s ease-in
 
     &:has(#my-tools:checked) {
       gap: var(--number-padding-simple);
+      //max-height: 200vh;
 
       & .tools__item {
         display: flex;
