@@ -6,14 +6,7 @@ $recent_projects = new WP_Query([
     'posts_per_page' => 6,
     'orderby' => 'date',
     'order' => 'DESC',
-]);/*
-$tools = new WP_Query([
-    'post_type' => 'tools',
-    'post_status' => 'publish',
-//    'posts_per_page' => 5,
-    'orderby' => 'date',
-    'order' => 'DESC',
-]);*/
+]);
 
     get_header(); ?>
 <div class="home">
@@ -43,17 +36,12 @@ $tools = new WP_Query([
     </h1>
     <?php // TODO import SVG with it's frame (composed SVG tier 2) ?>
     <p class="home__content">
-        <?php /* <?= get_field('short_bio_content'); */ ?>
+        <?= get_field('welcome'); ?>
         Bienvenue sur mon portfolio&nbsp;! Mon nom est Neil Kreuer, étudiant designer web à la Haute École de la Province de Liège.
     </p>
     <article class="home__bio">
-        <h2 class="home__bio__title">Mon parcours</h2>
-        <p class="home__bio__text">En 2016, j'ai rejoint l'institut St Joseph de Welkenraedt, et y ai passé mes études
-            secondaires, jusqu'à l'an de grâce 2020, année Covid 19. La situation me fit réaliser que j'avais envie de
-            changement, ce qui me poussa à partir afin d'étudier l'infographie à l'Athénée Royale de Welkenraedt. J'en
-            suis sorti avec le <abbr title="Certificat d’Études Secondaires Supérieures">CESS</abbr> et une
-            qualification en techniques d'infographie, et ai tout de suite approfondi mes études dans ce domaine à la
-            HEPL. C'est là que je découvris ma voie&nbsp;: Web Dev.</p>
+        <h2 class="home__bio__title"><?= get_field('bio_title') ?></h2>
+        <p class="home__bio__text"><?= get_field('bio_content') ?></p>
     </article>
 </div>
 
@@ -68,35 +56,14 @@ $tools = new WP_Query([
         <input type="checkbox"
                id="my-tools"
                class="hidden-checkbox">
-        <?php // if ($tools->have_posts()): while ($tools->have_posts()): $tools->the_post(); ?>
+        <?php  if (have_rows('tools')): while (have_rows('tools')): the_row(); ?>
         <article class="tools__item">
-            <h3 class="tools__title">Plutôt “dev” que “designer” web</h3>
-            <p class="tools__content">Je suis un dev plutôt axé back-end, qui sait assez bien visualiser en avance les
-                possibilités avec le code, avec des idées en design manquant d’organisation.</p>
-            <img class="tools__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>"
+            <h3 class="tools__title"><?= get_sub_field('title') ?></h3>
+            <p class="tools__content"><?= get_sub_field('text_content') ?></p>
+            <img class="tools__item__logo" src="<?= get_sub_field('logo')['url'] ?>" alt="<?= get_sub_field('logo')['alt'] ?>"
                  width="128px" height="128px">
         </article>
-        <?php // endwhile; endif; ?>
-        <article class="tools__item">
-            <?php /* <h2 class="tools__title--specs"><?= get_field('specialities_title') ?></h2>
-                    <p class="tools__content--specs"><?= get_field('specialities_content')?></p> */ ?>
-            <h3 class="tools__title">Figma, avec auto layout et SVG</h3>
-            <p>Figma est un outil que j’admire. J’utilise tous les jours son auto layout, et l’application dispose de
-                tellement de fonctionnalités que même mes SVG se font par là. Ses composants, variables et différents
-                modes permettent de simuler presque entièrement tout le comportement d’une web app.
-                <br>Par ailleurs, c’est Figma qui m’aide à préparer mon CSS, grâce à son organisation similaire.</p>
-            <img class="tools__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>"
-                 width="128px" height="128px">
-        </article>
-        <article class="tools__item">
-            <?php /* <h2 class="tools__title--specs"><?= get_field('specialities_title') ?></h2>
-                    <p class="tools__content--specs"><?= get_field('specialities_content')?></p> */ ?>
-            <h3 class="tools__title">Laravel/Livewire</h3>
-            <p>Ma meilleure expérience de création de webapp avec du PHP restera via le framework Laravel, voir même
-                LiveWire. Le gain de temps titanesque que représente l’utilisation de ces frameworks est incroyable.</p>
-            <img class="tools__item__logo" src="<?= '/wp_content/logo.svg' ?>" alt="<?= 'logo de l’outil' ?>"
-                 width="128px" height="128px">
-        </article>
+        <?php  endwhile; endif; ?>
     </div>
 </section>
 

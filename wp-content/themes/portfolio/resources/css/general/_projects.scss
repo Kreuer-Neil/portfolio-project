@@ -6,7 +6,7 @@
   flex-direction: column;
   margin: auto;
   max-width: var(--number-max-container-width);
-  gap: var(--number-padding-simple);
+  gap: var(--number-padding-medium);
 
   &__container {
     display: grid;

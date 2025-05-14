@@ -15,10 +15,15 @@ wp-content/*
 !wp-content/themes/portfolio
 !wp-content/themes/portfolio/*
 !wp-content/themes/portfolio/**/*
-wp-content/themes/portfolio/public/assets
+wp-content/themes/portfolio/public/*
+
 
 !wp-content/uploads
 !wp-content/uploads/*
 !wp-content/uploads/**/*
+wp-content/uploads/*/*-640x360.*
+wp-content/uploads/*/*-768x432.*
+wp-content/uploads/*/*-1280x720.*
+wp-content/uploads/*/*-1536x864.*
 
 /**/.DS_Store

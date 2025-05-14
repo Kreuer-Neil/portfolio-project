@@ -199,6 +199,9 @@ section, article {
   &__bluesky {
     background-image: url("../svg/icon-bluesky.svg");
   }
+  &__figma {
+    background-image: url("../svg/icon-figma.svg");
+  }
 }
 
 // Links sections
@@ -209,7 +212,7 @@ section, article {
   &__div {
     display: flex;
     flex-direction: column;
-    gap: var(--number-padding-small);
+    gap: var(--number-padding-mini);
     align-items: start;
     align-self: stretch;
   }
