@@ -73,6 +73,7 @@
   --number-card-main-radius: 2rem; // 32px
   --number-card-inner-radius: 1.75rem; // 28 rem
   --number-card-main-stroke-width: .25rem; // 4px
+  --number-card-image-ratio: 16/9;
 
   --number-inavlink-height: var(--number-padding-heavy);
   --number-about-logo-size: 8rem; // 128px
@@ -126,7 +127,7 @@
 
   //* items colors
   // About items bg
-  --color-about-item-bg: var(--color-purple-60);
+  --color-alt-card-bg: var(--color-purple-60);
 
   //* Gradients colors
   --color-main-purple-gradient-light: var(--color-gradient-purple-light);

@@ -1,0 +1,29 @@
+@use "../settings/breakpoints" as b;
+
+.project {
+
+  &__container {
+    display: flex;
+    gap: var(--number-padding-simple);
+  }
+
+  &__img {
+    aspect-ratio: var(--number-card-image-ratio);
+  }
+
+  &__container:nth-child(2n) {
+    //grid-template-areas: i c;
+  }
+
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--number-padding-simple);
+
+    padding: var(--number-padding-small);
+    border-radius: var(--number-padding-medium);
+    background-color: var(--color-alt-card-bg);
+
+    margin: 0 var(--number-padding-simple);
+  }
+}

@@ -1,30 +1,23 @@
 <?php
-// Add code here
-$projects = new WP_Query([
-    'post_type' => 'project',
-    'post_status' => 'publish',
-    'posts_per_page' => 12,
-    'orderby' => 'date',
-    'order' => 'DESC',
-]);
 
 get_header(); ?>
 
 <div class="projects">
     <h1>Mes projets</h1>
-
+<?php /* if ($terms = get_terms()): // TODO Faire request en AJAX ? ?>
     <div class="filters">
+        <p class="filters__title">Filtres</p>
         <ul class="filters__container">
-            <li class="filters__li"><a href="" class="filters__item">
-                    Web
+            <?php foreach ($terms as $term): ?>
+            <li class="filters__li"><a href="<?= '' // '?type='.$term['slug'] ?>" class="filters__item">
+                    <?= $term->name ?>
                 </a></li>
-            <li class="filters__li"><a href="" class="filters__item">
-                    3D
-                </a></li>
+            <?php endforeach; ?>
         </ul>
     </div>
+    <?php endif; */ ?>
     <div class="projects__container">
-        <?php if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
+        <?php if (have_posts()): while (have_posts()): the_post(); ?>
             <a class="projects__item" href="<?= get_page_link() ?>">
                 <article class="projects__item__article">
                     <?php $image = get_field('project_thumbnail'); ?>

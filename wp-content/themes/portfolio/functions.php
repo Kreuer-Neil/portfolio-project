@@ -11,6 +11,9 @@ add_theme_support('custom-header');
 add_theme_support('custom-footer');
 add_theme_support('post-thumbnails');
 
+//désactiver la barre d'admin
+add_filter('show_admin_bar', '__return_false');
+
 // Enregistrer des menus de navigation :
 register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
@@ -90,7 +93,7 @@ function dw_asset(string $file): string
 }
 
 // 2. Retrouver les éléments d'un menu pour une location donnée
-function dw_get_navigation_links(string $location): array
+/*function dw_get_navigation_links(string $location): array
 {
     // Pour $location, retrouver le menu.
     $locations = get_nav_menu_locations();
@@ -113,4 +116,4 @@ function dw_get_navigation_links(string $location): array
 
     // Retourner le tableau de liens formatés
     return $items;
-}
+}*/

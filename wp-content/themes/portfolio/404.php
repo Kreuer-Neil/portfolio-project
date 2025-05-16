@@ -1,8 +1,8 @@
 <?php get_header() ?>
-    <section class="404">
+    <div class="error">
         <?php // TODO Dinogame ?>
-        <h2 class="404__title">Error 404</h2>
-        <p class="404__message">Cette page n’est pas disponible.</p>
-    </section>
+        <h1 class="error__title">Erreur 404</h1>
+        <p class="error__text">Cette page n’est pas disponible ou n'existe pas.</p>
+    </div>
 
 <?php get_footer() ?>

@@ -1,7 +1,7 @@
 @use "../settings/breakpoints" as b;
 
-.home {
 
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +46,7 @@
     display: flex;
     order: -1;
   }
+
   &__button {
     cursor: pointer;
     font-family: var(--font-fam-buttons);
@@ -68,7 +69,6 @@
     overflow: visible;
 
     //max-height: 100vh;
-    transition-property: gap, height;
     transition: gap .1s ease-out;
     //, max-height .5s ease-in
 
@@ -104,13 +104,16 @@
 
   &__item {
     display: none;
+
     position: relative;
+    margin-top: var(--number-padding-heavy);
+
     padding: var(--number-padding-small);
     border-radius: var(--number-padding-medium);
+    background-color: var(--color-alt-card-bg);
+
     max-width: var(--number-tools-max-item-width);
     min-width: var(--number-tools-min-item-width);
-    margin-top: var(--number-padding-heavy);
-    background-color: var(--color-about-item-bg);
 
     &__logo {
       z-index: -1;
@@ -139,7 +142,7 @@
     margin: auto;
   }
 
-  & .contact {
+  .contact {
     max-width: var(--number-max-text-width);
     padding: 0 var(--number-padding-simple);
   }

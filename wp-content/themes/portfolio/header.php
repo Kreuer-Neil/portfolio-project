@@ -17,7 +17,6 @@
 <body class="custom-page dark">
 
 <header>
-    <?php /* <h1 class="sro"><?= get_the_title(); ?></h1> */ ?>
     <?php /*
     <nav class="main-nav" id="main-nav">
         <h2 class="sro">Menu de navigation principale</h2>
@@ -46,4 +45,4 @@
     */ ?>
     <?php // TODO voir si on fait utilisation de get_search_form() ?>
 </header>
-<main>
+<main class="<?= 'main' ?>">

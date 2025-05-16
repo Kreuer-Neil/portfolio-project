@@ -74,10 +74,9 @@ $recent_projects = new WP_Query([
         <?php if ($recent_projects->have_posts()): while ($recent_projects->have_posts()): $recent_projects->the_post(); ?>
             <a class="projects__item" href="<?= get_page_link() ?>">
                 <article class="projects__item__article">
-                    <?php $image = get_field('project_thumbnail'); ?>
                     <h3 class="projects__item__title"><?= get_the_title(); ?></h3>
                     <div class="projects__item__effect"></div>
-                    <?= get_the_post_thumbnail(size: 'thumbnail', attr: ['width' => '370', 'height' => '209', 'class' => 'projects__item__img']); ?>
+                    <?= get_the_post_thumbnail(size: 'thumbnail', attr: ['width' => '370px', 'height' => '209px', 'class' => 'projects__item__img']); ?>
                 </article>
             </a>
         <?php endwhile; endif; ?>
