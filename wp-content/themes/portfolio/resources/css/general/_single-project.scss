@@ -3,27 +3,63 @@
 .project {
 
   &__container {
-    display: flex;
+    max-width: var(--number-max-container-width);
+    display: grid;
+    grid-auto-flow: column;
     gap: var(--number-padding-simple);
+
+    grid-template-areas:
+            "c"
+            "i";
+    margin: 0 auto;
   }
 
   &__img {
+    grid-area: i;
     aspect-ratio: var(--number-card-image-ratio);
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: var(--number-padding-small);
   }
 
-  &__container:nth-child(2n) {
-    //grid-template-areas: i c;
-  }
 
   &__subcontainer {
+    grid-area: c;
     display: flex;
     flex-direction: column;
     gap: var(--number-padding-simple);
 
-    padding: var(--number-padding-small);
+    padding: var(--number-padding-simple) var(--number-padding-small);
     border-radius: var(--number-padding-medium);
     background-color: var(--color-alt-card-bg);
 
     margin: 0 var(--number-padding-simple);
+  }
+}
+
+@include b.lg {
+  .project {
+    &__container {
+      grid-auto-columns: 1fr 1fr;
+      grid-template-areas: "i c";
+      padding: 0 var(--number-padding-simple);
+      gap: var(--number-padding-double);
+
+      &:nth-child(2n) {
+        @include b.md {
+          grid-template-areas: "c i";
+        }
+      }
+    }
+
+    &__img {
+      max-width: 50vw;
+    }
+
+    &__subcontainer {
+      margin: auto;
+    }
+
   }
 }

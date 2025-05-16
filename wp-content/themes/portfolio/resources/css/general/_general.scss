@@ -23,8 +23,11 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--number-gap-sections);
     padding: var(--number-padding-heavy) 0;
+
+    min-height: 100vh;
 
     &::before {
       content: '';
@@ -38,199 +41,199 @@
       background: url("../svg/bg-crystals.svg") repeat-y center top;
     }
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-fam-title);
+  font-size: var(--number-fsize-subtitle);
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--number-fsize-title);
+}
+
+section, article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--number-padding-simple);
+}
 
 
-  & h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-fam-title);
-    font-size: var(--number-fsize-subtitle);
-    text-align: center;
+/* Solution avec un :before en absolute, avec un z-index et un bg-image. Fond non transparent.
+ * Avantages : Plutôt court et pas "trop" de bidouillages.
+ */
+.neon-card {
+  background-image: var(--gradient-main-bg-1);
+  position: relative;
+  border-radius: calc(var(--number-card-main-radius) - (var(--number-card-main-stroke-width)));
+  margin: var(--number-card-main-stroke-width);
+
+  &::before {
+    border-radius: var(--number-card-main-radius);
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: var(--gradient-main-border-1);
+    padding: var(--number-card-main-stroke-width);
+    top: calc(-1 * var(--number-card-main-stroke-width));
+    left: calc(-1 * var(--number-card-main-stroke-width));
+    position: absolute;
+    z-index: -1;
+
   }
 
-  & h1 {
-    font-size: var(--number-fsize-title);
-  }
+  &:nth-child(2n) {
+    background-image: var(--gradient-main-bg-2);
 
-  & section, article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--number-padding-simple);
+    &::before {
+      background-image: var(--gradient-main-border-2);
+    }
   }
 }
 
-  /* Solution avec un :before en absolute, avec un z-index et un bg-image. Fond non transparent.
-   * Avantages : Plutôt court et pas "trop" de bidouillages.
-   */
-  .neon-card {
-    background-image: var(--gradient-main-bg-1);
-    position: relative;
-    border-radius: calc(var(--number-card-main-radius) - (var(--number-card-main-stroke-width)));
-    margin: var(--number-card-main-stroke-width);
+.inavlink {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--number-padding-small);
 
-    &::before {
-      border-radius: var(--number-card-main-radius);
-      width: 100%;
-      height: 100%;
-      content: '';
-      background-image: var(--gradient-main-border-1);
-      padding: var(--number-card-main-stroke-width);
-      top: calc(-1 * var(--number-card-main-stroke-width));
-      left: calc(-1 * var(--number-card-main-stroke-width));
-      position: absolute;
-      z-index: -1;
+  transition: gap 200ms var(--anim-inavlink-hover);
+  transition-timing-function: var(--anim-inavlink-hover);
+  background: var(--number-crystal-inavlink-size) 0 no-repeat var(--gradient-inavlink-l);
+  min-height: var(--number-inavlink-height);
 
-    }
+  color: var(--color-main-text);
+  font-family: var(--font-fam-buttons);
+  text-decoration: none;
 
-    &:nth-child(2n) {
-      background-image: var(--gradient-main-bg-2);
+  max-width: var(--number-max-button-w);
+  padding: 0 0 0 var(--number-crystal-inavlink-size);
+  margin: 0 auto;
+  width: calc(100% - var(--number-crystal-inavlink-size) - var(--number-padding-simple) * 2);
 
-      &::before {
-        background-image: var(--gradient-main-border-2);
-      }
-    }
+  &:hover, &:focus {
+    gap: var(--number-padding-double);
   }
 
-  .inavlink {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--number-padding-small);
+  &::before {
+    background: var(--url-arrow-l) no-repeat center;
+    content: '';
+    width: 2rem;
+    height: 2rem;
+  }
 
-    transition: gap 200ms var(--anim-inavlink-hover);
-    transition-timing-function: var(--anim-inavlink-hover);
-    background: var(--number-crystal-inavlink-size) 0 no-repeat var(--gradient-inavlink-l);
-    min-height: var(--number-inavlink-height);
-
-    color: var(--color-main-text);
-    font-family: var(--font-fam-buttons);
-    text-decoration: none;
-
-    max-width: var(--number-max-button-w);
+  // image
+  &::after {
+    content: '';
+    position: absolute;
+    background: left no-repeat url("../svg/link-crystal.svg");
     padding: 0 0 0 var(--number-crystal-inavlink-size);
-    margin: 0 auto;
-    width: calc(100% - var(--number-crystal-inavlink-size) - var(--number-padding-simple) * 2);
+    height: var(--number-inavlink-height);
+    width: 0;
+  }
 
-    &:hover {
-      gap: var(--number-padding-double);
-    }
+  &--right {
+    flex-direction: row-reverse;
+    text-align: right;
+    background: calc(-1 * var(--number-crystal-inavlink-size)) 0 no-repeat var(--gradient-inavlink-r);
+    padding: 0 var(--number-crystal-inavlink-size) 0 0;
 
     &::before {
-      background: var(--url-arrow-l) no-repeat center;
-      content: '';
-      width: 2rem;
-      height: 2rem;
+      background-image: var(--url-arrow-r);
     }
 
-    // image
     &::after {
-      content: '';
-      position: absolute;
-      background: left no-repeat url("../svg/link-crystal.svg");
-      padding: 0 0 0 var(--number-crystal-inavlink-size);
-      height: var(--number-inavlink-height);
-      width: 0;
-    }
-
-    &--right {
-      flex-direction: row-reverse;
-      text-align: right;
-      background: calc(-1 * var(--number-crystal-inavlink-size)) 0 no-repeat var(--gradient-inavlink-r);
-      padding: 0 var(--number-crystal-inavlink-size) 0 0;
-
-      &::before {
-        background-image: var(--url-arrow-r);
-      }
-
-      &::after {
-        right: 0;
-      }
-    }
-
-    &--left {
-
-      &::after {
-        left: 0;
-        /*-moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);*/
-        transform: scaleX(-1);
-        /*filter: FlipH;
-        -ms-filter: "FlipH";*/
-      }
-    }
-
-    &__text {
-      padding: 0 var(--number-padding-small);
-
-      &--underlined {
-        text-decoration: underline;
-      }
+      right: 0;
     }
   }
 
-  //* Icons
-  // TODO mettre les icônes dans le HTML plutôt
-  .icon {
-    display: block;
-    font-size: 0;
-    aspect-ratio: 1;
-    min-width: var(--number-padding-semiheavy);
-    background: no-repeat;
-    background-size: contain;
+  &--left {
 
-    &__github {
-      background-image: url("../svg/icon-github.svg");
-    }
-
-    &__web {
-      background-image: url("../svg/icon-web.svg");
-      /* exemple pour la gestion des thèmes
-      -webkit-clip-path: url("../svg/icons.svg#ClipWeb");
-      background: var(--gradient-icon-web);*/
-    }
-
-    &__bluesky {
-      background-image: url("../svg/icon-bluesky.svg");
-    }
-
-    &__figma {
-      background-image: url("../svg/icon-figma.svg");
+    &::after {
+      left: 0;
+      /*-moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);*/
+      transform: scaleX(-1);
+      /*filter: FlipH;
+      -ms-filter: "FlipH";*/
     }
   }
 
-  // Links sections
-  .links {
-    padding: 0 var(--number-padding-simple);
-    max-width: var(--number-max-text-width);
+  &__text {
+    padding: 0 var(--number-padding-small);
 
-    &__div {
-      display: flex;
-      flex-direction: column;
-      gap: var(--number-padding-mini);
-      align-items: start;
-      align-self: stretch;
-    }
-
-    &__container {
-      display: flex;
-      gap: var(--number-padding-simple);
-      padding: 0 var(--number-padding-little);
-      align-items: center;
-      min-height: 3.5rem;
-    }
-
-    &__link {
-      width: var(--number-padding-heavy);
-      padding: 0;
-      transition: padding .2s ease-out;
-
-      &:hover {
-        padding: var(--number-padding-mini);
-      }
-    }
-
-    &__data {
-      align-self: center;
+    &--underlined {
+      text-decoration: underline;
     }
   }
+}
+
+//* Icons
+// TODO mettre les icônes dans le HTML plutôt
+.icon {
+  display: block;
+  font-size: 0;
+  aspect-ratio: 1;
+  min-width: var(--number-padding-semiheavy);
+  background: no-repeat;
+  background-size: contain;
+
+  &__github {
+    background-image: url("../svg/icon-github.svg");
+  }
+
+  &__web {
+    background-image: url("../svg/icon-web.svg");
+    /* exemple pour la gestion des thèmes
+    -webkit-clip-path: url("../svg/icons.svg#ClipWeb");
+    background: var(--gradient-icon-web);*/
+  }
+
+  &__bluesky {
+    background-image: url("../svg/icon-bluesky.svg");
+  }
+
+  &__figma {
+    background-image: url("../svg/icon-figma.svg");
+  }
+}
+
+// Links sections
+.links {
+  padding: 0 var(--number-padding-simple);
+  max-width: var(--number-max-text-width);
+
+  &__div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--number-padding-mini);
+    align-items: start;
+    align-self: stretch;
+  }
+
+  &__container {
+    display: flex;
+    gap: var(--number-padding-simple);
+    padding: 0 var(--number-padding-little);
+    align-items: center;
+    min-height: 3.5rem;
+  }
+
+  &__link {
+    width: var(--number-padding-heavy);
+    padding: 0;
+    transition: padding .2s ease-out;
+
+    &:hover, &:focus {
+      padding: var(--number-padding-mini);
+    }
+  }
+
+  &__data {
+    align-self: center;
+  }
+}
