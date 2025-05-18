@@ -14,9 +14,11 @@ add_theme_support('post-thumbnails');
 //désactiver la barre d'admin
 add_filter('show_admin_bar', '__return_false');
 
+/*
 // Enregistrer des menus de navigation :
 register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
+*/
 
 //retirer des fonctions de base WP
 add_action('wp_enqueue_scripts', function () {

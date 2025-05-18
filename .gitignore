@@ -21,9 +21,8 @@ wp-content/themes/portfolio/public/*
 !wp-content/uploads
 !wp-content/uploads/*
 !wp-content/uploads/**/*
-wp-content/uploads/**/*-640x360.*
-wp-content/uploads/**/*-768x432.*
-wp-content/uploads/**/*-1280x720.*
-wp-content/uploads/**/*-1536x864.*
+wp-content/uploads/**/*x720.*
+wp-content/uploads/**/*x1031.*
+wp-content/uploads/**/*x1080.*
 
 /**/.DS_Store
