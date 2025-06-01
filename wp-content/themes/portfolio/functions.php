@@ -2,8 +2,8 @@
 
 //use FnComponents\Project;
 
-//TODO Charger les champs ACF exportés
-//include_once('fields.php');
+// Charger les champs ACF exportés
+include_once('fields.php');
 
 // Désactiver l'éditeur de texte Gutenberg de Wordpress :
 add_filter('use_block_editor_for_post', '__return_false');
@@ -11,14 +11,13 @@ add_theme_support('custom-header');
 add_theme_support('custom-footer');
 add_theme_support('post-thumbnails');
 
-//désactiver la barre d'admin
+// Remove WP toolbar
 add_filter('show_admin_bar', '__return_false');
 
-/*
+
 // Enregistrer des menus de navigation :
-register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
-*/
+
 
 //retirer des fonctions de base WP
 add_action('wp_enqueue_scripts', function () {
@@ -38,6 +37,7 @@ remove_action('wp_head', 'wp_oembed_add_host_js');
 remove_action('wp_head', 'rest_output_link_wp_head');
 remove_action('wp_head', 'wp_generator');
 
+
 //importer le CSS et JS
 $manifestPath = get_theme_file_path('public/.vite/manifest.json');
 
@@ -54,39 +54,10 @@ if (file_exists($manifestPath)) {
 }
 
 //register project post type + taxonomy
-//Project::getInstance();
-register_post_type('project', [
-    'label' => 'Projects',
-    'description' => 'Mes projets affichés sur le site',
-    'public' => true,
-    'hierarchical' => false,
-    'has-archive' => true,
-    'menu_position' => 21,
-    'menu_icon' => 'dashicons-cover-image',
-    'has_archive' => true,
-    'rewrite' => [
-        'slug' => 'projects',
-    ],
-    'supports' => ['title', 'excerpt', 'editor', 'thumbnail'],
-]);
+require_once('projects.php');
 
-// Ajout des taxonomies
-register_taxonomy('project_type', ['project'], [
-    'labels' => [
-        'name' => 'Project types',
-        'singular' => 'Project type'
-    ],
-    'description' => 'Project types',
-    'public' => true,
-    'hierarchical' => true,
-    'show_ui' => true,
-    'show_admin_column' => true,
-    'show_tagcloud' => false,
-    'rewrite' => ['slug' => 'project-types'],
-],
-);
-
-// Fonctions propres au thème :
+// Traductions
+require_once('translations.php');
 
 // 1. Charger un fichier "public" (asset/image/css/script/...) pour le front-end.
 function dw_asset(string $file): string
@@ -95,7 +66,7 @@ function dw_asset(string $file): string
 }
 
 // 2. Retrouver les éléments d'un menu pour une location donnée
-/*function dw_get_navigation_links(string $location): array
+function dw_get_navigation_links(string $location): array
 {
     // Pour $location, retrouver le menu.
     $locations = get_nav_menu_locations();
@@ -118,4 +89,4 @@ function dw_asset(string $file): string
 
     // Retourner le tableau de liens formatés
     return $items;
-}*/
+}

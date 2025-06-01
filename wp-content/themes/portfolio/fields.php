@@ -1,10 +1,10 @@
 <?php
-add_action( 'acf/include_fields', function() {
-    if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+add_action('acf/include_fields', function () {
+    if (!function_exists('acf_add_local_field_group')) {
         return;
     }
 
-    acf_add_local_field_group( array(
+    acf_add_local_field_group(array(
         'key' => 'group_6823574090cf5',
         'title' => 'Home tools',
         'fields' => array(
@@ -45,6 +45,7 @@ add_action( 'acf/include_fields', function() {
                             'id' => '',
                         ),
                         'default_value' => '',
+                        'translations' => 'translate_once',
                         'maxlength' => '',
                         'placeholder' => '',
                         'prepend' => '',
@@ -67,6 +68,7 @@ add_action( 'acf/include_fields', function() {
                         ),
                         'return_format' => 'array',
                         'library' => 'all',
+                        'translations' => 'sync',
                         'min_width' => '',
                         'min_height' => '',
                         'min_size' => '',
@@ -92,6 +94,7 @@ add_action( 'acf/include_fields', function() {
                             'id' => '',
                         ),
                         'default_value' => '',
+                        'translations' => 'translate_once',
                         'maxlength' => '',
                         'rows' => '',
                         'placeholder' => '',
@@ -104,9 +107,9 @@ add_action( 'acf/include_fields', function() {
         'location' => array(
             array(
                 array(
-                    'param' => 'page',
+                    'param' => 'page_template',
                     'operator' => '==',
-                    'value' => '16',
+                    'value' => 'template-homepage.php',
                 ),
             ),
         ),
@@ -119,9 +122,9 @@ add_action( 'acf/include_fields', function() {
         'active' => true,
         'description' => '',
         'show_in_rest' => 0,
-    ) );
+    ));
 
-    acf_add_local_field_group( array(
+    acf_add_local_field_group(array(
         'key' => 'group_66d19eb7dbb52',
         'title' => 'Homepage',
         'fields' => array(
@@ -140,6 +143,7 @@ add_action( 'acf/include_fields', function() {
                     'id' => '',
                 ),
                 'default_value' => '',
+                'translations' => 'translate_once',
                 'maxlength' => '',
                 'rows' => '',
                 'placeholder' => '',
@@ -160,6 +164,7 @@ add_action( 'acf/include_fields', function() {
                     'id' => '',
                 ),
                 'default_value' => '',
+                'translations' => 'translate_once',
                 'maxlength' => '',
                 'placeholder' => '',
                 'prepend' => '',
@@ -180,18 +185,44 @@ add_action( 'acf/include_fields', function() {
                     'id' => '',
                 ),
                 'default_value' => '',
+                'translations' => 'translate_once',
                 'maxlength' => '',
                 'rows' => '',
                 'placeholder' => '',
                 'new_lines' => '',
             ),
+            array(
+                'key' => 'field_683ab0c5f9406',
+                'label' => 'Logo',
+                'name' => 'logo',
+                'aria-label' => '',
+                'type' => 'image',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'array',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '.svg',
+                'preview_size' => 'medium',
+            ),
         ),
         'location' => array(
             array(
                 array(
-                    'param' => 'page',
+                    'param' => 'page_template',
                     'operator' => '==',
-                    'value' => '16',
+                    'value' => 'template-homepage.php',
                 ),
             ),
         ),
@@ -204,9 +235,9 @@ add_action( 'acf/include_fields', function() {
         'active' => true,
         'description' => '',
         'show_in_rest' => 0,
-    ) );
+    ));
 
-    acf_add_local_field_group( array(
+    acf_add_local_field_group(array(
         'key' => 'group_6826e1e2c8f42',
         'title' => 'Project content',
         'fields' => array(
@@ -433,9 +464,9 @@ add_action( 'acf/include_fields', function() {
         'active' => true,
         'description' => '',
         'show_in_rest' => 0,
-    ) );
+    ));
 
-    acf_add_local_field_group( array(
+    acf_add_local_field_group(array(
         'key' => 'group_66d1b121ef113',
         'title' => 'Project preview',
         'fields' => array(
@@ -498,6 +529,6 @@ add_action( 'acf/include_fields', function() {
         'active' => true,
         'description' => '',
         'show_in_rest' => 0,
-    ) );
-} );
+    ));
+});
 

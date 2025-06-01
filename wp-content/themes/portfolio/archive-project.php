@@ -3,7 +3,7 @@
 get_header(); ?>
 
 <div class="projects">
-    <h1>Mes projets</h1>
+    <h1><?= pll__('My projects') ?></h1>
 <?php /* if ($terms = get_terms()): // TODO Faire request en AJAX ? ?>
     <div class="filters">
         <p class="filters__title">Filtres</p>
@@ -29,7 +29,7 @@ get_header(); ?>
         <?php endwhile; endif; ?>
     </div>
     <a href="/" class="inavlink inavlink--left">
-        <span class="inavlink__text"><span class="inavlink__text--underlined">Retourner</span> à l’accueil</span>
+        <span class="inavlink__text"><span class="inavlink__text--underlined"><?= pll__('Back') ?></span> <?= pll__('home') ?></span>
     </a>
 </div>
 

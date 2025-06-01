@@ -190,6 +190,7 @@ section, article {
     background-image: url("../svg/icon-web.svg");
     /* exemple pour la gestion des thèmes
     -webkit-clip-path: url("../svg/icons.svg#ClipWeb");
+    clip-path: url("../svg/icons.svg#ClipWeb");
     background: var(--gradient-icon-web);*/
   }
 
@@ -235,5 +236,39 @@ section, article {
 
   &__data {
     align-self: center;
+  }
+}
+
+.footer {
+  padding: var(--number-padding-simple) var(--number-padding-medium);
+  background-color: var(--color-main-bg);
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--number-gap-articles);
+    width: 100%;
+    max-width: var(--number-max-container-width);
+  }
+
+  &__nav {
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--number-padding-mini);
+    }
+
+    &__link {
+      color: var(--color-main-text);
+    }
+  }
+
+  @include b.sm {
+    &__copyright {
+      text-align: center;
+    }
   }
 }

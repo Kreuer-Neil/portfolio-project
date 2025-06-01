@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?= pll__('en') ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="author" content="Kreuer Neil"/>
+<!--    <meta name="keyword" content="Portfolio, Neil Kreuer, Web Designer, CV, Web Developer">-->
+<!--    <meta name="description" content="Page d'accueil du site Portfolio "/>-->
+    <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
+
     <?php wp_head() ?>
-    <meta name="keyword" content="Portfolio, Neil Kreuer, Web Designer, CV, Web Developer">
-    <meta name="description" content="Page d'accueil du site Portfolio "/>
-
-    <?php wp_head(); ?>
-
     <?php /*<link rel="stylesheet" href="<?= dw_asset('css/site.css'); ?>"> */ ?>
     <title>Neil Kreuer - Portfolio</title>
 </head>
@@ -43,6 +42,5 @@
         </ul>
     </nav>
     */ ?>
-    <?php // TODO voir si on fait utilisation de get_search_form() ?>
 </header>
-<main class="<?= 'main' ?>">
+<main id="main">
