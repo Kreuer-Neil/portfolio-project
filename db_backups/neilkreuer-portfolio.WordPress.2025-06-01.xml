@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/6.7.2" created="2025-06-01 17:46" -->
+	<!-- generator="WordPress/6.7.2" created="2025-06-01 17:59" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Neil Kreuer - Portfolio</title>
 	<link>http://portfolio-project.test</link>
 	<description>Neil Kreuer&#039;s Portfolio website</description>
-	<pubDate>Sun, 01 Jun 2025 17:46:09 +0000</pubDate>
+	<pubDate>Sun, 01 Jun 2025 17:59:35 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://portfolio-project.test</wp:base_site_url>
@@ -2415,8 +2415,8 @@ Je n'ai pas pris énormément de plaisir à utiliser ce <abbr title="Content Man
 		<wp:post_id>91</wp:post_id>
 		<wp:post_date><![CDATA[2024-08-30 11:32:59]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2024-08-30 11:32:59]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-06-01 17:41:55]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-06-01 17:41:55]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-06-01 17:56:07]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-06-01 17:56:07]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[home-2]]></wp:post_name>
@@ -2470,7 +2470,7 @@ Je n'ai pas pris énormément de plaisir à utiliser ce <abbr title="Content Man
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[bio_content]]></wp:meta_key>
-		<wp:meta_value><![CDATA[En 2016, j'ai rejoint l'institut St Joseph de Welkenraedt, et y ai passé mes études secondaires, jusqu'à l'an de grâce 2020, année Covid 19. La situation me fit réaliser que j'avais envie de changement, ce qui me poussa à partir afin d'étudier l'infographie à l'Athénée Royale de Welkenraedt. J'en suis sorti avec le <abbr title="Certificat d’Études Secondaires Supérieures">CESS</abbr> et une qualification en techniques d'infographie, et ai tout de suite approfondi mes études dans ce domaine à la <abbr title="Haute École de la Province de Liège>HEPL</abbr>. C'est là que je découvris ma voie&nbsp;: Web Dev.]]></wp:meta_value>
+		<wp:meta_value><![CDATA[En 2016, j'ai rejoint l'institut St Joseph de Welkenraedt, et y ai passé mes études secondaires, jusqu'à l'an de grâce 2020, année Covid 19. La situation me fit réaliser que j'avais envie de changement, ce qui me poussa à partir afin d'étudier l'infographie à l'Athénée Royale de Welkenraedt. J'en suis sorti avec le <abbr title="Certificat d’Études Secondaires Supérieures">CESS</abbr> et une qualification en techniques d'infographie, et ai tout de suite approfondi mes études dans ce domaine à la <abbr title="Haute École de la Province de Liège">HEPL</abbr>. C'est là que je découvris ma voie&nbsp;: Web Dev.]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_bio_content]]></wp:meta_key>
@@ -2762,8 +2762,8 @@ Je n'ai pas pris énormément de plaisir à utiliser ce <abbr title="Content Man
 		<wp:post_id>110</wp:post_id>
 		<wp:post_date><![CDATA[2025-06-01 17:15:39]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-06-01 17:15:39]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-06-01 17:15:39]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-06-01 17:15:39]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-06-01 17:55:53]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-06-01 17:55:53]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[projet-client-2024-2025]]></wp:post_name>
@@ -2801,7 +2801,7 @@ Je n'ai pas pris énormément de plaisir à utiliser ce <abbr title="Content Man
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[description]]></wp:meta_key>
-		<wp:meta_value><![CDATA[Le projet client, créé dans le cadre de mes études, année 2024-2025, pour le cours de Design Web de 2e année d'Infographie Web à la <abbr title="Haute École de la Province de Liège>HEPL</abbr>. Toutes les informations sont accessibles via les liens ci-dessous.]]></wp:meta_value>
+		<wp:meta_value><![CDATA[Le projet client, créé dans le cadre de mes études, année 2024-2025, pour le cours de Design Web de 2e année d'Infographie Web à la <abbr title="Haute École de la Province de Liège">HEPL</abbr>. Toutes les informations sont accessibles via les liens ci-dessous.]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_description]]></wp:meta_key>

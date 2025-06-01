@@ -19,6 +19,8 @@
     aspect-ratio: var(--number-card-image-ratio);
     object-fit: cover;
     width: 100%;
+    max-width: 98vw;
+    justify-self: center;
     height: auto;
     border-radius: var(--number-padding-small);
   }
