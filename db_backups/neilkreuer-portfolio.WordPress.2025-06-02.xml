@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/6.7.2" created="2025-06-01 17:59" -->
+	<!-- generator="WordPress/6.7.2" created="2025-06-02 11:13" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Neil Kreuer - Portfolio</title>
 	<link>http://portfolio-project.test</link>
 	<description>Neil Kreuer&#039;s Portfolio website</description>
-	<pubDate>Sun, 01 Jun 2025 17:59:35 +0000</pubDate>
+	<pubDate>Mon, 02 Jun 2025 11:13:50 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://portfolio-project.test</wp:base_site_url>
@@ -1440,8 +1440,8 @@
 		<wp:post_id>16</wp:post_id>
 		<wp:post_date><![CDATA[2024-08-30 11:32:59]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2024-08-30 11:32:59]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-06-01 12:13:42]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-06-01 12:13:42]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-06-02 11:06:42]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-06-02 11:06:42]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[home]]></wp:post_name>
@@ -1587,7 +1587,7 @@
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[bio_content]]></wp:meta_key>
-		<wp:meta_value><![CDATA[In 2016, I joined St. Joseph's Institute in Welkenraedt, where I finished my secondary education until Covid 19 in 2020. The situation made me realize that I wanted to change, which prompted me to go and study computer graphics at the Royal Athenaeum of Welkenraedt. I came out with the <abbr lang="fr" title="Certificat d’Études Secondaires Supérieures">CESS</abbr> and a qualification in computer graphics techniques, and immediately deepened my studies in this field at the <abbr lang="fr" title="Haute École de la Province de Liège>HEPL</abbr>. That’s when I discovered my path: Web Dev.]]></wp:meta_value>
+		<wp:meta_value><![CDATA[In 2016, I joined St. Joseph's Institute in Welkenraedt, where I finished my secondary education until Covid 19 in 2020. The situation made me realize that I wanted to change, which prompted me to go and study computer graphics at the Royal Athenaeum of Welkenraedt. I came out with the <abbr lang="fr" title="Certificat d’Études Secondaires Supérieures">CESS</abbr> and a qualification in computer graphics techniques, and immediately deepened my studies in this field at the <abbr lang="fr" title="Haute École de la Province de Liège">HEPL</abbr>. That’s when I discovered my path: Web Dev.]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_bio_content]]></wp:meta_key>
@@ -1672,7 +1672,7 @@
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_yoast_wpseo_linkdex]]></wp:meta_key>
-		<wp:meta_value><![CDATA[36]]></wp:meta_value>
+		<wp:meta_value><![CDATA[38]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
@@ -2334,8 +2334,8 @@ Je n'ai pas pris énormément de plaisir à utiliser ce <abbr title="Content Man
 		<wp:post_id>88</wp:post_id>
 		<wp:post_date><![CDATA[2025-05-16 15:54:31]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-05-16 15:54:31]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-05-16 15:54:37]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-05-16 15:54:37]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-06-01 18:05:45]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-06-01 18:05:45]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[decor-3d]]></wp:post_name>
@@ -2346,6 +2346,7 @@ Je n'ai pas pris énormément de plaisir à utiliser ce <abbr title="Content Man
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
 										<category domain="project_type" nicename="3d"><![CDATA[3D]]></category>
+		<category domain="project_type" nicename="hepl"><![CDATA[HEPL]]></category>
 						<wp:postmeta>
 		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
 		<wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2762,8 +2763,8 @@ Je n'ai pas pris énormément de plaisir à utiliser ce <abbr title="Content Man
 		<wp:post_id>110</wp:post_id>
 		<wp:post_date><![CDATA[2025-06-01 17:15:39]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-06-01 17:15:39]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-06-01 17:55:53]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-06-01 17:55:53]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2025-06-01 18:05:54]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-06-01 18:05:54]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[projet-client-2024-2025]]></wp:post_name>
@@ -2774,6 +2775,7 @@ Je n'ai pas pris énormément de plaisir à utiliser ce <abbr title="Content Man
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
 										<category domain="project_type" nicename="design"><![CDATA[Design]]></category>
+		<category domain="project_type" nicename="hepl"><![CDATA[HEPL]]></category>
 		<category domain="project_type" nicename="web"><![CDATA[Web]]></category>
 						<wp:postmeta>
 		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
