@@ -18,7 +18,11 @@
     z-index: -3;
   }
 
-  & main {
+  p {
+    line-height: 1.3;
+  }
+
+  main {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -41,23 +45,24 @@
       background: url("../svg/bg-crystals.svg") repeat-y center top;
     }
   }
-}
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-fam-title);
-  font-size: var(--number-fsize-subtitle);
-  text-align: center;
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-fam-title);
+    font-size: var(--number-fsize-subtitle);
+    text-align: center;
+    line-height: 1.3;
+  }
 
-h1 {
-  font-size: var(--number-fsize-title);
-}
+  h1 {
+    font-size: var(--number-fsize-title);
+  }
 
-section, article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--number-padding-simple);
+  section, article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--number-padding-simple);
+  }
 }
 
 

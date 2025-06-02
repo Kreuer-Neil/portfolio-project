@@ -1,6 +1,7 @@
 <?php
 $translations = [
     'lang' => 'en',
+
     // Home
     'webdev' => 'Web Developer',
     'mytools' => 'My tools',
