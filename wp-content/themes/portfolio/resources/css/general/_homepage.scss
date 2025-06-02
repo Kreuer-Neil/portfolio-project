@@ -19,11 +19,20 @@
 
     font-size: var(--number-fsize-subtitle);
     font-family: "Ubuntu Mono", code, sans-serif;
+
+    @include b.md {
+      font-size: var(--number-fsize-title);
+
+    }
   }
 
   &__logo {
     background-color: var(--color-logo-bg);
     border: var(--number-padding-small) solid var(--color-logo-border);
+    width: 110%;
+    @include b.md {
+      border-width: var(--number-padding-simple);
+    }
   }
 
   &__content {
@@ -61,6 +70,10 @@
     border: .25rem solid var(--color-main-button-border);
     &__title {
       display: flex;
+    }
+    transition: transform .2s ease-in-out;
+    &:hover, &:focus {
+      transform: scale(1.1);
     }
   }
 
