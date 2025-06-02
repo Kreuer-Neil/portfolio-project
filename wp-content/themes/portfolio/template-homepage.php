@@ -16,7 +16,6 @@ $recent_projects = new WP_Query([
         <img title="Neil Kreuer" src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>" class="home__logo">
         <?= pll__('Web Developer') ?>
     </h1>
-    <?php // TODO import SVG with it's frame (composed SVG tier 2) ?>
     <p class="home__content">
         <?= get_field('welcome'); ?>
     </p>
