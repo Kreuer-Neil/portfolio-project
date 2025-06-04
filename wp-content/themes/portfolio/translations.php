@@ -2,6 +2,11 @@
 $translations = [
     'lang' => 'en',
 
+    'urlproj' => 'projects',
+
+    'langnav' => 'Language selector',
+    'footnav' => 'Footer navigation',
+
     // Home
     'webdev' => 'Web Developer',
     'mytools' => 'My tools',
@@ -16,6 +21,11 @@ $translations = [
     //Projects archive
     'back' => 'Back',
     'home' => 'home',
+
+    //Single projects
+    'toprjs' => 'to the projects',
+    'noprj' => 'It seems this project does not exist',
+    'tryotherprj' => 'Please try another project, or stop playing with the URL!',
 ];
 
 

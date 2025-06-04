@@ -1,4 +1,6 @@
 <?php
+
+
 add_action('acf/include_fields', function () {
     if (!function_exists('acf_add_local_field_group')) {
         return;
@@ -68,7 +70,7 @@ add_action('acf/include_fields', function () {
                         ),
                         'return_format' => 'array',
                         'library' => 'all',
-                        'translations' => 'sync',
+                        'translations' => 'copy_once',
                         'min_width' => '',
                         'min_height' => '',
                         'min_size' => '',
@@ -256,6 +258,7 @@ add_action('acf/include_fields', function () {
                     'id' => '',
                 ),
                 'default_value' => '',
+                'translations' => 'translate_once',
                 'maxlength' => '',
                 'rows' => '',
                 'placeholder' => '',
@@ -306,6 +309,7 @@ add_action('acf/include_fields', function () {
                         'default_value' => 'web',
                         'return_format' => 'array',
                         'multiple' => 0,
+                        'translations' => 'sync',
                         'allow_null' => 0,
                         'ui' => 0,
                         'ajax' => 0,
@@ -327,6 +331,7 @@ add_action('acf/include_fields', function () {
                             'id' => '',
                         ),
                         'default_value' => '/',
+                        'translations' => 'sync',
                         'placeholder' => '',
                         'parent_repeater' => 'field_6826e26185623',
                     ),
@@ -345,6 +350,7 @@ add_action('acf/include_fields', function () {
                             'id' => '',
                         ),
                         'default_value' => 'Vers la page',
+                        'translations' => 'translate_once',
                         'maxlength' => '',
                         'placeholder' => '',
                         'prepend' => '',
@@ -390,6 +396,7 @@ add_action('acf/include_fields', function () {
                             'id' => '',
                         ),
                         'default_value' => '',
+                        'translations' => 'translate_once',
                         'maxlength' => '',
                         'placeholder' => '',
                         'prepend' => '',
@@ -411,6 +418,7 @@ add_action('acf/include_fields', function () {
                             'id' => '',
                         ),
                         'default_value' => '',
+                        'translations' => 'translate_once',
                         'maxlength' => '',
                         'rows' => '',
                         'placeholder' => '',
@@ -433,6 +441,7 @@ add_action('acf/include_fields', function () {
                         ),
                         'return_format' => 'array',
                         'library' => 'all',
+                        'translations' => 'sync',
                         'min_width' => '',
                         'min_height' => '',
                         'min_size' => '',
@@ -485,8 +494,8 @@ add_action('acf/include_fields', function () {
                     'id' => '',
                 ),
                 'default_value' => '%postname%',
+                'translations' => 'translate_once',
                 'maxlength' => '',
-                'allow_in_bindings' => 0,
                 'placeholder' => '',
                 'prepend' => '',
                 'append' => '',
@@ -508,7 +517,7 @@ add_action('acf/include_fields', function () {
                 'display_format' => 'd/m/Y',
                 'return_format' => 'd/m/Y',
                 'first_day' => 1,
-                'allow_in_bindings' => 0,
+                'translations' => 'sync',
             ),
         ),
         'location' => array(

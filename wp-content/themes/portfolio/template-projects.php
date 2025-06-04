@@ -1,6 +1,15 @@
-<?php
+<?php /* Template Name: Page "Projects" */
 
-get_header(); ?>
+get_header();
+
+$projects = new WP_Query([
+    'post_type' => 'project',
+    'post_status' => 'publish',
+//    'posts_per_page' => 12,
+    'orderby' => 'date',
+    'order' => 'DESC',
+]);
+?>
 
 <div class="projects">
     <h1><?= pll__('My projects') ?></h1>
@@ -17,7 +26,7 @@ get_header(); ?>
     </div>
     <?php endif; */ ?>
     <div class="projects__container">
-        <?php if (have_posts()): while (have_posts()): the_post(); ?>
+        <?php if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
             <a class="projects__item" href="<?= get_page_link() ?>">
                 <article class="projects__item__article">
                     <?php $image = get_field('project_thumbnail'); ?>
@@ -28,7 +37,7 @@ get_header(); ?>
             </a>
         <?php endwhile; endif; ?>
     </div>
-    <a href="/" class="inavlink inavlink--left">
+    <a href="<?= get_home_url() ?>" class="inavlink inavlink--left">
         <span class="inavlink__text"><span class="inavlink__text--underlined"><?= pll__('Back') ?></span> <?= pll__('home') ?></span>
     </a>
 </div>

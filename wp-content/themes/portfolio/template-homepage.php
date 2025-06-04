@@ -13,7 +13,7 @@ $recent_projects = new WP_Query([
 
     <h1 class="home__title">
         <?php $logo = get_field('logo') ?>
-        <img title="Neil Kreuer" src="<?= $logo['url'] ?>" alt="<?= $logo['alt'] ?>" class="home__logo">
+        <img title="Neil Kreuer" src="<?= $logo['url'] ?>" alt="N K" class="home__logo">
         <?= pll__('Web Developer') ?>
     </h1>
     <p class="home__content">
@@ -61,7 +61,7 @@ $recent_projects = new WP_Query([
             </a>
         <?php endwhile; endif; ?>
     </div>
-    <a href="/projects" class="inavlink inavlink--right">
+    <a href="<?= nk_get_translation_string('projects') ?>" class="inavlink inavlink--right">
         <span class="inavlink__text"><?= pll__('See') ?> <span
                     class="inavlink__text--underlined"><?= pll__('all my projects')?></span></span>
     </a>

@@ -16,7 +16,8 @@ add_filter('show_admin_bar', '__return_false');
 
 
 // Enregistrer des menus de navigation :
-register_nav_menu('footer', 'Navigation de pied de page');
+register_nav_menu('lang', 'Languages');
+register_nav_menu('footer', 'Footer nav');
 
 
 //retirer des fonctions de base WP
@@ -89,4 +90,11 @@ function dw_get_navigation_links(string $location): array
 
     // Retourner le tableau de liens formatés
     return $items;
+}
+
+function nk_get_translation_string(string $page)
+{
+    if ($lang = pll__('en') === 'en')
+        $lang = '';
+    return get_home_url() . '/' . $lang . '/' . pll__($page);
 }

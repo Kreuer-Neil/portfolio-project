@@ -247,7 +247,8 @@ section, article {
   padding: var(--number-padding-simple) var(--number-padding-medium);
   background-color: var(--color-main-bg);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: var(--number-gap-sections);
 
   &__container {
     display: flex;

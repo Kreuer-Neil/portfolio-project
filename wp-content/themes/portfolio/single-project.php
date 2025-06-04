@@ -35,14 +35,14 @@ get_header(); ?>
                  alt="<?= get_sub_field('sub_image')['alt'] ?>" width="692px" height="390px" class="project__img">
         </article>
     <?php endwhile; endif; ?>
-    <a href="/" class="inavlink inavlink--left">
-        <span class="inavlink__text"><span class="inavlink__text--underlined">Retourner</span> aux projets</span>
+    <a href="<?= nk_get_translation_string('projects') ?>" class="inavlink inavlink--left">
+        <span class="inavlink__text"><span class="inavlink__text--underlined"><?= pll__('Back') ?></span> <?= pll__('to the projects') ?></span>
     </a>
-<?php endwhile;
+<?php endwhile; //TODO fix link
 else: ?>
     <div class="error">
-        <h1 class="error__title">Ce projet ne semble pas exister.</h1>
-        <p class="error__text">Veuillez tenter un autre projet, ou cessez de jouer avec l'URL&nbsp;!</p>
+        <h1 class="error__title"><?= pll__('It seems this project does not exist') ?></h1>
+        <p class="error__text"><?= pll__('Please try another project, or stop playing with the URL!') ?></p>
     </div>
 <?php endif; ?>
 <?php get_footer(); ?>

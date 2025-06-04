@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<h1 class="sro"><?= get_the_title() ?></h1>
+<?= get_the_id() ?>
 <?php
 // On ouvre "la boucle" (The Loop), la structure de contrôle
 // de contenu propre à Wordpress:

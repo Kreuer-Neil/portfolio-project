@@ -7,6 +7,8 @@
 
 !db_backups
 !db_backups/*
+!a_tr_backups
+!a_tr_backups/*
 
 !wp-content/
 wp-content/*
