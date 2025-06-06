@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 180 127" id="logo">
+    <path fill="#777"
+          d="M167.933 0h-63.352v62.492L167.933 0ZM127.71 67.346 180 113.897V13.103l-52.29 54.243ZM104.581 88.707V127h63.352l-52.701-46.365-10.651 8.072Z"/>
+    <path fill="#555" d="M85.475 93.738V0H21.117l64.358 93.738ZM19.106 30.238V127H84.47L19.106 30.238Z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 180 127">
+<path fill="#777"
+      d="M168 0h-63.5v62.5L168 0ZM127.5 67.5 180 114V13l-52.5 54.5ZM104.5 88.707V127H168l-53-46.5-10.5 8.207Z"/>
+<path fill="#F1F1F1" d="M85.5 95V0H21l64.5 95ZM19 30v97h65L19 30Z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="127" viewBox="0 0 180 127">
+<path d="M168 0H104.5V62.5L168 0Z" fill="#100F1F"/>
+<path d="M127.5 67.5L180 114V13L127.5 67.5Z" fill="#100F1F"/>
+<path d="M104.5 88.7067V127H168L115 80.5L104.5 88.7067Z" fill="#100F1F"/>
+<path d="M85.5 95V0H21L85.5 95Z" fill="#F1F1F1"/>
+<path d="M19 30V127H84L19 30Z" fill="#F1F1F1"/>
+</svg>

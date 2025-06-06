@@ -1,0 +1,199 @@
+:root {
+  font-size: 16px;
+
+  //* Base common colors
+  --color-white: #F1F1F1;
+  --color-untrue-black: #0B0B0B;
+  --color-transparent: #ffffff00;
+  --color-lightpink: #e892f3;
+
+
+  --color-darkblue: #1D1B36;
+  --color-darkblue-light: #23204A;
+  --color-purple: #441990;
+  --color-purple-60: #44199099;
+  --color-midpurple: #761679;
+
+  // Crystal colors
+  --color-crystal-purple-base: #A640EA;
+  --color-crystal-purple-reflection: #B762F0;
+  --color-crystal-purple-saturated: #8F2AD4;
+  --color-crystal-orange-base: #DB7827;
+  --color-crystal-orange-reflection: #ED9625;
+  --color-crystal-orange-saturated: #D36F1C;
+
+  //* Dark theme exclusive colors
+  --color-gradient-purple-light: #FC76FA;
+  --color-gradient-purple-deep: #A516FA;
+  --color-gradient-orange-light: #FEC552;
+  --color-gradient-orange-deep: #FF6A1A;
+
+  --color-orange-faded: #A46C31;
+  --color-orange-faded-dark: #FF6A1A;
+  --color-pink-faded: #9746CE;
+  --color-pink-faded-dark: #A516FA;
+
+  // Crystal bg
+  --color-dark-amethyst-base: #672FA1;
+  --color-dark-amethyst-reflection: #7A4599;
+  --color-dark-amethyst-saturated: #501984;
+
+  //* Numbers
+  // maximums
+  --number-max-container-width: 90rem; //1440px
+  --number-max-container-width-extended: 120rem; // 1920px
+  --number-max-text-width: 45rem; //720px
+  --number-max-button-w: 28rem; // 520px (32.5rem) - 72px (4.5rem padding (crystal-inavlink))
+  --number-projects-max-container-width: 76rem;
+  --number-projects-max-item-width-reduced: 25rem;
+  --number-projects-max-item-width: 28rem; // 448px
+  --number-projects-min-item-width: 16rem;
+  --number-tools-max-item-width: 25.25rem; // 420px - 2*8px (padding)
+  --number-tools-min-item-width: 17.75rem; // 300px - 2*8px (padding)
+  --number-svg-bg-break: 70rem; // 1120px
+
+  // Paddings
+  --number-padding-little: .125rem; // 2px
+  --number-padding-mini: .25rem; // 4px
+  --number-padding-small: .5rem; // 8px
+  --number-padding-simple: .75rem; // 12px
+  --number-padding-medium: 1rem; // 16px
+  --number-padding-double: 1.5rem; // 24px
+  --number-padding-semiheavy: 2rem; // 32px
+  --number-padding-heavy: 3rem; // 48px
+
+  // Font sizes
+  --number-fsize-title: 2.5rem;
+  --number-fsize-subtitle: 2rem;
+  --number-fsize-button: 1.25rem;
+  --number-fsize-small: .75rem;
+
+  // Auto gaps
+  --number-gap-sections: 2rem;
+  --number-gap-containers: 1.5rem;
+  --number-gap-items: .75rem;
+
+  // Card & items values
+  --number-card-main-radius: 2rem; // 32px
+  --number-card-inner-radius: 1.75rem; // 28 rem
+  --number-card-main-stroke-width: .25rem; // 4px
+  --number-card-image-ratio: 16/9;
+
+  --number-inavlink-height: var(--number-padding-heavy);
+  --number-about-logo-size: 8rem; // 128px
+
+  --number-crystal-inavlink-size: 4.5rem;
+  --number-crystal-about-aspect-ratio: 201/53;
+
+  //* URLs
+  --url-arrow-l: url("../svg/arrow-l.svg");
+  --url-arrow-r: url("../svg/arrow-r.svg");
+
+  //* Animations
+  --anim-inavlink-hover: cubic-bezier(0, 0.58, .58, 2);
+
+  //* font-families
+  --font-fam-text: "Poppins", sans-serif;
+  --font-fam-title: "Montserrat Medium", sans-serif;
+  --font-fam-buttons: "Poppins SemiBold Italic", sans-serif;
+
+
+  //** Light theme setup
+  --color-main-bg: var(--color-white);
+  --color-main-text: var(--color-untrue-black);
+  --color-gradient-top-bg: var(--color-lightpink);
+
+
+  //* Logo colors
+  --color-logo-left-light: var(--color-gradient-orange-light);
+  --color-logo-left-deep: var(--color-gradient-orange-deep);
+
+  --color-logo-right-light: var(--color-gradient-purple-light);
+  --color-logo-right-deep: var(--color-gradient-purple-deep);
+
+  --color-logo-bg: var(--color-white);
+
+  //* Gradients colors
+  --color-main-purple-gradient-light: #fff;
+  --color-main-purple-gradient-deep: #fff;
+
+  --color-main-orange-gradient-light: #fff;
+  --color-main-orange-gradient-deep: #fff;
+}
+
+.dark {
+  //** Base dark theme colors
+  --color-main-bg: var(--color-darkblue);
+  --color-main-text: var(--color-white);
+  --color-gradient-top-bg: var(--color-purple);
+
+  //* Logo and SVGs colors
+
+  //* items colors
+  // About items bg
+  --color-alt-card-bg: var(--color-purple-60);
+
+  //* Gradients colors
+  --color-main-purple-gradient-light: var(--color-gradient-purple-light);
+  --color-main-purple-gradient-deep: var(--color-gradient-purple-deep);
+
+  --color-main-orange-gradient-light: var(--color-gradient-orange-light);
+  --color-main-orange-gradient-deep: var(--color-gradient-orange-deep);
+
+  --color-gradient-bg-orange: var(--color-crystal-orange-saturated);
+  --color-gradient-bg-purple: var(--color-crystal-purple-saturated);
+
+  --color-gradient-projects-link-1-light: #A516FA66;
+  --color-gradient-projects-link-1-deep: #A46C31CC;
+  --color-gradient-projects-link-2-light: #FF6A1A66;
+  --color-gradient-projects-link-2-deep: #9746CECC;
+
+  --color-main-button: var(--color-midpurple);
+  --color-main-button-border: var(--color-gradient-purple-deep);
+  --color-gradient-inavlink-end: var(--color-crystal-purple-base);
+
+  --color-text-alt: var(--color-lightpink);
+
+  // Icons
+  --color-gradient-icon-web-1: var(--color-lightpink);
+  --color-gradient-icon-web-2: var(--color-gradient-purple-deep);
+}
+
+// Re-setting root to assign correct values to gradients (& other composed values if needed)
+.custom-page {
+  // logo values
+  --color-logo-bg: var(--color-main-bg);
+  --color-logo-border: var(--color-gradient-top-bg);
+  // Page main gradients
+  --gradient-top-bg: linear-gradient(var(--color-gradient-top-bg), var(--color-main-bg) 65%);
+
+  // Logo and SVGs gradients
+  --gradient-logo-left: linear-gradient(to right, var(--color-logo-left-light), var(--color-logo-left-deep));
+  --gradient-logo-right: linear-gradient(to left, var(--color-logo-right-light), var(--color-logo-right-deep));
+
+  // "Neon box" gradients
+  --gradient-main-border-1: linear-gradient(30deg, var(--color-main-purple-gradient-light), var(--color-main-purple-gradient-deep) 15%, var(--color-main-orange-gradient-deep) 85%, var(--color-main-orange-gradient-light));
+  --gradient-main-border-2: linear-gradient(150deg, var(--color-main-orange-gradient-light), var(--color-main-orange-gradient-deep) 15%, var(--color-main-purple-gradient-deep) 85%, var(--color-main-purple-gradient-light));
+  --gradient-main-bg-1: linear-gradient(to left, var(--color-gradient-bg-orange), var(--color-gradient-bg-purple));
+  --gradient-main-bg-2: linear-gradient(to right, var(--color-gradient-bg-orange), var(--color-gradient-bg-purple));
+
+  // Link gradients
+  --gradient-inavlink-r: linear-gradient(to right, var(--color-main-button) 70%, var(--color-gradient-inavlink-end));
+  --gradient-inavlink-l: linear-gradient(to left, var(--color-main-button) 70%, var(--color-gradient-inavlink-end));
+
+  // Projects box exclusive gradients
+  --gradient-projects-link-1: linear-gradient(to right, var(--color-gradient-projects-link-1-light), var(--color-gradient-projects-link-1-deep) 90%);
+  --gradient-projects-link-2: linear-gradient(to right, var(--color-gradient-projects-link-2-light), var(--color-gradient-projects-link-2-deep) 90%);
+
+  // Icons gradients
+  --gradient-icon-web: radial-gradient(var(--color-gradient-icon-web-1) 60%, var(--color-gradient-icon-web-2) 95%)
+}
+
+@keyframes arrowMove {
+  from {
+    background-position: left center;
+  }
+  to {
+    background-position: var(--number-card-main-radius) center;
+  }
+}
