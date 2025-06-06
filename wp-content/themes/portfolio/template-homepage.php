@@ -86,7 +86,7 @@ get_header(); ?>
         </div>
         <div class="links__div">
             <p><?= pll__('Contact me') ?></p>
-            <p class="links__data"><?= pll__('') ?></p>
+            <p class="links__data"><?= pll__('mail') ?></p>
         </div>
     </section>
 
