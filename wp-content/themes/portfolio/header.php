@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="author" content="Kreuer Neil"/>
-    <!--    <meta name="keyword" content="Portfolio, Neil Kreuer, Web Designer, CV, Web Developer">-->
-    <!--    <meta name="description" content="Page d'accueil du site Portfolio "/>-->
-    <title><?= wp_title('·', false, 'right') . get_bloginfo('name') ?></title>
+        <meta name="keyword" content="Portfolio, Neil Kreuer, Web Designer, CV, Web Developer">
+    <title><?= pll__(get_bloginfo('name')) ?></title>
 
     <?php wp_head() ?>
-    <?php /*<link rel="stylesheet" href="<?= dw_asset('css/site.css'); ?>"> */ ?>
-    <title>Neil Kreuer - Portfolio</title>
 </head>
 <body class="custom-page dark">
 

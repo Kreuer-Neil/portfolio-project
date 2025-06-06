@@ -1,4 +1,5 @@
 @use "../settings/breakpoints" as b;
+@use "../general/general" as g;
 
 
 .home {
@@ -36,20 +37,21 @@
   }
 
   &__content {
-    margin: 0 var(--number-padding-simple);
+    padding: 0 var(--number-padding-simple);
     max-width: var(--number-max-text-width);
     align-self: center;
   }
 
   &__bio {
-    margin: 0 var(--number-padding-simple);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--number-padding-simple);
-    max-width: min(var(--number-max-text-width), 100vw);
+    max-width: var(--number-max-container-width);
     &__text {
       padding: 0 var(--number-padding-simple);
+      max-width: var(--number-max-text-width);
+
     }
   }
 }
@@ -61,13 +63,12 @@
   }
 
   &__button {
-    cursor: pointer;
-    font-family: var(--font-fam-buttons);
+    @extend .button;
+    font-size: 1.5rem;
+    border-width: var(--number-padding-mini);
 
-    background-color: var(--color-main-button);
     padding: var(--number-padding-medium) var(--number-padding-double);
     border-radius: var(--number-padding-double);
-    border: .25rem solid var(--color-main-button-border);
     &__title {
       display: flex;
     }
@@ -153,7 +154,6 @@
   width: 100%;
   display: grid;
   gap: var(--number-padding-medium);
-  align-items: center;
   justify-content: center;
   max-width: var(--number-max-container-width);
 
@@ -164,5 +164,18 @@
   .contact {
     max-width: var(--number-max-text-width);
     padding: 0 var(--number-padding-simple);
+
+    &__warning {
+      padding: 0 var(--number-padding-small);
+
+      &::before {
+        content: '* ';
+      }
+    }
+    &__success {
+      font-size: 1.2rem;
+      padding: var(--number-padding-simple) var(--number-padding-simple);
+      background-color: var(--color-main-button);
+    }
   }
 }

@@ -1,0 +1,79 @@
+
+.inavlink {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--number-padding-small);
+
+  transition: gap 200ms var(--anim-inavlink-hover);
+  transition-timing-function: var(--anim-inavlink-hover);
+  background: var(--number-crystal-inavlink-size) 0 no-repeat var(--gradient-inavlink-l);
+  min-height: var(--number-inavlink-height);
+
+  color: var(--color-main-text);
+  font-family: var(--font-fam-buttons);
+  text-decoration: none;
+
+  max-width: var(--number-max-button-w);
+  padding: 0 0 0 var(--number-crystal-inavlink-size);
+  margin: 0 auto;
+  width: calc(100% - var(--number-crystal-inavlink-size) - var(--number-padding-simple) * 2);
+
+  &:hover, &:focus {
+    gap: var(--number-padding-double);
+  }
+
+  &::before {
+    background: var(--url-arrow-l) no-repeat center;
+    content: '';
+    width: 2rem;
+    height: 2rem;
+  }
+
+  // image
+  &::after {
+    content: '';
+    position: absolute;
+    background: left no-repeat url("../svg/link-crystal.svg");
+    padding: 0 0 0 var(--number-crystal-inavlink-size);
+    height: var(--number-inavlink-height);
+    width: 0;
+  }
+
+  &--right {
+    flex-direction: row-reverse;
+    text-align: right;
+    background: calc(-1 * var(--number-crystal-inavlink-size)) 0 no-repeat var(--gradient-inavlink-r);
+    padding: 0 var(--number-crystal-inavlink-size) 0 0;
+
+    &::before {
+      background-image: var(--url-arrow-r);
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &--left {
+
+    &::after {
+      left: 0;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+    }
+  }
+
+  &__text {
+    padding: 0 var(--number-padding-small);
+
+    &--underlined {
+      text-decoration: underline;
+    }
+  }
+}

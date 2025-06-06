@@ -24,7 +24,7 @@
 
   main {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,11 +39,18 @@
       top: 0;
       left: 0;
       width: 100vw;
-      height: 999rem;
+      height: 100%;
       z-index: -3;
 
       background: url("../svg/bg-crystals.svg") repeat-y center top;
+      background-size: 100% auto;
     }
+  }
+
+  small {
+    font-size: var(--number-fsize-small);
+    color: var(--color-text-alt);
+    line-height: 1.3;
   }
 }
 
@@ -98,85 +105,6 @@ section, article {
   }
 }
 
-.inavlink {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--number-padding-small);
-
-  transition: gap 200ms var(--anim-inavlink-hover);
-  transition-timing-function: var(--anim-inavlink-hover);
-  background: var(--number-crystal-inavlink-size) 0 no-repeat var(--gradient-inavlink-l);
-  min-height: var(--number-inavlink-height);
-
-  color: var(--color-main-text);
-  font-family: var(--font-fam-buttons);
-  text-decoration: none;
-
-  max-width: var(--number-max-button-w);
-  padding: 0 0 0 var(--number-crystal-inavlink-size);
-  margin: 0 auto;
-  width: calc(100% - var(--number-crystal-inavlink-size) - var(--number-padding-simple) * 2);
-
-  &:hover, &:focus {
-    gap: var(--number-padding-double);
-  }
-
-  &::before {
-    background: var(--url-arrow-l) no-repeat center;
-    content: '';
-    width: 2rem;
-    height: 2rem;
-  }
-
-  // image
-  &::after {
-    content: '';
-    position: absolute;
-    background: left no-repeat url("../svg/link-crystal.svg");
-    padding: 0 0 0 var(--number-crystal-inavlink-size);
-    height: var(--number-inavlink-height);
-    width: 0;
-  }
-
-  &--right {
-    flex-direction: row-reverse;
-    text-align: right;
-    background: calc(-1 * var(--number-crystal-inavlink-size)) 0 no-repeat var(--gradient-inavlink-r);
-    padding: 0 var(--number-crystal-inavlink-size) 0 0;
-
-    &::before {
-      background-image: var(--url-arrow-r);
-    }
-
-    &::after {
-      right: 0;
-    }
-  }
-
-  &--left {
-
-    &::after {
-      left: 0;
-      /*-moz-transform: scaleX(-1);
-      -o-transform: scaleX(-1);
-      -webkit-transform: scaleX(-1);*/
-      transform: scaleX(-1);
-      /*filter: FlipH;
-      -ms-filter: "FlipH";*/
-    }
-  }
-
-  &__text {
-    padding: 0 var(--number-padding-small);
-
-    &--underlined {
-      text-decoration: underline;
-    }
-  }
-}
-
 //* Icons
 .icon {
   display: block;
@@ -207,73 +135,17 @@ section, article {
   }
 }
 
-// Links sections
-.links {
-  padding: 0 var(--number-padding-simple);
-  max-width: var(--number-max-text-width);
+.button {
+  cursor: pointer;
+  font-family: var(--font-fam-buttons);
+  font-size: var(--number-fsize-button);
+  color: var(--color-main-text);
 
-  &__div {
-    display: flex;
-    flex-direction: column;
-    gap: var(--number-padding-mini);
-    align-items: start;
-    align-self: stretch;
-  }
+  background-color: var(--color-main-button);
+  border: var(--number-padding-little) solid var(--color-main-button-border);
 
-  &__container {
-    display: flex;
-    gap: var(--number-padding-simple);
-    padding: 0 var(--number-padding-little);
-    align-items: center;
-    min-height: 3.5rem;
-  }
-
-  &__link {
-    width: var(--number-padding-heavy);
-    padding: 0;
-    transition: padding .2s ease-out;
-
-    &:hover, &:focus {
-      padding: var(--number-padding-mini);
-    }
-  }
-
-  &__data {
-    align-self: center;
-  }
-}
-
-.footer {
-  padding: var(--number-padding-simple) var(--number-padding-medium);
-  background-color: var(--color-main-bg);
-  display: flex;
-  justify-content: flex-start;
-  gap: var(--number-gap-sections);
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--number-gap-articles);
-    width: 100%;
-    max-width: var(--number-max-container-width);
-  }
-
-  &__nav {
-
-    &__container {
-      display: flex;
-      flex-direction: column;
-      gap: var(--number-padding-mini);
-    }
-
-    &__link {
-      color: var(--color-main-text);
-    }
-  }
-
-  @include b.sm {
-    &__copyright {
-      text-align: center;
-    }
+  transition: transform .2s ease-in-out;
+  &:hover, &:focus {
+    transform: scale(1.1);
   }
 }

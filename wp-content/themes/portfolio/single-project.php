@@ -22,7 +22,7 @@ get_header(); ?>
                 </ul>
             <?php endif; ?>
         </div>
-        <?= get_the_post_thumbnail(size: 'large', attr: ['width' => '692px', 'height' => '390px', 'class' => 'project__img']); ?>
+        <?= get_the_post_thumbnail(size: 'large', attr: ['width' => '692', 'height' => '390', 'class' => 'project__img']); ?>
     </div>
 
     <?php if (have_rows('content')): while (have_rows('content')): the_row() ?>
@@ -32,13 +32,13 @@ get_header(); ?>
                 <p class="project__text"><?= get_sub_field('sub_text') ?></p>
             </div>
             <img src="<?= get_sub_field('sub_image')['sizes']['medium'] ?>"
-                 alt="<?= get_sub_field('sub_image')['alt'] ?>" width="692px" height="390px" class="project__img">
+                 alt="<?= get_sub_field('sub_image')['alt'] ?>" width="692" height="390" class="project__img">
         </article>
     <?php endwhile; endif; ?>
-    <a href="<?= nk_get_translation_string('projects') ?>" class="inavlink inavlink--left">
+    <a href="<?= portfolio_get_translation_string('projects') ?>" class="inavlink inavlink--left">
         <span class="inavlink__text"><span class="inavlink__text--underlined"><?= pll__('Back') ?></span> <?= pll__('to the projects') ?></span>
     </a>
-<?php endwhile; //TODO fix link
+<?php endwhile;
 else: ?>
     <div class="error">
         <h1 class="error__title"><?= pll__('It seems this project does not exist') ?></h1>

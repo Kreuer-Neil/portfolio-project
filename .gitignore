@@ -17,14 +17,9 @@ wp-content/*
 !wp-content/themes/portfolio
 !wp-content/themes/portfolio/*
 !wp-content/themes/portfolio/**/*
-wp-content/themes/portfolio/public/*
 
 
 !wp-content/uploads
-!wp-content/uploads/*
-!wp-content/uploads/**/*
-wp-content/uploads/**/*x720.*
-wp-content/uploads/**/*x1031.*
-wp-content/uploads/**/*x1080.*
 
 /**/.DS_Store
+/wp-content/uploads/wpcf7_uploads/

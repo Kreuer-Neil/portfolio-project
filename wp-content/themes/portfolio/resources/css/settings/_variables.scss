@@ -12,7 +12,7 @@
   --color-darkblue-light: #23204A;
   --color-purple: #441990;
   --color-purple-60: #44199099;
-  --color-midpurple: #6E3361;
+  --color-midpurple: #761679;
 
   // Crystal colors
   --color-crystal-purple-base: #A640EA;
@@ -50,6 +50,7 @@
   --number-projects-min-item-width: 16rem;
   --number-tools-max-item-width: 25.25rem; // 420px - 2*8px (padding)
   --number-tools-min-item-width: 17.75rem; // 300px - 2*8px (padding)
+  --number-svg-bg-break: 70rem; // 1120px
 
   // Paddings
   --number-padding-little: .125rem; // 2px
@@ -65,9 +66,12 @@
   --number-fsize-title: 2.5rem;
   --number-fsize-subtitle: 2rem;
   --number-fsize-button: 1.25rem;
+  --number-fsize-small: .75rem;
 
   // Auto gaps
   --number-gap-sections: 2rem;
+  --number-gap-containers: 1.5rem;
+  --number-gap-items: .75rem;
 
   // Card & items values
   --number-card-main-radius: 2rem; // 32px
@@ -97,7 +101,7 @@
   //** Light theme setup
   --color-main-bg: var(--color-white);
   --color-main-text: var(--color-untrue-black);
-  --color-gradient-top-light: var(--color-lightpink);
+  --color-gradient-top-bg: var(--color-lightpink);
 
 
   //* Logo colors
@@ -121,7 +125,7 @@
   //** Base dark theme colors
   --color-main-bg: var(--color-darkblue);
   --color-main-text: var(--color-white);
-  --color-gradient-top-light: var(--color-purple);
+  --color-gradient-top-bg: var(--color-purple);
 
   //* Logo and SVGs colors
 
@@ -148,6 +152,8 @@
   --color-main-button-border: var(--color-gradient-purple-deep);
   --color-gradient-inavlink-end: var(--color-crystal-purple-base);
 
+  --color-text-alt: var(--color-lightpink);
+
   // Icons
   --color-gradient-icon-web-1: var(--color-lightpink);
   --color-gradient-icon-web-2: var(--color-gradient-purple-deep);
@@ -157,9 +163,9 @@
 .custom-page {
   // logo values
   --color-logo-bg: var(--color-main-bg);
-  --color-logo-border: var(--color-gradient-top-light);
+  --color-logo-border: var(--color-gradient-top-bg);
   // Page main gradients
-  --gradient-top-bg: linear-gradient(var(--color-gradient-top-light), var(--color-main-bg) 65%);
+  --gradient-top-bg: linear-gradient(var(--color-gradient-top-bg), var(--color-main-bg) 65%);
 
   // Logo and SVGs gradients
   --gradient-logo-left: linear-gradient(to right, var(--color-logo-left-light), var(--color-logo-left-deep));

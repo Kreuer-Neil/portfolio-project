@@ -12,7 +12,7 @@ $projects = new WP_Query([
 ?>
 
 <div class="projects">
-    <h1><?= pll__('My projects') ?></h1>
+    <h1><?= get_the_title() ?></h1>
 <?php /* if ($terms = get_terms()): // TODO Faire request en AJAX ? ?>
     <div class="filters">
         <p class="filters__title">Filtres</p>
@@ -27,7 +27,7 @@ $projects = new WP_Query([
     <?php endif; */ ?>
     <div class="projects__container">
         <?php if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
-            <a class="projects__item" href="<?= get_page_link() ?>">
+            <a class="projects__item" href="<?= portfolio_get_translation_string('projects', $post->post_name) ?>">
                 <article class="projects__item__article">
                     <?php $image = get_field('project_thumbnail'); ?>
                     <h2 class="projects__item__title"><?= get_the_title(); ?></h2>
