@@ -12,9 +12,9 @@
                 <?php endforeach; ?>
             </ul>
         </nav>
+            <?php if ($footNavLinks = portfolio_get_navigation_links('footer')): ?>
         <nav class="footer__nav">
             <h2 class="footer__nav__title sro"><?= pll__('Footer navigation') ?></h2>
-            <?php if ($footNavLinks = portfolio_get_navigation_links('footer')) ?>
             <ul class="footer__nav__container">
                 <?php foreach ($footNavLinks as $footNavLink): ?>
                     <li class="footer__nav__li">
@@ -23,6 +23,7 @@
                 <?php endforeach; ?>
             </ul>
         </nav>
+        <?php endif; ?>
     </div>
 
     <p class="footer__copyright">© Neil Kreuer</p>

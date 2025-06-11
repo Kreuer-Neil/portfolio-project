@@ -94,11 +94,12 @@ function portfolio_get_navigation_links(string $location): array
 
 function portfolio_get_translation_string(string $page, string $postslug = ''): string
 {
-    if ($lang = ('/'.pll__('en')) === '/en')
+    if ($lang = ('/' . pll__('en')) === '/en')
         $lang = '';
     return get_home_url() . $lang . '/' . pll__($page) . '/' . $postslug;
 }
 
+// Contact
 
 // Ajouter un post-type custom pour sauvegarder les messages de contact
 register_post_type('contact_message', [
@@ -132,42 +133,43 @@ function portfolio_execute_contact_form()
             'message' => 'textarea_field',
         ])
         ->validate([
-            'name' => ['required','short'],
-            'email' => ['required','email'],
+            'name' => ['required', 'short'],
+            'email' => ['required', 'email'],
             'message' => ['required'],
         ])->save(
-            title: fn( $data ) => $data['name'] . ' <' . $data['email'] . '>',
-            content: fn( $data ) => $data['message'],
+            title: fn($data) => $data['name'] . ' <' . $data['email'] . '>',
+            content: fn($data) => $data['message'],
         )
         ->send(
-            title: fn( $data ) => 'New message from ' . $data['name'],
-            content: fn( $data
+            title: fn($data) => 'New message from ' . $data['name'],
+            content: fn($data
             ) => 'Name: ' . $data['name'] . PHP_EOL . 'Email: ' . $data['email'] . PHP_EOL . 'Message:' . PHP_EOL . $data['message'],
-        )
-        ->feedback();
+        )->feedback();
 }
 
-add_action( 'admin_post_nopriv_portfolio_contact_form', 'portfolio_execute_contact_form' );
-add_action( 'admin_post_portfolio_contact_form', 'portfolio_execute_contact_form' );
+add_action('admin_post_nopriv_portfolio_contact_form', 'portfolio_execute_contact_form');
+add_action('admin_post_portfolio_contact_form', 'portfolio_execute_contact_form');
 
-function portfolio_session_flash( string $key, mixed $value ): void {
-    if ( ! isset( $_SESSION['portfolio_flash'] ) ) {
+function portfolio_session_flash(string $key, mixed $value): void
+{
+    if (!isset($_SESSION['portfolio_flash'])) {
         $_SESSION['portfolio_flash'] = [];
     }
 
-    $_SESSION['portfolio_flash'][ $key ] = $value;
+    $_SESSION['portfolio_flash'][$key] = $value;
 }
-function portfolio_session_get( string $key ) {
-    if ( isset( $_SESSION['portfolio_flash'] ) && array_key_exists( $key, $_SESSION['portfolio_flash'] ) ) {
-        $value = $_SESSION['portfolio_flash'][ $key ];
 
-        unset( $_SESSION['portfolio_flash'][ $key ] );
-
-        return $value;
+function portfolio_session_get(string $key)
+{
+    if (!(isset($_SESSION['portfolio_flash']) && array_key_exists($key, $_SESSION['portfolio_flash']))) {
+        return null;
     }
 
-    // La donnée n'existait pas dans la session flash, on retourne null.
-    return null;
+    $value = $_SESSION['portfolio_flash'][$key];
+    unset($_SESSION['portfolio_flash'][$key]);
+
+    return $value;
+
 }
 
 
