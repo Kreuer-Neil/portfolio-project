@@ -9,12 +9,12 @@ $recent_projects = new WP_Query([
 ]);
 
 get_header(); // TODO add microdatas ?>
-<div class="home">
+<div class="home" >
 
     <h1 class="home__title">
         <?php $logo = get_field('logo') ?>
-        <img title="Neil Kreuer" src="<?= $logo['url'] ?>" alt="N K" class="home__logo">
-        <?= pll__('Web Developer') ?>
+        <img itemprop="name" title="Neil Kreuer" src="<?= $logo['url'] ?>" alt="Neil Kreuer" class="home__logo">
+        <span itemprop="hasOccupation"><?= pll__('Web Developer') ?></span>
     </h1>
     <p class="home__content">
         <?= get_field('welcome'); ?>
@@ -25,7 +25,7 @@ get_header(); // TODO add microdatas ?>
     </article>
 </div>
 
-<section class="tools" id="tools">
+<section class="tools" id="tools" itemprop="skills">
     <h2 class="tools__button__title">
         <label for="my-tools"
                class="tools__button" title="Afficher/masquer mes outils" tabindex="0">
@@ -86,7 +86,7 @@ get_header(); // TODO add microdatas ?>
         </div>
         <div class="links__div">
             <p><?= pll__('Contact me') ?></p>
-            <p class="links__data"><?= pll__('mail') ?></p>
+            <p class="links__data" itemprop="email"><?= pll__('mail') ?></p>
         </div>
     </section>
 
