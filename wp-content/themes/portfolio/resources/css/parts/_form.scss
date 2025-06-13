@@ -23,7 +23,7 @@
   &__submit {
     @extend .button;
 
-
+    grid-column: span 2;
     justify-self: center;
     min-width: 50%;
 
