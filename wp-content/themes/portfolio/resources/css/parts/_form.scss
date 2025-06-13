@@ -58,6 +58,8 @@
     color: var(--color-main-text);
     font-family: var(--font-fam-text);
     font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
 
     &::placeholder {
       color: var(--color-text-alt);
