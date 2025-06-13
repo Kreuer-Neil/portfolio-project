@@ -1,5 +1,4 @@
 <?php
-
 add_action('acf/include_fields', function () {
     if (!function_exists('acf_add_local_field_group')) {
         return;
@@ -267,9 +266,9 @@ add_action('acf/include_fields', function () {
         'location' => array(
             array(
                 array(
-                    'param' => 'post_type',
-                    'operator' => '==',
-                    'value' => 'post',
+                    'param' => 'page_template',
+                    'operator' => '!=',
+                    'value' => 'default',
                 ),
             ),
         ),
