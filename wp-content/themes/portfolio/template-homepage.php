@@ -8,7 +8,7 @@ $recent_projects = new WP_Query([
     'order' => 'DESC',
 ]);
 
-get_header(); ?>
+get_header(); // TODO add microdatas ?>
 <div class="home">
 
     <h1 class="home__title">
