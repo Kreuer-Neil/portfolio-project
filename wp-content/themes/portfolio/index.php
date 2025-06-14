@@ -13,7 +13,7 @@ if(have_posts()): while(have_posts()): the_post(); ?>
 <?php
     // On ferme "la boucle" (The Loop):
 endwhile; else: ?>
-    <p>La page est vide.</p>
+    <p class="empty">La page est vide.</p>
 <?php endif; ?>
 <?php get_footer(); ?>
 

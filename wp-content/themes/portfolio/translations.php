@@ -32,8 +32,10 @@ $translations = [
     'warn' => 'Unaviable for now',
 
     //Projects archive
+    'all' => 'All',
     'back' => 'Back',
     'home' => 'home',
+    'nnoprojs' => 'No projects found',
 
     //Single projects
     'toprjs' => 'to the projects',

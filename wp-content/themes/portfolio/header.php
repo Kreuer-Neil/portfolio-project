@@ -40,4 +40,4 @@
     </nav>
 </header>
     */ ?>
-<main id="main" <?= ($schema = get_field('page_schema'))?" itemscope itemtype=\"{$schema}\"":'' // https://schema.org/Person ?>>
+<main id="main" <?= ($schema = get_field('page_schema'))?" itemscope itemtype=\"{$schema}\"":'' ?>>
