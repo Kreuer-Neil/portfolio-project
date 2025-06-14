@@ -23,6 +23,7 @@ $translations = [
     'mylinks' => 'My links',
     'myacc' => 'If you want to see more, there are my links to my accounts:',
     'contactme' => 'Contact me',
+    'mymail' => 'mail',
     'contmedir' => 'Contact me directly',
     'name' => 'Name',
     'email' => 'Email adress',
@@ -31,8 +32,10 @@ $translations = [
     'warn' => 'Unaviable for now',
 
     //Projects archive
+    'all' => 'All',
     'back' => 'Back',
     'home' => 'home',
+    'nnoprojs' => 'No projects found',
 
     //Single projects
     'toprjs' => 'to the projects',

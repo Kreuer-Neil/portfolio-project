@@ -7,11 +7,11 @@
   gap: var(--number-gap-items);
 
   &__container {
-    display: flex;
-    justify-content: flex-start;
-    gap: var(--number-gap-sections);
-    max-width: var(--number-max-container-width);
-  }
+     display: flex;
+     justify-content: flex-start;
+     gap: var(--number-gap-sections);
+     max-width: var(--number-max-container-width);
+   }
 
   &__nav {
 

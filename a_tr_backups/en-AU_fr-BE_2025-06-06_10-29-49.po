@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Source-Language: en-AU\n"
-"X-Polylang-Site-Reference: http://portfolio-project.test\n"
+"X-Polylang-Site-Reference: https://neil-kreuer.be\n"
 
 #. wordpress-seo, title-home-wpseo
 msgid "%%sitename%% %%page%% %%sep%% %%sitedesc%%"

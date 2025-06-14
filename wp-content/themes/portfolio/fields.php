@@ -1,6 +1,5 @@
 <?php
 
-
 add_action('acf/include_fields', function () {
     if (!function_exists('acf_add_local_field_group')) {
         return;
@@ -225,6 +224,59 @@ add_action('acf/include_fields', function () {
                     'param' => 'page_template',
                     'operator' => '==',
                     'value' => 'template-homepage.php',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+        'show_in_rest' => 0,
+    ));
+
+    acf_add_local_field_group(array(
+        'key' => 'group_684c2e526281f',
+        'title' => 'Microdatas',
+        'fields' => array(
+            array(
+                'key' => 'field_684c2e5278751',
+                'label' => 'Page microdatas',
+                'name' => 'page_schema',
+                'aria-label' => '',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'translations' => 'sync',
+                'maxlength' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page_template',
+                    'operator' => '!=',
+                    'value' => 'default',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '!=',
+                    'value' => 'post',
                 ),
             ),
         ),

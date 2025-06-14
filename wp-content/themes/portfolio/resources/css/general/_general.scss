@@ -149,3 +149,8 @@ section, article {
     transform: scale(1.1);
   }
 }
+
+.empty {
+  margin: auto;
+  padding: var(--number-padding-small) var(--number-padding-simple);
+}
