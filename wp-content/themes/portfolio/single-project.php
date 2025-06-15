@@ -22,7 +22,7 @@ get_header(); ?>
                 </ul>
             <?php endif; ?>
         </div>
-        <?= get_the_post_thumbnail(size: 'large', attr: ['width' => '692', 'height' => '390', 'class' => 'project__img']); ?>
+        <?= get_the_post_thumbnail(size: 'medium', attr: ['width' => '692', 'height' => '390', 'class' => 'project__img']); ?>
     </div>
 
     <?php if (have_rows('content')): while (have_rows('content')): the_row() ?>
