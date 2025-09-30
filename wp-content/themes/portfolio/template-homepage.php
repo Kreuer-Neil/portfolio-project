@@ -78,10 +78,10 @@ get_header(); // TODO add microdatas ?>
                     <a title="Vers ma page GitHub" href="https://github.com/Kreuer-Neil"
                        class="links__link icon icon__github">Mon GitHub</a>
                 </li>
-                <li class="links__li">
+                <?php /*<li class="links__li">
                     <a title="Vers mon profil BlueSky pro" href="https://bsky.app/profile/neil-kreuer.be"
                        class="links__link icon icon__bluesky">Mon profil Bluesky de développeur</a>
-                </li>
+                </li>*/ ?>
             </ul>
         </div>
         <div class="links__div">
