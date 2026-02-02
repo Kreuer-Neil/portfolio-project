@@ -27,8 +27,6 @@
     justify-self: center;
     min-width: 50%;
 
-    background-color: var(--color-main-button);
-    border-radius: var(--number-padding-simple);
     padding: var(--number-padding-small) var(--number-padding-medium);
 
     &:hover, &:focus {
@@ -53,6 +51,7 @@
     border-radius: 0;
     padding: var(--number-padding-mini) var(--number-padding-small);
     border: var(--number-padding-little) solid var(--color-main-button);
+    border-radius: var(--number-padding-mini);
     background-color: var(--color-gradient-top-bg);
 
     color: var(--color-main-text);

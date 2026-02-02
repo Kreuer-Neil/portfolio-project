@@ -67,8 +67,8 @@
     font-size: 1.5rem;
     border-width: var(--number-padding-mini);
 
-    padding: var(--number-padding-medium) var(--number-padding-double);
-    border-radius: var(--number-padding-double);
+    padding: var(--number-padding-simple) var(--number-padding-double);
+    border-radius: var(--number-padding-small);
     &__title {
       display: flex;
     }
