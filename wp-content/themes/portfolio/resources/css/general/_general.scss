@@ -56,6 +56,63 @@
     color: var(--color-text-alt);
     line-height: 1.3;
   }
+
+  .main-nav {
+    width: 100vw;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-navbar-primary);
+
+    &__container {
+      display: flex;
+    }
+
+    &__item {
+      flex-grow: 1;
+
+      &--home {
+        flex-grow: 0;
+      }
+
+      &--active {
+        background: var(--color-navbar-active);
+      }
+    }
+
+    &__link {
+      box-sizing: border-box;
+      color: var(--color-main-text);
+      text-decoration: none;
+      font-family: var(--font-fam-buttons);
+      font-size: var(--number-fsize-button);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      min-height: var(--number-navbar-max-height);
+
+      border: var(--number-main-stroke-width) solid var(--color-navbar-primary);
+      border-bottom: none;
+
+      &--home {
+        aspect-ratio: var(--number-nk-logo-aspect-ratio);
+        padding: 0;
+        border: var(--number-main-stroke-width) solid var(--color-purple);
+
+        background: var(--color-main-bg);
+      }
+    }
+  }
+
+  &__logo {
+    background-color: var(--color-logo-bg);
+    border: var(--number-padding-small) solid var(--color-logo-border);
+    width: 110%;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,8 +140,8 @@ section, article {
 .neon-card {
   background-image: var(--gradient-main-bg-1);
   position: relative;
-  border-radius: calc(var(--number-card-main-radius) - (var(--number-card-main-stroke-width)));
-  margin: var(--number-card-main-stroke-width);
+  border-radius: calc(var(--number-card-main-radius) - (var(--number-main-stroke-width)));
+  margin: var(--number-main-stroke-width);
 
   &::before {
     border-radius: var(--number-card-main-radius);
@@ -92,9 +149,9 @@ section, article {
     height: 100%;
     content: '';
     background-image: var(--gradient-main-border-1);
-    padding: var(--number-card-main-stroke-width);
-    top: calc(-1 * var(--number-card-main-stroke-width));
-    left: calc(-1 * var(--number-card-main-stroke-width));
+    padding: var(--number-main-stroke-width);
+    top: calc(-1 * var(--number-main-stroke-width));
+    left: calc(-1 * var(--number-main-stroke-width));
     position: absolute;
     z-index: -1;
 
@@ -150,6 +207,7 @@ section, article {
   border-radius: var(--number-padding-mini);
 
   transition: transform .2s ease-in-out;
+
   &:hover, &:focus {
     transform: scale(1.1);
   }

@@ -61,7 +61,7 @@
     min-width: var(--number-projects-min-item-width);
     max-width: var(--number-projects-max-item-width);
     width: 100%;
-    margin: var(--number-card-main-stroke-width);
+    margin: var(--number-main-stroke-width);
 
     & > * {
       line-height: normal;
