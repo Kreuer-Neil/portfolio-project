@@ -25,6 +25,7 @@ get_header(); // TODO add microdatas ?>
     </article>
 </div>
 
+<?php // TODO turn back into a title and make animation on scroll? ?>
 <section class="tools" id="tools" itemprop="skills">
     <h2 class="tools__button__title">
         <label for="my-tools"
