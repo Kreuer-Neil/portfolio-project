@@ -27,20 +27,20 @@ get_header(); // TODO add microdatas ?>
 
 <?php // TODO turn back into a title and make animation on scroll? ?>
 <section class="tools" id="tools" itemprop="skills">
-    <h2 class="tools__button__title">
-        <label for="my-tools"
-               class="tools__button" title="Afficher/masquer mes outils" tabindex="0">
+    <h2 class="tools__title">
+        <?php /*<label for="my-tools"
+               class="tools__button" title="Afficher/masquer mes outils" tabindex="0"> */ ?>
             <?= pll__('My tools') ?>
-        </label>
+        <?php //</label> ?>
     </h2>
-    <div class="tools__container">
-        <input type="checkbox"
+    <div class="tools__container open <?php //TODO remove class with JS init and add it back after ?>">
+        <?php /* <input type="checkbox"
                id="my-tools"
-               class="hidden-checkbox">
+               class="hidden-checkbox"> */ ?>
         <?php if (have_rows('tools')): while (have_rows('tools')): the_row(); ?>
             <article class="tools__item">
-                <h3 class="tools__title"><?= get_sub_field('title') ?></h3>
-                <p class="tools__content"><?= get_sub_field('text_content') ?></p>
+                <h3 class="tools__item__title"><?= get_sub_field('title') ?></h3>
+                <p class="tools__item__content"><?= get_sub_field('text_content') ?></p>
                 <img class="tools__item__logo" src="<?= get_sub_field('logo')['url'] ?>"
                      alt="<?= get_sub_field('logo')['alt'] ?>"
                      width="128" height="128">
