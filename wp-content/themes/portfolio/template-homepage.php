@@ -1,15 +1,15 @@
 <?php /* Template Name: Page "Homepage" */
 
 $recent_projects = new WP_Query([
-    'post_type' => 'project',
-    'post_status' => 'publish',
-    'posts_per_page' => 6,
-    'orderby' => 'date',
-    'order' => 'DESC',
+        'post_type' => 'project',
+        'post_status' => 'publish',
+        'posts_per_page' => 6,
+        'orderby' => 'date',
+        'order' => 'DESC',
 ]);
 
 get_header(); // TODO add microdatas ?>
-<div class="home" >
+<div class="home">
 
     <h1 class="home__title">
         <?php $logo = get_field('logo') ?>
@@ -25,22 +25,15 @@ get_header(); // TODO add microdatas ?>
     </article>
 </div>
 
-<?php // TODO turn back into a title and make animation on scroll? ?>
 <section class="tools" id="tools" itemprop="skills">
-    <h2 class="tools__button__title">
-        <label for="my-tools"
-               class="tools__button" title="Afficher/masquer mes outils" tabindex="0">
-            <?= pll__('My tools') ?>
-        </label>
+    <h2 class="tools__title">
+        <?= pll__('My tools') ?>
     </h2>
-    <div class="tools__container">
-        <input type="checkbox"
-               id="my-tools"
-               class="hidden-checkbox">
+    <div class="tools__container open">
         <?php if (have_rows('tools')): while (have_rows('tools')): the_row(); ?>
             <article class="tools__item">
-                <h3 class="tools__title"><?= get_sub_field('title') ?></h3>
-                <p class="tools__content"><?= get_sub_field('text_content') ?></p>
+                <h3 class="tools__item__title"><?= get_sub_field('title') ?></h3>
+                <p class="tools__item__content"><?= get_sub_field('text_content') ?></p>
                 <img class="tools__item__logo" src="<?= get_sub_field('logo')['url'] ?>"
                      alt="<?= get_sub_field('logo')['alt'] ?>"
                      width="128" height="128">
