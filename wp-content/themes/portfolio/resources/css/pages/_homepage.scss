@@ -57,18 +57,14 @@
 }
 
 .tools {
-  &__title {
-    display: flex;
-    order: -1;
-  }
 
-  &__button {
+  /*&__button {
     @extend .button;
     font-size: 1.5rem;
     border-width: var(--number-padding-mini);
 
-    padding: var(--number-padding-medium) var(--number-padding-double);
-    border-radius: var(--number-padding-double);
+    padding: var(--number-padding-simple) var(--number-padding-double);
+    border-radius: var(--number-padding-small);
     &__title {
       display: flex;
     }
@@ -76,7 +72,7 @@
     &:hover, &:focus {
       transform: scale(1.1);
     }
-  }
+  }*/
 
   &__container {
     display: flex;
@@ -93,7 +89,7 @@
     transition: gap .1s ease-out;
     //, max-height .5s ease-in
 
-    &:has(#my-tools:checked) {
+    &.open {
       gap: var(--number-padding-simple);
       //max-height: 200vh;
 
@@ -135,6 +131,11 @@
 
     max-width: var(--number-tools-max-item-width);
     min-width: var(--number-tools-min-item-width);
+
+    &__title {
+      display: flex;
+      order: -1;
+    }
 
     &__logo {
       z-index: -1;

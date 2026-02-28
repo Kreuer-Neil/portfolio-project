@@ -61,7 +61,7 @@
     min-width: var(--number-projects-min-item-width);
     max-width: var(--number-projects-max-item-width);
     width: 100%;
-    margin: var(--number-card-main-stroke-width);
+    margin: var(--number-main-stroke-width);
 
     & > * {
       line-height: normal;
@@ -134,16 +134,12 @@
   }
 
   &__item {
+    @extend .button;
     text-decoration: none;
     display: block;
-    color: var(--color-main-text);
 
     padding: var(--number-padding-small) var(--number-padding-medium);
-    background: var(--color-main-button);
-    border-radius: var(--number-padding-simple);
-    border: .125rem solid var(--color-main-button-border);
 
-    font-family: var(--font-fam-buttons);
     font-size: var(--number-fsize-button);
   }
 }

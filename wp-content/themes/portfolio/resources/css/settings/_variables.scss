@@ -74,9 +74,10 @@
   --number-gap-items: .75rem;
 
   // Card & items values
+  --number-main-stroke-width: .25rem; // 4px
+
   --number-card-main-radius: 2rem; // 32px
   --number-card-inner-radius: 1.75rem; // 28 rem
-  --number-card-main-stroke-width: .25rem; // 4px
   --number-card-image-ratio: 16/9;
 
   --number-inavlink-height: var(--number-padding-heavy);
@@ -84,6 +85,11 @@
 
   --number-crystal-inavlink-size: 4.5rem;
   --number-crystal-about-aspect-ratio: 201/53;
+
+  // Navbar values
+  --number-nk-logo-aspect-ratio: 180/127;
+  --number-navbar-max-height: 4.5rem;
+  --number-navbar-logo-width: 5.8779527559rem;
 
   //* URLs
   --url-arrow-l: url("../svg/arrow-l.svg");
@@ -127,6 +133,10 @@
   --color-main-text: var(--color-white);
   --color-gradient-top-bg: var(--color-purple);
 
+  // Navbar
+  --color-navbar-primary: var(--color-purple);
+  --color-navbar-active: var(--color-darkblue-light);
+
   //* Logo and SVGs colors
 
   //* items colors
@@ -148,9 +158,11 @@
   --color-gradient-projects-link-2-light: #FF6A1A66;
   --color-gradient-projects-link-2-deep: #9746CECC;
 
+  // Button
   --color-main-button: var(--color-midpurple);
   --color-main-button-border: var(--color-gradient-purple-deep);
   --color-gradient-inavlink-end: var(--color-crystal-purple-base);
+  --color-alt-button: var(--color-purple);
 
   --color-text-alt: var(--color-lightpink);
 
